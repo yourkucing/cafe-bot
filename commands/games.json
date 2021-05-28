@@ -1,0 +1,10 @@
+[
+	{
+		"games": "Solve this three-digit code (answer in this format: 1 2 3): ░ ░ ░\n\n**Here are some hints:**\n 6 8 2: One number is correct and well placed.\n6 1 4: One number is correct but wrongly placed.\n2 0 6: Two numbers are correct but wrongly placed.\n7 3 8: Nothing is correct.\n7 8 0: One number is correct but wrongly placed.\n\nGood luck, you have 10 tries (This counts every message that you send from now until you get the answer right or you run out of tries.)",
+		"answers": ["0 4 2"]
+	},
+	{
+		"games": "How many letters are there in the alphabet?",
+		"answers": ["26"]
+	}
+]
