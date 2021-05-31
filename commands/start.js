@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const games = require('./games.json');
+const correct = require('./correct.json');
 
 module.exports.run = async(client, msg, args) => {
     hooman = msg.author.id
@@ -11,7 +12,8 @@ module.exports.run = async(client, msg, args) => {
     );
     collector.on('collect', m => {
         if (m.content.toLowerCase() == item.answers) {
-            msg.channel.send(`You opened a pretty cool bathroom.`)
+            const bathroom = correct[Math.floor(Math.random() * correct.length)]
+            msg.channel.send(bathroom)
             collector.stop(item.answers)
         }
     });

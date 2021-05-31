@@ -4,11 +4,71 @@
 		"answers": "0 4 2"
 	},
 	{
-		"games": "Decode this (it's not case sensitive): 6277799926 4447777 2629999444664\n**Hint:** _Call_ me on your cellphone and I'll tell you.",
+		"games": "Decode this (it's not case sensitive): 6277799926 4447777 2629999444664\n**Hint:** _Call me on your cellphone_ and I'll tell you.",
 		"answers": "maryam is amazing"
 	},
     {
         "games": "David’s parents have three sons: Snap, Crackle, and what’s the name of the third son?",
         "answers": "david"
-    }
+    },
+	{
+		"games": "Unscramble the following: hmaavriycahm",
+		"answers": "maryam havich"
+	},
+	{
+		"games": "Unscramble the following: mdieluess",
+		"answers": "deus miles"
+	},
+	{
+		"games": "Unscramble the following: soedlpsmlendara",
+		"answers": "desmond pallaras"
+	},
+	{
+		"games": "Unscramble the following: etdplryionwe",
+		"answers": "peyton wilder"
+	},
+	{
+		"games": "Unscramble the following: lyneanwwn",
+		"answers": "elwyn wann"
+	},
+	{
+		"games": "Unscramble the following: iovmiunllsla",
+		"answers": "milo sullivan"
+	},
+	{
+		"games": "Unscramble the following: actcasnlnyonti",
+		"answers": "clay constantin"
+	},
+	{
+		"games": "Unscramble the following: etihhreawhet",
+		"answers": "heather white"
+	},
+	{
+		"games": "Decode the following: wrggobqq",
+		"answers": "todd lynn"
+	},
+	{
+		"games": "Decode the following: lprjhqvndoehfn",
+		"answers": "imogen skalbeck"
+	},
+	{
+		"games": "Decode the following: elmrxurvlhu",
+		"answers": "mafeera hostlan"
+	},
+	{
+		"games": "https://i.ibb.co/Qv77Krd/image.png",
+		"answers": "vinnie gevore"
+	},
+	{
+		"games": "https://i.ibb.co/DKTnGnV/image.png",
+		"answers": "wain rohwedder"
+	},
+	{
+		"games": "https://i.ibb.co/vq5JrXh/image.png",
+		"answers": "black as night"
+	},
+	{
+		"games": "https://i.ibb.co/kM3vY1N/image.png",
+		"answers": "catnip shake"
+	}
 ]
