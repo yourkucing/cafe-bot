@@ -21,6 +21,7 @@ module.exports.run = async(client, msg, args) => {
     collector.on('end', collected => {
         if (collected.size == 5) {
             msg.channel.send(`You did not get it! That's 5 tries. You opened an ugly bathroom.`)
+            console.log(collected)
             return
         }
     });
