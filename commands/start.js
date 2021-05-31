@@ -8,7 +8,7 @@ module.exports.run = async(client, msg, args) => {
     msg.channel.send(item.games)
     msg.channel.send(`\n\n**Good luck, you have 5 tries (This counts every message that you send from now until you get the answer right or you run out of tries.)**`)
     const collector = msg.channel.createMessageCollector(
-        m => m.author.id == hooman, {max: 5}
+        m => m.author.id == hooman, {max: 5, time: 1200000}
     );
     collector.on('collect', m => {
         if (m.content.toLowerCase() == item.answers) {
