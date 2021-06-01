@@ -9,6 +9,10 @@ client.commands = new Map();
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setActivity('cafe help', { type: 'STREAMING' });
+    tempchannel = client.channels.cache.get("849144198585778186")
+	tempchannel.messages.fetch("849144591622209577").then(message => {
+        message.react("💎")
+    })
  });
 
  client.on('guildMemberAdd', member => {
