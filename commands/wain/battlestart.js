@@ -28,6 +28,7 @@ module.exports.run = async(client, msg, args) => {
     servant = client.channels.cache.get("849142098045435924")
     catroom = client.channels.cache.get("849143190305112084")
     throne = client.channels.cache.get("849143623592574986")
+    bonus = client.channels.cache.get("849211609591447562")
 
 
     const collector1 = entrance.createMessageCollector(
@@ -264,5 +265,48 @@ module.exports.run = async(client, msg, args) => {
             collector21.stop()
         }
     });
+
+    const collector22 = bonus.createMessageCollector(
+        m => m.author.id == hooman
+    );
+    collector22.on('collect', m => {
+        console.log(m.content)
+        if (m.content.toLowerCase() == answers[21].answer) {
+            bonus.send(answers[21].message)
+            
+            const collector23 = bonus.createMessageCollector(
+                m => m.author.id == hooman
+            );
+            collector23.on('collect', m => {
+                if (m.content.toLowerCase() == answers[22].answer) {
+                    bonus.send(answers[22].message)
+
+                    const collector24 = bonus.createMessageCollector(
+                        m => m.author.id == hooman
+                    );
+                    collector24.on('collect', m => {
+                        if (m.content.toLowerCase() == answers[23].answer) {
+                            bonus.send(answers[23].message)
+
+                            const collector25 = bonus.createMessageCollector(
+                                m => m.author.id == hooman
+                            );
+
+                            collector25.on('collect', m => {
+                                if (m.content.toLowerCase() == answers[24].answer) {
+                                    bonus.send(answers[23].message)
+                                    collector25.stop()
+                                    collector24.stop()
+                                    collector23.stop()
+                                    collector22.stop()
+                                }
+                            })
+                        }
+                    })
+                }
+            })
+
+        }
+    })
 
 }
