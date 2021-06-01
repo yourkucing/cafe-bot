@@ -11,6 +11,18 @@ client.on('ready', () => {
     client.user.setActivity('cafe help', { type: 'STREAMING' });
  });
 
+ client.on('guildMemberAdd', member => {
+    const guild = member.guild;
+    if (guild.id === "848797378722267136" && member.id === "267130234522828801") {
+        client.channels.cache.get("849114718878957579").send(`Hey **${member.displayName}**, welcome to the battlefield. Are you ready to test your physical and mental strength? Start here <#849121069109084220> :sparkles:`);
+        member.roles.add(member.guild.roles.cache.find(x => x.id == "849143729172512799"), "");
+    }
+    else if (guild.id === "848797378722267136") {
+        client.channels.cache.get("849114718878957579").send(`Hey **${member.displayName}**, welcome to the battlefield, Sand Guardian! :sparkles:`);
+        member.roles.add(member.guild.roles.cache.find(x => x.id == "849143653347885076"), "");
+    }
+})
+
  client.on('message', msg => {
 
     var message = msg.content.toLowerCase()
