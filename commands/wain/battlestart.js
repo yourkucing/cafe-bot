@@ -31,21 +31,23 @@ module.exports.run = async(client, msg, args) => {
 
 
     const collector1 = entrance.createMessageCollector(
-        m => m.author.id == hooman, {max: 5, time: 1200000}
+        m => m.author.id == hooman
     );
     collector1.on('collect', m => {
         if (m.content.toLowerCase() == answers[0].answer) {
-            msg.channel.send(bathroom)
-            collector.stop(answers[0].message)
+            msg.channel.send(answers[0].message)
+            birthdayboy.roles.add(tempguild.roles.cache.find(x => x.id == "849153932822708236"), "")
+            collector1.stop()
         }
     });
     const collector2 = hallway.createMessageCollector(
-        m => m.author.id == hooman, {max: 5, time: 1200000}
+        m => m.author.id == hooman
     );
     collector2.on('collect', m => {
         if (m.content.toLowerCase() == answers[0].answer) {
-            msg.channel.send(bathroom)
-            collector.stop(answers[0].message)
+            msg.channel.send(answers[0].message)
+            birthdayboy.roles.add(tempguild.roles.cache.find(x => x.id == "849153972790099968"), "")
+            collector2.stop()
         }
     });
 }
