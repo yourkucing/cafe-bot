@@ -294,7 +294,7 @@ module.exports.run = async(client, msg, args) => {
 
                             collector25.on('collect', m => {
                                 if (m.content.toLowerCase() == answers[24].answer) {
-                                    bonus.send(answers[23].message)
+                                    bonus.send(answers[24].message)
                                     collector25.stop()
                                     collector24.stop()
                                     collector23.stop()
