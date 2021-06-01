@@ -18,7 +18,7 @@ client.on('ready', () => {
         const birthday = message.createReactionCollector(birthdayFilter);
         birthday.on('collect', (reaction, user) => {
 			const birthdayboy = tempguild.members.cache.get(user.id)
-			tempchannel.send(`\`Its - Just that darn notebook. UGH! Well… I guess, maybe it will be nice to see whats in it, right? -\`\n\n<insert video link here>\nReally and truly, from the bottom of our hearts - HAPPY BIRTHDAY WAIN! Thank you for EVERYTHING YOU DO!\n*(I guess the true treasure is… The friends we made along the way? ;) )*`)
+			tempchannel.send(`\`Its - Just that darn notebook. UGH! Well… I guess, maybe it will be nice to see whats in it, right? -\`\n\nhttps://drive.google.com/file/d/14xZMBzyqvsaXtfmEYL79u1R2OhS-edUg/view?usp=sharing\nReally and truly, from the bottom of our hearts - HAPPY BIRTHDAY WAIN! Thank you for EVERYTHING YOU DO!\n*(I guess the true treasure is… The friends we made along the way? ;) )*`)
             birthdayboy.roles.add(tempguild.roles.cache.find(x => x.id == "849211648031981578"), "")
 		})
     })
