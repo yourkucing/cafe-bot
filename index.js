@@ -11,17 +11,24 @@ client.on('ready', () => {
     client.user.setActivity('cafe help', { type: 'STREAMING' });
     tempchannel = client.channels.cache.get("849144198585778186")
 	tempchannel.messages.fetch("849144591622209577").then(message => {
-        message.react("💎")
+        const birthdayFilter = (reaction, user) => {
+			return reaction.emoji.name === '💎' && !user.bot;
+		};
+        const birthday = message.createReactionCollector(birthdayFilter);
+        birthday.on('collect', (reaction, user) => {
+			const birthdayboy = tempguild.members.cache.get(user.id)
+			tempchannel.send(`\`Its - Just that darn notebook. UGH! Well… I guess, maybe it will be nice to see whats in it, right? -\`\n\n<insert video link here>\nReally and truly, from the bottom of our hearts - HAPPY BIRTHDAY WAIN! Thank you for EVERYTHING YOU DO!\n*(I guess the true treasure is… The friends we made along the way? ;) )*`)
+		})
     })
  });
 
  client.on('guildMemberAdd', member => {
     const guild = member.guild;
-    if (guild.id === "848797378722267136" && member.id === "267130234522828801") {
+    if (guild.id === "848797378722267136" && member.id === "753095540329414697") {
         client.channels.cache.get("849114718878957579").send(`Hey **${member.displayName}**, welcome to the battlefield. Are you ready to test your physical and mental strength? Start here <#849121069109084220> :sparkles:`);
         member.roles.add(member.guild.roles.cache.find(x => x.id == "849143729172512799"), "");
     }
-    else if (guild.id === "848797378722267136" & member.id != "267130234522828801") {
+    else if (guild.id === "848797378722267136" && member.id != "753095540329414697") {
         client.channels.cache.get("849114718878957579").send(`Hey **${member.displayName}**, welcome to the battlefield, Sand Guardian! :sparkles:`);
         member.roles.add(member.guild.roles.cache.find(x => x.id == "849143653347885076"), "");
     }
