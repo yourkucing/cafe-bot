@@ -34,8 +34,9 @@ module.exports.run = async(client, msg, args) => {
         m => m.author.id == hooman
     );
     collector1.on('collect', m => {
+        console.log(m.content)
         if (m.content.toLowerCase() == answers[0].answer) {
-            entrance.channel.send(answers[0].message)
+            entrance.send(answers[0].message)
             birthdayboy.roles.add(tempguild.roles.cache.find(x => x.id == "849153932822708236"), "")
             collector1.stop()
         }
@@ -44,8 +45,9 @@ module.exports.run = async(client, msg, args) => {
         m => m.author.id == hooman
     );
     collector2.on('collect', m => {
+        console.log(m.content)
         if (m.content.toLowerCase() == answers[0].answer) {
-            hallway.channel.send(answers[0].message)
+            hallway.send(answers[0].message)
             birthdayboy.roles.add(tempguild.roles.cache.find(x => x.id == "849153972790099968"), "")
             collector2.stop()
         }
