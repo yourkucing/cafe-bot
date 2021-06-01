@@ -157,7 +157,8 @@ module.exports.run = async(client, msg, args) => {
     collector12.on('collect', m => {
         console.log(m.content)
         if (m.content.toLowerCase() == answers[11].answer) {
-            campfire.send(answers[11].message)
+            campfire.send(answers[11].message[0])
+            campfire.send(answers[11].message[1])
             birthdayboy.roles.add(tempguild.roles.cache.find(x => x.id == "849154363984838707"), "")
             collector12.stop()
         }
