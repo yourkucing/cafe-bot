@@ -191,7 +191,8 @@ module.exports.run = async(client, msg, args) => {
     collector15.on('collect', m => {
         console.log(m.content)
         if (m.content.toLowerCase() == answers[14].answer) {
-            bathroom.send(answers[14].message)
+            bathroom.send(answers[14].message[0])
+            bathroom.send(answers[14].message[1])
             birthdayboy.roles.add(tempguild.roles.cache.find(x => x.id == "849154476517752832"), "")
             collector15.stop()
         }
@@ -202,7 +203,8 @@ module.exports.run = async(client, msg, args) => {
     collector16.on('collect', m => {
         console.log(m.content)
         if (m.content.toLowerCase() == answers[15].answer) {
-            pantry.send(answers[15].message)
+            pantry.send(answers[15].message[0])
+            pantry.send(answers[15].message[1])
             birthdayboy.roles.add(tempguild.roles.cache.find(x => x.id == "849154550173532160"), "")
             collector16.stop()
         }
