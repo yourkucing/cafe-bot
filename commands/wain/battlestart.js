@@ -35,7 +35,7 @@ module.exports.run = async(client, msg, args) => {
     );
     collector1.on('collect', m => {
         if (m.content.toLowerCase() == answers[0].answer) {
-            msg.channel.send(answers[0].message)
+            entrance.channel.send(answers[0].message)
             birthdayboy.roles.add(tempguild.roles.cache.find(x => x.id == "849153932822708236"), "")
             collector1.stop()
         }
@@ -45,7 +45,7 @@ module.exports.run = async(client, msg, args) => {
     );
     collector2.on('collect', m => {
         if (m.content.toLowerCase() == answers[0].answer) {
-            msg.channel.send(answers[0].message)
+            hallway.channel.send(answers[0].message)
             birthdayboy.roles.add(tempguild.roles.cache.find(x => x.id == "849153972790099968"), "")
             collector2.stop()
         }
