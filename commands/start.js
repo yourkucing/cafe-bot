@@ -23,7 +23,7 @@ module.exports.run = async(client, msg, args) => {
             return
         }
         else {
-            if (collected.size == 5) {
+            if (collected.size == 3) {
                 msg.channel.send('https://media.discordapp.net/attachments/847825770382229514/850426337154826270/old-dirty-toilet-picture-id523086917.png')
                 return
             }
