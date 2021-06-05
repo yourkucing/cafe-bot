@@ -19,7 +19,9 @@ module.exports.run = async(client, msg, args) => {
         }
     });
     collector.on('end', (collected, reason) => {
+        
         if (reason && reason === item.answers) {
+            collected.delete()
             return
         }
         else {
