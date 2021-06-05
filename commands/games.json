@@ -1,58 +1,46 @@
 [
 	{
-		"games": "Solve this three-digit code (answer in this format: 1 2 3): ░ ░ ░\n\n**Here are some hints:**\n 6 8 2: One number is correct and well placed.\n6 1 4: One number is correct but wrongly placed.\n2 0 6: Two numbers are correct but wrongly placed.\n7 3 8: Nothing is correct.\n7 8 0: One number is correct but wrongly placed.",
-		"answers": "0 4 2"
-	},
-	{
-		"games": "Decode this (it's not case sensitive): 6277799926 4447777 2629999444664\n**Hint:** _Call me on your cellphone_ and I'll tell you.",
-		"answers": "maryam is amazing"
-	},
-    {
-        "games": "David’s parents have three sons: Snap, Crackle, and what’s the name of the third son?",
-        "answers": "david"
-    },
-	{
-		"games": "Unscramble the following: hmaavriycahm",
+		"games": "hmaavriycahm",
 		"answers": "maryam havich"
 	},
 	{
-		"games": "Unscramble the following: mdieluess",
+		"games": "mdieluess",
 		"answers": "deus miles"
 	},
 	{
-		"games": "Unscramble the following: soedlpsmlendara",
+		"games": "soedlpsmlendara",
 		"answers": "desmond pallaras"
 	},
 	{
-		"games": "Unscramble the following: etdplryionwe",
+		"games": "etdplryionwe",
 		"answers": "peyton wilder"
 	},
 	{
-		"games": "Unscramble the following: lyneanwwn",
+		"games": "lyneanwwn",
 		"answers": "elwyn wann"
 	},
 	{
-		"games": "Unscramble the following: iovmiunllsla",
+		"games": "iovmiunllsla",
 		"answers": "milo sullivan"
 	},
 	{
-		"games": "Unscramble the following: actcasnlnyonti",
+		"games": "actcasnlnyonti",
 		"answers": "clay constantin"
 	},
 	{
-		"games": "Unscramble the following: etihhreawhet",
+		"games": "etihhreawhet",
 		"answers": "heather white"
 	},
 	{
-		"games": "Decode the following: wrggobqq",
+		"games": "wrggobqq",
 		"answers": "todd lynn"
 	},
 	{
-		"games": "Decode the following: lprjhqvndoehfn",
+		"games": "lprjhqvndoehfn",
 		"answers": "imogen skalbeck"
 	},
 	{
-		"games": "Decode the following: elmrxurvlhu",
+		"games": "elmrxurvlhu",
 		"answers": "mafeera hostlan"
 	},
 	{
@@ -70,5 +58,9 @@
 	{
 		"games": "https://i.ibb.co/kM3vY1N/image.png",
 		"answers": "catnip shake"
+	},
+	{
+		"games": "Find the letters in the picture to spell out words:\nhttps://media.discordapp.net/attachments/847825795112370186/850428656979279892/107270ec2c8d71ccdc07ac1c90580784.png",
+		"answers": "doom town"
 	}
 ]
