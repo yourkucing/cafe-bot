@@ -51,14 +51,19 @@ client.on('ready', () => {
     if (message.includes('hit it, cafe bot!')) {
         if (msg.author.id == "279101053750870017") {
             msg.channel.send('HAPPY BIRTHDAY TO YOUUUUUU')
-            await sleep(2)
-            msg.channel.send('HAPPY BIRTHDAY TO YOOOooOooOooOOOooo')
-            await sleep(2)
-            msg.channel.send('HAPPY BIRTHDAY TO PEYTON WILDER THE COOLEST BEAN ON THE BLOCK AND THE BEST GUN SHOOTER DUDE MAN')
-            await sleep(2)
-            msg.channel.send('HAPPY BIRTHDAY TO YOUUUUUUUUUUUUUUUUUUUU!')
-            await sleep(2)
-            msg.channel.send('https://acegif.com/wp-content/gif/hapby-cat-16.gif')
+            sleep(2).then( r => {
+                msg.channel.send('HAPPY BIRTHDAY TO YOOOooOooOooOOOooo')
+                sleep(2).then( s => {
+                    msg.channel.send('HAPPY BIRTHDAY TO PEYTON WILDER THE COOLEST BEAN ON THE BLOCK AND THE BEST GUN SHOOTER DUDE MAN')
+                    sleep(2).then(t => {
+                        msg.channel.send('HAPPY BIRTHDAY TO YOUUUUUUUUUUUUUUUUUUUU!')
+                        sleep(2).then(u => {
+                            msg.channel.send('https://acegif.com/wp-content/gif/hapby-cat-16.gif')
+                        })
+                    })
+                })
+            })
+            
         }
     }
     
