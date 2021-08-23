@@ -37,6 +37,9 @@ client.on('ready', () => {
 })
 
  client.on('message', msg => {
+    function sleep(sec) {
+        return new Promise(resolve => setTimeout(resolve, sec*1000));
+    }
 
     var message = msg.content.toLowerCase()
 
@@ -48,9 +51,13 @@ client.on('ready', () => {
     if (message.includes('hit it, cafe bot!')) {
         if (msg.author.id == "279101053750870017") {
             msg.channel.send('HAPPY BIRTHDAY TO YOUUUUUU')
+            await sleep(2)
             msg.channel.send('HAPPY BIRTHDAY TO YOOOooOooOooOOOooo')
+            await sleep(2)
             msg.channel.send('HAPPY BIRTHDAY TO PEYTON WILDER THE COOLEST BEAN ON THE BLOCK AND THE BEST GUN SHOOTER DUDE MAN')
+            await sleep(2)
             msg.channel.send('HAPPY BIRTHDAY TO YOUUUUUUUUUUUUUUUUUUUU!')
+            await sleep(2)
             msg.channel.send('https://acegif.com/wp-content/gif/hapby-cat-16.gif')
         }
     }
