@@ -44,6 +44,16 @@ client.on('ready', () => {
     if (message.includes('hi cafe bot')) {
         msg.channel.send('Greetings ' + msg.author.toString() +'! I hope you\'re having a lovely day!');
     }
+
+    if (message.includes('hit it, cafe bot!')) {
+        if (msg.author.id == "279101053750870017") {
+            msg.channel.send('HAPPY BIRTHDAY TO YOUUUUUU')
+            msg.channel.send('HAPPY BIRTHDAY TO YOOOooOooOooOOOooo')
+            msg.channel.send('HAPPY BIRTHDAY TO PEYTON WILDER THE COOLEST BEAN ON THE BLOCK AND THE BEST GUN SHOOTER DUDE MAN')
+            msg.channel.send('HAPPY BIRTHDAY TO YOUUUUUUUUUUUUUUUUUUUU!')
+            msg.channel.send('https://acegif.com/wp-content/gif/hapby-cat-16.gif')
+        }
+    }
     
     if (!msg.content.toLowerCase().startsWith(prefix) || msg.author.bot) return;
     let args = msg.content.slice(prefix.length).split(new RegExp(/\s+/));
