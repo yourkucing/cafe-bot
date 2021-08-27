@@ -3,6 +3,7 @@ const client = new Discord.Client({disableEveryone: false});
 const prefix = "cafe ";
 const fs = require('fs').promises;
 const path = require('path');
+const rooms = require('./commands/room.json')
 
 client.commands = new Map();
 
@@ -48,24 +49,22 @@ client.on('ready', () => {
         msg.channel.send('Greetings ' + msg.author.toString() +'! I hope you\'re having a lovely day!');
     }
 
-    if (message.includes('hit it, cafe bot!')) {
-        if (msg.author.id == "279101053750870017") {
-            msg.channel.send('HAPPY BIRTHDAY TO YOUUUUUU')
-            sleep(2).then( r => {
-                msg.channel.send('HAPPY BIRTHDAY TO YOOOooOooOooOOOooo')
-                sleep(2).then( s => {
-                    msg.channel.send('HAPPY BIRTHDAY TO PEYTON WILDER THE COOLEST BEAN ON THE BLOCK AND THE BEST GUN SHOOTER DUDE MAN')
-                    sleep(2).then(t => {
-                        msg.channel.send('HAPPY BIRTHDAY TO YOUUUUUUUUUUUUUUUUUUUU!')
-                        sleep(2).then(u => {
-                            msg.channel.send('https://acegif.com/wp-content/gif/hapby-cat-16.gif')
-                        })
-                    })
-                })
-            })
-            
+    if (message == "intas" || message == "intas!" || message == "intas." || message == "*intas*" || message == "**intas**" || message == "\"intas\"") {
+        player = msg.guild.members.cache.get(msg.author.id)
+        for (i in rooms) {
+            if (player.roles.cache.get(rooms[i].room1)) {
+                player.roles.remove(msg.guild.roles.cache.get(rooms[i].room1))
+                player.roles.add(msg.guild.roles.cache.get(rooms[i].room2))
+            }
         }
     }
+    else if (message == "vardis" || message == "vardis!" || message == "vardis." || message == "*vardis*" || message == "**vardis**" || message == "\"vardis\"") {
+
+    }
+
+
+
+
     
     if (!msg.content.toLowerCase().startsWith(prefix) || msg.author.bot) return;
     let args = msg.content.slice(prefix.length).split(new RegExp(/\s+/));
@@ -80,22 +79,7 @@ client.on('ready', () => {
     //-----------------------------------------------------------------------------------------------------------------------------------------
     
      
-     if (msg.content === '@nyrres help' || command === 'help' || command === 'command' || command === 'commands') {
-            const embed = new Discord.MessageEmbed()
-            .setColor('#FF69B4')
-            .setTitle(`Commands`)
-            .setDescription('Thank you for using Nyrres bot!')
-            .addFields(
-            { name: 'Information', value: `ny race - view the different races\nny class - view the different classes`},
-            { name: `Character`, value: `ny whoami - view your character\nny create - create a character\nny delete - delete your character\nny wallet - view your wallet`},
-            { name: `Gameplay`, value: `ny dice - roll the dice using this format [eg. ny dice 2d6 will roll 2 d6 dice]`}
-            )
-            .setFooter(`Created by Maryam#9206`);
-            msg.author.send(embed);
-            msg.channel.send(`Let's move this to your DMs, **${msg.guild.members.cache.get(msg.author.id).displayName}**, shall we?`)
-     }
-     
-     });
+    });
      
      (async function registerCommands(dir = 'commands') {
          let files = await fs.readdir(path.join(__dirname, dir));
