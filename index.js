@@ -50,7 +50,6 @@ client.on('ready', () => {
     }
 
     if (message === "intas" || message === "intas!" || message === "intas." || message === "*intas*" || message === "**intas**" || message === "\"intas\"") {
-        console.log("she said it!")
         player = msg.guild.members.cache.get(msg.author.id)
         if (player.roles.cache.get("880679525669806122")) {
             player.roles.remove(msg.guild.roles.cache.get("880679525669806122"))
@@ -82,7 +81,36 @@ client.on('ready', () => {
         }
     }
     else if (message == "vardis" || message == "vardis!" || message == "vardis." || message == "*vardis*" || message == "**vardis**" || message == "\"vardis\"") {
+        player = msg.guild.members.cache.get(msg.author.id)
 
+        if (player.roles.cache.get("880679579616948285")) {
+            player.roles.remove(msg.guild.roles.cache.get("880679579616948285"))
+            player.roles.add(msg.guild.roles.cache.get("880679525669806122"))
+        }
+        else if (player.roles.cache.get("880679639222190142")) {
+            player.roles.remove(msg.guild.roles.cache.get("880679639222190142"))
+            player.roles.add(msg.guild.roles.cache.get("880679579616948285"))
+        }
+        else if (player.roles.cache.get("880679675146424340")) {
+            player.roles.remove(msg.guild.roles.cache.get("880679675146424340"))
+            player.roles.add(msg.guild.roles.cache.get("880679598747176960"))
+        }
+        else if (player.roles.cache.get("880679525669806122")) {
+            player.roles.remove(msg.guild.roles.cache.get("880679525669806122"))
+            player.roles.add(msg.guild.roles.cache.get("880679621736153118"))
+        }
+        else if (player.roles.cache.get("880679598747176960")) {
+            player.roles.remove(msg.guild.roles.cache.get("880679598747176960"))
+            player.roles.add(msg.guild.roles.cache.get("880679639222190142"))
+        }
+        else if (player.roles.cache.get("880679621736153118")) {
+            player.roles.remove(msg.guild.roles.cache.get("880679621736153118"))
+            player.roles.add(msg.guild.roles.cache.get("880679655961665567"))
+        }
+        else if (player.roles.cache.get("880679655961665567")) {
+            player.roles.remove(msg.guild.roles.cache.get("880679655961665567"))
+            player.roles.add(msg.guild.roles.cache.get("880679675146424340"))
+        }
     }
 
 
