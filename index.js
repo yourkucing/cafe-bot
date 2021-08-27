@@ -53,10 +53,12 @@ client.on('ready', () => {
         console.log("she said it!")
         player = msg.guild.members.cache.get(msg.author.id)
         for (i in rooms) {
+            console.log(rooms[i].room1)
             if (player.roles.cache.get(rooms[i].room1)) {
                 try {
                     player.roles.remove(msg.guild.roles.cache.get(rooms[i].room1))
                     player.roles.add(msg.guild.roles.cache.get(rooms[i].room2))
+                    return
                 }
                 catch(e) {
                     console.log(e)
