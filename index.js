@@ -49,7 +49,8 @@ client.on('ready', () => {
         msg.channel.send('Greetings ' + msg.author.toString() +'! I hope you\'re having a lovely day!');
     }
 
-    if (message == "intas" || message == "intas!" || message == "intas." || message == "*intas*" || message == "**intas**" || message == "\"intas\"") {
+    if (message === "intas" || message === "intas!" || message === "intas." || message === "*intas*" || message === "**intas**" || message === "\"intas\"") {
+        console.log("she said it!")
         player = msg.guild.members.cache.get(msg.author.id)
         for (i in rooms) {
             if (player.roles.cache.get(rooms[i].room1)) {
