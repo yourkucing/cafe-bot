@@ -49,69 +49,71 @@ client.on('ready', () => {
         msg.channel.send('Greetings ' + msg.author.toString() +'! I hope you\'re having a lovely day!');
     }
 
-    if (message === "intas" || message === "intas!" || message === "intas." || message === "*intas*" || message === "**intas**" || message === "\"intas\"") {
-        player = msg.guild.members.cache.get(msg.author.id)
-        if (player.roles.cache.get("880679525669806122")) {
-            player.roles.remove(msg.guild.roles.cache.get("880679525669806122"))
-            player.roles.add(msg.guild.roles.cache.get("880679579616948285"))
+    if (msg.channel.id === "880150667874926612" || msg.channel.id === "880151052735881238" || msg.channel.id === "880151712424411136" || msg.channel.id === "880151760700846140" || msg.channel.id === "880151795056381952" || msg.channel.id === "880151828199784498" || msg.channel.id === "880151864220459059") {
+        if (message === "intas" || message === "intas!" || message === "intas." || message === "*intas*" || message === "**intas**" || message === "\"intas\"") {
+            player = msg.guild.members.cache.get(msg.author.id)
+            if (player.roles.cache.get("880211122278502500")) {
+                player.roles.remove(msg.guild.roles.cache.get("880211122278502500"))
+                player.roles.add(msg.guild.roles.cache.get("880211165945397248"))
+            }
+            else if (player.roles.cache.get("880211165945397248")) {
+                player.roles.remove(msg.guild.roles.cache.get("880211165945397248"))
+                player.roles.add(msg.guild.roles.cache.get("880211219292774541"))
+            }
+            else if (player.roles.cache.get("880211185771872337")) {
+                player.roles.remove(msg.guild.roles.cache.get("880211185771872337"))
+                player.roles.add(msg.guild.roles.cache.get("880211256152313876"))
+            }
+            else if (player.roles.cache.get("880211204675620935")) {
+                player.roles.remove(msg.guild.roles.cache.get("880211204675620935"))
+                player.roles.add(msg.guild.roles.cache.get("880211122278502500"))
+            }
+            else if (player.roles.cache.get("880211219292774541")) {
+                player.roles.remove(msg.guild.roles.cache.get("880211219292774541"))
+                player.roles.add(msg.guild.roles.cache.get("880211185771872337"))
+            }
+            else if (player.roles.cache.get("880211240474009610")) {
+                player.roles.remove(msg.guild.roles.cache.get("880211240474009610"))
+                player.roles.add(msg.guild.roles.cache.get("880211204675620935"))
+            }
+            else if (player.roles.cache.get("880211256152313876")) {
+                player.roles.remove(msg.guild.roles.cache.get("880211256152313876"))
+                player.roles.add(msg.guild.roles.cache.get("880211240474009610"))
+            }
         }
-        else if (player.roles.cache.get("880679579616948285")) {
-            player.roles.remove(msg.guild.roles.cache.get("880679579616948285"))
-            player.roles.add(msg.guild.roles.cache.get("880679639222190142"))
-        }
-        else if (player.roles.cache.get("880679598747176960")) {
-            player.roles.remove(msg.guild.roles.cache.get("880679598747176960"))
-            player.roles.add(msg.guild.roles.cache.get("880679675146424340"))
-        }
-        else if (player.roles.cache.get("880679621736153118")) {
-            player.roles.remove(msg.guild.roles.cache.get("880679621736153118"))
-            player.roles.add(msg.guild.roles.cache.get("880679525669806122"))
-        }
-        else if (player.roles.cache.get("880679639222190142")) {
-            player.roles.remove(msg.guild.roles.cache.get("880679639222190142"))
-            player.roles.add(msg.guild.roles.cache.get("880679598747176960"))
-        }
-        else if (player.roles.cache.get("880679655961665567")) {
-            player.roles.remove(msg.guild.roles.cache.get("880679655961665567"))
-            player.roles.add(msg.guild.roles.cache.get("880679621736153118"))
-        }
-        else if (player.roles.cache.get("880679675146424340")) {
-            player.roles.remove(msg.guild.roles.cache.get("880679675146424340"))
-            player.roles.add(msg.guild.roles.cache.get("880679655961665567"))
+        else if (message == "vardis" || message == "vardis!" || message == "vardis." || message == "*vardis*" || message == "**vardis**" || message == "\"vardis\"") {
+            player = msg.guild.members.cache.get(msg.author.id)
+            if (player.roles.cache.get("880211122278502500")) {
+                player.roles.remove(msg.guild.roles.cache.get("880211122278502500"))
+                player.roles.add(msg.guild.roles.cache.get("880211204675620935"))
+            }
+            else if (player.roles.cache.get("880211165945397248")) {
+                player.roles.remove(msg.guild.roles.cache.get("880211165945397248"))
+                player.roles.add(msg.guild.roles.cache.get("880211122278502500"))
+            }
+            else if (player.roles.cache.get("880211185771872337")) {
+                player.roles.remove(msg.guild.roles.cache.get("880211185771872337"))
+                player.roles.add(msg.guild.roles.cache.get("880211219292774541"))
+            }
+            else if (player.roles.cache.get("880211204675620935")) {
+                player.roles.remove(msg.guild.roles.cache.get("880211204675620935"))
+                player.roles.add(msg.guild.roles.cache.get("880211240474009610"))
+            }
+            else if (player.roles.cache.get("880211219292774541")) {
+                player.roles.remove(msg.guild.roles.cache.get("880211219292774541"))
+                player.roles.add(msg.guild.roles.cache.get("880211165945397248"))
+            }
+            else if (player.roles.cache.get("880211240474009610")) {
+                player.roles.remove(msg.guild.roles.cache.get("880211240474009610"))
+                player.roles.add(msg.guild.roles.cache.get("880211256152313876"))
+            }
+            else if (player.roles.cache.get("880211256152313876")) {
+                player.roles.remove(msg.guild.roles.cache.get("880211256152313876"))
+                player.roles.add(msg.guild.roles.cache.get("880211185771872337"))
+            }
         }
     }
-    else if (message == "vardis" || message == "vardis!" || message == "vardis." || message == "*vardis*" || message == "**vardis**" || message == "\"vardis\"") {
-        player = msg.guild.members.cache.get(msg.author.id)
 
-        if (player.roles.cache.get("880679579616948285")) {
-            player.roles.remove(msg.guild.roles.cache.get("880679579616948285"))
-            player.roles.add(msg.guild.roles.cache.get("880679525669806122"))
-        }
-        else if (player.roles.cache.get("880679639222190142")) {
-            player.roles.remove(msg.guild.roles.cache.get("880679639222190142"))
-            player.roles.add(msg.guild.roles.cache.get("880679579616948285"))
-        }
-        else if (player.roles.cache.get("880679675146424340")) {
-            player.roles.remove(msg.guild.roles.cache.get("880679675146424340"))
-            player.roles.add(msg.guild.roles.cache.get("880679598747176960"))
-        }
-        else if (player.roles.cache.get("880679525669806122")) {
-            player.roles.remove(msg.guild.roles.cache.get("880679525669806122"))
-            player.roles.add(msg.guild.roles.cache.get("880679621736153118"))
-        }
-        else if (player.roles.cache.get("880679598747176960")) {
-            player.roles.remove(msg.guild.roles.cache.get("880679598747176960"))
-            player.roles.add(msg.guild.roles.cache.get("880679639222190142"))
-        }
-        else if (player.roles.cache.get("880679621736153118")) {
-            player.roles.remove(msg.guild.roles.cache.get("880679621736153118"))
-            player.roles.add(msg.guild.roles.cache.get("880679655961665567"))
-        }
-        else if (player.roles.cache.get("880679655961665567")) {
-            player.roles.remove(msg.guild.roles.cache.get("880679655961665567"))
-            player.roles.add(msg.guild.roles.cache.get("880679675146424340"))
-        }
-    }
 
 
 
