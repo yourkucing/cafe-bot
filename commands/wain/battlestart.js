@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
-const answers = require('./answers.json');
+//const answers = require('./answers.json');
 
-module.exports.run = async(client, msg, args) => {
+module.exports.run = async(client, msg, args) => {/* 
     tempguild = msg.guild
     let hooman = msg.author.id
     const birthdayboy = tempguild.members.cache.get(hooman)
@@ -308,5 +308,5 @@ module.exports.run = async(client, msg, args) => {
 
         }
     })
-
+ */
 }
