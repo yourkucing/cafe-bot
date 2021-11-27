@@ -6,22 +6,19 @@ const path = require('path');
 
 client.commands = new Map();
 
+const checkforDate = async() => {
+	day = new Date().getDay()
+	if (day == 0 && new Date().getUTCHours() == 6 && new Date().getUTCMinutes() == 0) {
+		const channel = client.channels.cache.get("810721573375442975")
+        channel.send(`**${Roman()}**`)
+	}
+
+	setTimeout(checkforDate, 1000 * 60)
+}
+
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setActivity('cafe help', { type: 'STREAMING' });
-/*     tempguild = client.guilds.cache.get("848797378722267136")
-    tempchannel = client.channels.cache.get("849144198585778186")
-	tempchannel.messages.fetch("849144591622209577").then(message => {
-        const birthdayFilter = (reaction, user) => {
-			return reaction.emoji.name === '💎' && !user.bot;
-		};
-        const birthday = message.createReactionCollector(birthdayFilter);
-        birthday.on('collect', (reaction, user) => {
-			const birthdayboy = tempguild.members.cache.get(user.id)
-			tempchannel.send(`\`Its - Just that darn notebook. UGH! Well… I guess, maybe it will be nice to see whats in it, right? -\`\n\nhttps://drive.google.com/file/d/14xZMBzyqvsaXtfmEYL79u1R2OhS-edUg/view?usp=sharing\nReally and truly, from the bottom of our hearts - HAPPY BIRTHDAY WAIN! Thank you for EVERYTHING YOU DO!\n*(I guess the true treasure is… The friends we made along the way? ;) )*`)
-            birthdayboy.roles.add(tempguild.roles.cache.find(x => x.id == "849211648031981578"), "")
-		})
-    }) */
  });
 
  client.on('guildMemberAdd', member => {
@@ -157,7 +154,7 @@ client.on('ready', () => {
         }
 
         if (command == "time") {
-            msg.channel.send(Roman())
+            msg.channel.send(`**${Roman()}**`)
         }
 
      
