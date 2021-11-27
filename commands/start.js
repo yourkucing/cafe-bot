@@ -7,13 +7,11 @@ module.exports.run = async(client, msg, args) => {
     const item = games[Math.floor(Math.random() * games.length)]
     msg.channel.send(item.games)
     msg.channel.send(`\n\n**Good luck, you have 3 tries (This counts every message that you send from now until you get the answer right or you run out of tries.)**`)
-    const filter = m => m.author.id == hooman;
-    const collector = msg.channel.createMessageCollector({
-        filter, max: 3}
+    const collector = msg.channel.createMessageCollector(
+        m => m.author.id == hooman, {max: 3}
     );
     collector.on('collect', m => {
         if (m.content.toLowerCase() == item.answers) {
-            m.delete()
             const bathroom = correct[Math.floor(Math.random() * correct.length)]
             msg.channel.send(bathroom)
             collector.stop(item.answers)
