@@ -3,7 +3,6 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 const prefix = "cafe ";
 const fs = require('fs').promises;
 const path = require('path');
-const rooms = require('./commands/room.json')
 
 client.commands = new Map();
 
