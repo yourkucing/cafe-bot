@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const client = new Discord.Client({disableEveryone: false},{intents: ["GUILDS", "GUILD_MESSAGES"]});
+const client = new Discord.Client({disableEveryone: false});
 const prefix = "cafe ";
 const fs = require('fs').promises;
 const path = require('path');
