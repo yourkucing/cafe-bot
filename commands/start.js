@@ -12,7 +12,6 @@ module.exports.run = async(client, msg, args) => {
     );
     collector.on('collect', m => {
         if (m.content.toLowerCase() == item.answers) {
-            m.delete()
             const bathroom = correct[Math.floor(Math.random() * correct.length)]
             msg.channel.send(bathroom)
             collector.stop(item.answers)

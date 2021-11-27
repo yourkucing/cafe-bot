@@ -36,7 +36,7 @@ client.on('ready', () => {
     } */
 })
 
- client.on('message', msg => {
+ client.on('messageCreate', msg => {
     function sleep(sec) {
         return new Promise(resolve => setTimeout(resolve, sec*1000));
     }
