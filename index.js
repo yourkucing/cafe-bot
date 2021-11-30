@@ -8,7 +8,7 @@ client.commands = new Map();
 
 const checkforDate = async() => {
 	day = new Date().getDay()
-	if (day == 0 && new Date().getUTCHours() == 6 && new Date().getUTCMinutes() == 0) {
+	if (day == 1 && new Date().getUTCHours() == 6 && new Date().getUTCMinutes() == 0) {
 		const channel = client.channels.cache.get("810721573375442975")
         channel.send(`**${Roman()}**`)
 	}
@@ -19,6 +19,10 @@ const checkforDate = async() => {
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setActivity('cafe help', { type: 'STREAMING' });
+
+    checkforDate().catch((err) => {
+		console.log(err)
+	})
  });
 
  client.on('guildMemberAdd', member => {
