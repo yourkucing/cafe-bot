@@ -105,7 +105,9 @@ function Roman(){
 
 const checkforDate = async() => {
 	day = new Date().getDay()
+    console.log("not yet")
 	if (day == 1 && new Date().getUTCHours() == 6 && new Date().getUTCMinutes() == 0) {
+        console.log("now!")
 		const channel = client.channels.cache.get("810721573375442975")
         channel.send(`**${Roman()}**`)
 	}
