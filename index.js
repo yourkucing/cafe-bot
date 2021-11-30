@@ -6,6 +6,103 @@ const path = require('path');
 
 client.commands = new Map();
 
+function getNumberOfDays(start, end) {
+    const date1 = new Date(start);
+    const date2 = new Date(end);
+
+    // One day in milliseconds
+    const oneDay = 1000 * 60 * 60 * 24;
+
+    // Calculating the time difference between two dates
+    const diffInTime = date2.getTime() - date1.getTime();
+
+    // Calculating the no. of days between two dates
+    const diffInDays = Math.round(diffInTime / oneDay);
+
+    return diffInDays;
+}
+
+function Roman(){
+    var startWeek = 1; //Today's IG week in GMT timezone
+    var startYear = 1; //Today's IG year in GMT timezone
+    var startDate = '2021,10,25'; //Today's date in GMT timezone
+    //var currentDate = '2021,12,2'; // Use this to check if code works.
+    var c = new Date();
+    var n = c.toUTCString();
+    
+    var s = n.split(" ");
+    
+    var month = s[2];
+    if (month == 'Jan'){t=1};
+    if (month == 'Feb'){t=2};
+    if (month == 'Mar'){t=3};
+    if (month == 'Apr'){t=4};
+    if (month == 'May'){t=5};
+    if (month == 'Jun'){t=6};
+    if (month == 'Jul'){t=7};
+    if (month == 'Aug'){t=8};
+    if (month == 'Sep'){t=9};
+    if (month == 'Oct'){t=10};
+    if (month == 'Nov'){t=11};
+    if (month == 'Dec'){t=12};
+    
+    var currentDate = s[3]+','+t+','+s[1];
+    var currentDay = s[0];
+    
+    var number = getNumberOfDays(startDate,currentDate);
+    
+    if(currentDay=='Mon,'){daynumber = 1;}
+    if(currentDay=='Tue,'){daynumber = 2;}
+    if(currentDay=='Wed,'){daynumber = 3;}
+    if(currentDay=='Thu,'){daynumber = 4;}
+    if(currentDay=='Fri,'){daynumber = 5;}
+    if(currentDay=='Sat,'){daynumber = 6;}
+    if(currentDay=='Sun,'){daynumber = 7;}
+    
+    var days = (daynumber+number)%7;
+    
+    var weekDifference = number/14;
+    var yearDifference = number/168;
+    
+    var week = ((Math.floor(startWeek + weekDifference))%(12))+1;
+    
+    var year = Math.floor(startYear + yearDifference);
+    
+    var month;
+    
+    if (week==1){month='September';
+    }
+    if (week==2){month='October';
+    }
+    if (week==3){month='November';
+    }
+    if (week==4){month='December';
+    }
+    if (week==5){month='January';
+    }
+    if (week==6){month='February';
+    }
+    if (week==7){month='March';
+    }
+    if (week==8){month='April';
+    }
+    if (week==9){month='May';
+    }
+    if (week==10){month='June';
+    }
+    if (week==11){month='July';
+    }
+    if (week==12){month='August';
+    }
+    
+    var d;
+    var RLyear = 1962+Number(year);
+    
+    IGtime = 'IG ' + month + ' '+ RLyear
+    return IGtime;
+    }
+
+
 const checkforDate = async() => {
 	day = new Date().getDay()
 	if (day == 1 && new Date().getUTCHours() == 6 && new Date().getUTCMinutes() == 0) {
@@ -61,108 +158,12 @@ client.on('ready', () => {
     
     //-----------------------------------------------------------------------------------------------------------------------------------------
     
-    function getNumberOfDays(start, end) {
-        const date1 = new Date(start);
-        const date2 = new Date(end);
-    
-        // One day in milliseconds
-        const oneDay = 1000 * 60 * 60 * 24;
-    
-        // Calculating the time difference between two dates
-        const diffInTime = date2.getTime() - date1.getTime();
-    
-        // Calculating the no. of days between two dates
-        const diffInDays = Math.round(diffInTime / oneDay);
-    
-        return diffInDays;
+    if (command == "time") {
+        msg.channel.send(`**${Roman()}**`)
     }
 
-    function Roman(){
-        var startWeek = 1; //Today's IG week in GMT timezone
-        var startYear = 1; //Today's IG year in GMT timezone
-        var startDate = '2021,10,25'; //Today's date in GMT timezone
-        //var currentDate = '2021,12,2'; // Use this to check if code works.
-        var c = new Date();
-        var n = c.toUTCString();
-        
-        var s = n.split(" ");
-        
-        var month = s[2];
-        if (month == 'Jan'){t=1};
-        if (month == 'Feb'){t=2};
-        if (month == 'Mar'){t=3};
-        if (month == 'Apr'){t=4};
-        if (month == 'May'){t=5};
-        if (month == 'Jun'){t=6};
-        if (month == 'Jul'){t=7};
-        if (month == 'Aug'){t=8};
-        if (month == 'Sep'){t=9};
-        if (month == 'Oct'){t=10};
-        if (month == 'Nov'){t=11};
-        if (month == 'Dec'){t=12};
-        
-        var currentDate = s[3]+','+t+','+s[1];
-        var currentDay = s[0];
-        
-        var number = getNumberOfDays(startDate,currentDate);
-        
-        if(currentDay=='Mon,'){daynumber = 1;}
-        if(currentDay=='Tue,'){daynumber = 2;}
-        if(currentDay=='Wed,'){daynumber = 3;}
-        if(currentDay=='Thu,'){daynumber = 4;}
-        if(currentDay=='Fri,'){daynumber = 5;}
-        if(currentDay=='Sat,'){daynumber = 6;}
-        if(currentDay=='Sun,'){daynumber = 7;}
-        
-        var days = (daynumber+number)%7;
-        
-        var weekDifference = number/14;
-        var yearDifference = number/168;
-        
-        var week = ((Math.floor(startWeek + weekDifference))%(12))+1;
-        
-        var year = Math.floor(startYear + yearDifference);
-        
-        var month;
-        
-        if (week==1){month='September';
-        }
-        if (week==2){month='October';
-        }
-        if (week==3){month='November';
-        }
-        if (week==4){month='December';
-        }
-        if (week==5){month='January';
-        }
-        if (week==6){month='February';
-        }
-        if (week==7){month='March';
-        }
-        if (week==8){month='April';
-        }
-        if (week==9){month='May';
-        }
-        if (week==10){month='June';
-        }
-        if (week==11){month='July';
-        }
-        if (week==12){month='August';
-        }
-        
-        var d;
-        var RLyear = 1962+Number(year);
-        
-        IGtime = 'IG ' + month + ' '+ RLyear
-        return IGtime;
-        }
-
-        if (command == "time") {
-            msg.channel.send(`**${Roman()}**`)
-        }
-
-     
-    });
+ 
+});
      
      (async function registerCommands(dir = 'commands') {
          let files = await fs.readdir(path.join(__dirname, dir));
