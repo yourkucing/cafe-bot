@@ -96,15 +96,15 @@ function Roman(){
     }
     
     var d;
-    var RLyear = 1962+Number(year);
+    var RLyear = 1963+Number(year);
     
-    IGtime = 'IG ' + month + ' '+ RLyear
+    IGtime = new Date().toDateString() + ': IG ' + month + ' '+ RLyear
     return IGtime;
     }
 
 
 const checkforDate = async() => {
-	if (new Date().getDay() == 1 && new Date().getUTCHours() == 6 && new Date().getUTCMinutes() == 0) {
+	if (new Date().getDay() == 1 && new Date().getUTCHours() == 15 && new Date().getUTCMinutes() == 10) {
 		const channel = client.channels.cache.get("810721573375442975")
         channel.send(`**${Roman()}**`)
 	}
