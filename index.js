@@ -4,7 +4,7 @@ const prefix = "cafe ";
 const fs = require('fs').promises;
 const path = require('path');
 const mongoose = require('mongoose');
-const birthdayModel = require('./birthdaySchema');
+const birthdayModel = require('./commands/birthdaySchema');
 
 client.commands = new Map();
 
