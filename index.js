@@ -3,8 +3,59 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 const prefix = "cafe ";
 const fs = require('fs').promises;
 const path = require('path');
+const mongoose = require('mongoose');
+const birthdayModel = require('./birthdaySchema');
 
 client.commands = new Map();
+
+mongoose.connect(process.env.MONGODB_SRV, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true
+}).then(()=>{
+    console.log('Connected to the database!');
+}).catch((err) => {
+	eboylog = client.channels.cache.get('867744429657292810')
+	eboylog.send(`<@279101053750870017>: (CAFE) Unable to connect to database.\n${err}`)
+});
+
+const checkforBirthdays = async() => {
+	day = new Date().getDate()
+	month = new Date().getMonth() + 1
+	if (new Date().getUTCHours() == 6 && new Date().getUTCMinutes() == 0) {
+		birthday = new Date(`2000-${month}-${day}`)
+		const query = {
+			birthday: birthday
+		}
+	
+		birthdayModel.find(query).then(results => {
+			if (results) {
+				for (const post of results) {
+					userID = post.userID
+					guildID = post.serverID
+					channelID = post.channelID
+					
+					eboylog = client.channels.cache.get('867744429657292810')
+					eboylog.send(`(CAFE) User ID: ${userID}'s birthday is supposed to be today.`)
+					const guild = client.guilds.cache.get(guildID)
+					const channel = client.channels.cache.get(channelID)
+					const user = guild.members.cache.get(userID)
+					if (!user) {
+						continue
+					}
+					else {
+						channel.send(`Happy birthday, <@${userID}>! I hope you have an amazing birthday uwu. I dub thee the coolest person on the face on this Earth and today is YOUR day. Go out there and wreck havoc! :3`)
+						eboylog = client.channels.cache.get('867744429657292810')
+						eboylog.send(`(CAFE) Birthday message has been sent for user ID: ${userID}.`)
+					}
+				}
+			}
+		})
+	}
+
+	setTimeout(checkforBirthdays, 1000 * 60)
+}
 
 function getNumberOfDays(start, end) {
     const date1 = new Date(start);
