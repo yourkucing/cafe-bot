@@ -16,8 +16,7 @@ mongoose.connect(process.env.MONGODB_SRV, {
 }).then(()=>{
     console.log('Connected to the database!');
 }).catch((err) => {
-	eboylog = client.channels.cache.get('867744429657292810')
-	eboylog.send(`<@279101053750870017>: (CAFE) Unable to connect to database.\n${err}`)
+	console.log(err)
 });
 
 const checkforBirthdays = async() => {
