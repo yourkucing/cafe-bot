@@ -10,9 +10,7 @@ client.commands = new Map();
 
 mongoose.connect(process.env.MONGODB_SRV, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true
+    useUnifiedTopology: true
 }).then(()=>{
     console.log('Connected to the database!');
 }).catch((err) => {
