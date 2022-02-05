@@ -9,7 +9,7 @@ module.exports.run = async(client, msg, args) => {
     if (!args || args.length == 0) {
         birthdaykids = await birthdayModel.find({serverID: server}).sort({birthday: 'asc'})
         if (!birthdaykids || birthdaykids.length == 0) {
-            msg.channel.send(`\`No birthdays have been registered on this server. To do so, please do uwu birthday date month [eg. uwu birthday 17 march]\``)
+            msg.channel.send(`\`No birthdays have been registered on this server. To do so, please do cafe birthday date month [eg. cafe birthday 17 march]\``)
             return
         }
         else {
@@ -111,7 +111,7 @@ module.exports.run = async(client, msg, args) => {
         else {
             birthdayModel.find({serverID: server, userID: hooman}).then(s => {
                 if(s.length != 0) {
-                    msg.channel.send(`Your birthday is already in the system for this server. You can check using \`uwu birthday\`.`)
+                    msg.channel.send(`Your birthday is already in the system for this server. You can check using \`cafe birthday\`.`)
                 }
                 else {
                     date = parseInt(date)
