@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGODB_SRV, {
 const checkforBirthdays = async() => {
 	day = new Date().getDate()
 	month = new Date().getMonth() + 1
-	if (new Date().getUTCHours() == 6 && new Date().getUTCMinutes() == 25) {
+	if (new Date().getUTCHours() == 6 && new Date().getUTCMinutes() == 35) {
 		birthday = new Date(`2000-${month}-${day}`)
 		const query = {
 			birthday: birthday
@@ -36,10 +36,9 @@ const checkforBirthdays = async() => {
 					eboylog = client.channels.cache.get('867744429657292810')
 					eboylog.send(`(CAFE) User ID: ${userID}'s birthday is supposed to be today.`)
 					const guild = client.guilds.cache.get(guildID)
-                    console.log(guild)
 					const channel = client.channels.cache.get(channelID)
-                    console.log(channel)
 					const user = guild.members.cache.get(userID)
+                    console.log(guild.members)
                     console.log(user)
 					if (!user) {
 						continue
