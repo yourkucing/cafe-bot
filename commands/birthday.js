@@ -24,15 +24,15 @@ module.exports.run = async(client, msg, args) => {
                     birthdays = ""
                     for (m in current) {
                         users = msg.guild.members.cache.get(current[m].userID)
-                        console.log(users)
+                        console.log(users.nickname)
                         if (!users) {
-                            console.log(current[m].userID)
                             continue
                         }
                         else {
                             birthdays += `**${++j}.**  **${users.nickname}**: ${current[m].birthday.getDate()} ${current[m].birthday.toLocaleString('default', { month: 'long' })}\n`
                         }
                     }
+                    console.log(birthday)
                     const embed = new MessageEmbed()
                     .setColor('#FF69B4')
                     .setTitle(`Birthdays`)
