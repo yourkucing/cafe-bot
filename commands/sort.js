@@ -3,6 +3,10 @@ const question = require('./questions.json');
 
 module.exports.run = async(client, msg, args) => {
     hooman = msg.author.id
+    a = 0
+    b = 0
+    c = 0
+    d = 0
     msg.channel.send(question[0]).then( message => {
         message.react("❤️")
         message.react("💙")
@@ -12,17 +16,38 @@ module.exports.run = async(client, msg, args) => {
         
         message.awaitReactions({ filter, max: 1, time: 60000, errors: ['time'] })
             .then(collected => {
-                console.log(collected.first())
                 const reaction = collected.first();
         
                 if (reaction.emoji.name === '❤️') {
-                    message.channel.send('You reacted with a red.');
+                    a += 1
                 } else {
-                    message.channel.send('You reacted with a blue.');
+                    b += 1
                 }
+
+                msg.channel.send(question[1]).then(message => {
+                    message.react("❤️")
+                    message.react("💙")
+                    const filter = (reaction, user) => {
+                        return ['❤️', '💙'].includes(reaction.emoji.name) && user.id === hooman;
+                    }
+                    message.awaitReactions({ filter, max: 1, time: 60000, errors: ['time'] })
+                    .then(collected => {
+                        const reaction = collected.first();
+                
+                        if (reaction.emoji.name === '❤️') {
+                            a += 1
+                        } else {
+                            b += 1
+                        }
+                        msg.channel.send(`${a} and ${b}`)
+                    }).catch(collected => {
+                        msg.channel.send('You didnt react.');
+                    })
+
+                })
             })
             .catch(collected => {
-                message.channel.send('You didnt react.');
+                msg.channel.send('You didnt react.');
             });
     })
 
