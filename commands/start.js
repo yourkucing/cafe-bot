@@ -19,6 +19,8 @@ module.exports.run = async(client, msg, args) => {
                 }
             });
             collector.on('end', (collected, reason) => {
+                m1.delete()
+                m2.delete()
                 collected.forEach(msg => {
                     msg.delete();
                   })
@@ -32,8 +34,7 @@ module.exports.run = async(client, msg, args) => {
                     }
                     
                 }
-                m1.delete()
-                m2.delete()
+
             });
         })
     })

@@ -15,13 +15,13 @@ module.exports.run = async(client, msg, args) => {
                 const reaction = collected.first();
         
                 if (reaction.emoji.name === '❤️') {
-                    msg.reply('You reacted with a red.');
+                    msg.channel.send('You reacted with a red.');
                 } else {
-                    msg.reply('You reacted with a blue.');
+                    msg.channel.send('You reacted with a blue.');
                 }
             })
             .catch(collected => {
-                message.reply('You didnt react.');
+                msg.channel.send('You didnt react.');
             });
     })
 
