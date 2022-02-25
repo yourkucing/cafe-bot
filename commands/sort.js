@@ -3,25 +3,26 @@ const question = require('./questions.json');
 
 module.exports.run = async(client, msg, args) => {
     hooman = msg.author.id
-    msg.channel.send(question[0]).then( msg => {
-        msg.react("❤️")
-        msg.react("💙")
+    msg.channel.send(question[0]).then( message => {
+        message.react("❤️")
+        message.react("💙")
         const filter = (reaction, user) => {
             return ['❤️', '💙'].includes(reaction.emoji.name) && user.id === hooman;
         };
         
-        msg.awaitReactions({ filter, max: 1, time: 60000, errors: ['time'] })
+        message.awaitReactions({ filter, max: 1, time: 60000, errors: ['time'] })
             .then(collected => {
+                console.log(collected.first())
                 const reaction = collected.first();
         
                 if (reaction.emoji.name === '❤️') {
-                    msg.channel.send('You reacted with a red.');
+                    message.channel.send('You reacted with a red.');
                 } else {
-                    msg.channel.send('You reacted with a blue.');
+                    message.channel.send('You reacted with a blue.');
                 }
             })
             .catch(collected => {
-                msg.channel.send('You didnt react.');
+                message.channel.send('You didnt react.');
             });
     })
 
