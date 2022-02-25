@@ -28,7 +28,7 @@ module.exports.run = async(client, msg, args) => {
                             continue
                         }
                         else {
-                            birthdays += `**${++j}.**  **${users.displayName}**: ${current[m].birthday.getDate()} ${current[m].birthday.toLocaleString('default', { month: 'long' })}\n`
+                            birthdays += `**${++j}.**  **${users}**: ${current[m].birthday.getDate()} ${current[m].birthday.toLocaleString('default', { month: 'long' })}\n`
                         }
                     }
                     const embed = new MessageEmbed()
