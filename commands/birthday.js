@@ -24,6 +24,7 @@ module.exports.run = async(client, msg, args) => {
                     birthdays = ""
                     for (m in current) {
                         users = msg.guild.members.cache.get(current[m].userID)
+                        console.log(users.username)
                         console.log(users.nickname)
                         if (!users) {
                             continue
