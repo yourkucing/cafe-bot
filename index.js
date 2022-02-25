@@ -176,7 +176,8 @@ client.on('ready', () => {
  client.on('guildMemberRemove', member => {
 	userID = member.id
 	serverID = member.guild.id
-	birthdayModel.deleteOne({serverID: member.guild.id, userID: member.id}).then().catch(e => console.log(e))
+	eboylog = client.channels.cache.get('867744429657292810')
+	birthdayModel.deleteOne({serverID: member.guild.id, userID: member.id}).then().catch(e => eboylog.send(`(CAFE): <@279101053750870017>, unable to delete birthday from database [${userID}].\n${e}`))
 })
 
  client.on('messageCreate', msg => {
