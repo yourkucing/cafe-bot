@@ -32,7 +32,7 @@ module.exports.run = async(client, msg, args) => {
                             birthdays += `**${++j}.**  **${users.nickname}**: ${current[m].birthday.getDate()} ${current[m].birthday.toLocaleString('default', { month: 'long' })}\n`
                         }
                     }
-                    console.log(birthday)
+                    console.log(birthdays)
                     const embed = new MessageEmbed()
                     .setColor('#FF69B4')
                     .setTitle(`Birthdays`)
