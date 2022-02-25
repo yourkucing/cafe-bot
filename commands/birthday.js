@@ -24,7 +24,7 @@ module.exports.run = async(client, msg, args) => {
                     birthdays = ""
                     for (m in current) {
                         users = await msg.guild.members.cache.get(current[m].userID)
-                        if (user.nickname == null) {
+                        if (users.nickname == null) {
                             user = users.username
                         }
                         else {
@@ -69,7 +69,7 @@ module.exports.run = async(client, msg, args) => {
                 .setDescription(`These are all the birthdays of the people in this server.`);
                 for (x in birthdaykids) {
                     users = await msg.guild.members.cache.get(birthdaykids[x].userID)
-                    if (user.nickname == null) {
+                    if (users.nickname == null) {
                         user = users.username
                     }
                     else {
