@@ -3,18 +3,13 @@ const birthdayModel = require('./birthdaySchema')
 const paginationEmbed = require('discordjs-button-pagination');
 
 module.exports.run = async(client, msg, args) => {
-    eboylog = client.channels.cache.get('867744429657292810')
-	author = msg.author
-    guild = client.guilds.cache.get(msg.guild.id)
-    eboylog.send(`**${author.username}** [${author.id}] used the **birthday** command in **${guild}** [${msg.guild.id}].`)
-
     hooman = msg.author.id
     server = msg.guild.id
     months = {january: 01, february: 02, march: 03, april: 04, may: 05, june: 06, july: 07, august: 08, september: 09, october: 10, november: 11, december: 12, jan: 01, feb: 02, mar: 03, apr: 04, jun: 06, jul: 07, aug: 08, sep: 09, oct: 10, nov: 11, dec: 12}
     if (!args || args.length == 0) {
         birthdaykids = await birthdayModel.find({serverID: server}).sort({birthday: 'asc'})
         if (!birthdaykids || birthdaykids.length == 0) {
-            msg.channel.send(`\`No birthdays have been registered on this server. To do so, please do uwu birthday date month [eg. uwu birthday 17 march]\``)
+            msg.channel.send(`\`No birthdays have been registered on this server. To do so, please do cafe birthday date month [eg. cafe birthday 17 march]\``)
             return
         }
         else {
@@ -116,7 +111,7 @@ module.exports.run = async(client, msg, args) => {
         else {
             birthdayModel.find({serverID: server, userID: hooman}).then(s => {
                 if(s.length != 0) {
-                    msg.channel.send(`Your birthday is already in the system for this server. You can check using \`uwu birthday\`.`)
+                    msg.channel.send(`Your birthday is already in the system for this server. You can check using \`cafe birthday\`.`)
                 }
                 else {
                     date = parseInt(date)
