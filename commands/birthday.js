@@ -1,15 +1,20 @@
 const { Client, Intents, MessageEmbed, Permissions, MessageButton } = require('discord.js');
-const birthdayModel = require('./birthdaySchema')
+const birthdayModel = require('../../models/birthdaySchema')
 const paginationEmbed = require('discordjs-button-pagination');
 
 module.exports.run = async(client, msg, args) => {
+    eboylog = client.channels.cache.get('867744429657292810')
+	author = msg.author
+    guild = client.guilds.cache.get(msg.guild.id)
+    eboylog.send(`**${author.username}** [${author.id}] used the **birthday** command in **${guild}** [${msg.guild.id}].`)
+
     hooman = msg.author.id
     server = msg.guild.id
     months = {january: 01, february: 02, march: 03, april: 04, may: 05, june: 06, july: 07, august: 08, september: 09, october: 10, november: 11, december: 12, jan: 01, feb: 02, mar: 03, apr: 04, jun: 06, jul: 07, aug: 08, sep: 09, oct: 10, nov: 11, dec: 12}
     if (!args || args.length == 0) {
         birthdaykids = await birthdayModel.find({serverID: server}).sort({birthday: 'asc'})
         if (!birthdaykids || birthdaykids.length == 0) {
-            msg.channel.send(`\`No birthdays have been registered on this server. To do so, please do cafe birthday date month [eg. cafe birthday 17 march]\``)
+            msg.channel.send(`\`No birthdays have been registered on this server. To do so, please do uwu birthday date month [eg. uwu birthday 17 march]\``)
             return
         }
         else {
@@ -23,18 +28,13 @@ module.exports.run = async(client, msg, args) => {
                     k += 10
                     birthdays = ""
                     for (m in current) {
-                        users = await msg.guild.members.cache.get(current[m].userID)
-                        if (users.nickname === null || users.nickname === undefined) {
-                            user = users.username
-                        }
-                        else {
-                            user = users.username
-                        }
+                        users = msg.guild.members.cache.get(current[m].userID)
                         if (!users) {
+                            console.log(current[m].userID)
                             continue
                         }
                         else {
-                            birthdays += `**${++j}.**  **${user}**: ${current[m].birthday.getDate()} ${current[m].birthday.toLocaleString('default', { month: 'long' })}\n`
+                            birthdays += `**${++j}.**  **${users.nickname}**: ${current[m].birthday.getDate()} ${current[m].birthday.toLocaleString('default', { month: 'long' })}\n`
                         }
                     }
                     const embed = new MessageEmbed()
@@ -68,14 +68,8 @@ module.exports.run = async(client, msg, args) => {
                 .setTitle(`Birthdays`)
                 .setDescription(`These are all the birthdays of the people in this server.`);
                 for (x in birthdaykids) {
-                    users = await msg.guild.members.cache.get(birthdaykids[x].userID)
-                    if (users.nickname === null || users.nickname === undefined) {
-                        user = users.username
-                    }
-                    else {
-                        user = users.username
-                    }
-                    birthdaylist += `**${n}.** **${user}**: ${birthdaykids[x].birthday.getDate()} ${birthdaykids[x].birthday.toLocaleString('default', { month: 'long' })}\n`
+                    users = msg.guild.members.cache.get(birthdaykids[x].userID)
+                    birthdaylist += `**${n}.** **${users.nickname}**: ${birthdaykids[x].birthday.getDate()} ${birthdaykids[x].birthday.toLocaleString('default', { month: 'long' })}\n`
                     n++
                 }
                 embed.addFields({name: `Birthdays`, value: `${birthdaylist}`})
@@ -122,7 +116,7 @@ module.exports.run = async(client, msg, args) => {
         else {
             birthdayModel.find({serverID: server, userID: hooman}).then(s => {
                 if(s.length != 0) {
-                    msg.channel.send(`Your birthday is already in the system for this server. You can check using \`cafe birthday\`.`)
+                    msg.channel.send(`Your birthday is already in the system for this server. You can check using \`uwu birthday\`.`)
                 }
                 else {
                     date = parseInt(date)
