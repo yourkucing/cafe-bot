@@ -21,8 +21,6 @@ module.exports.run = async(client, msg, args) => {
             collector.on('end', (collected, reason) => {
                 collected.forEach(msg => {
                     msg.delete();
-                    m1.delete()
-                    m2.delete()
                   })
                 if (reason && reason === item.answers) {
                     return
@@ -34,6 +32,8 @@ module.exports.run = async(client, msg, args) => {
                     }
                     
                 }
+                m1.delete()
+                m2.delete()
             });
         })
     })
