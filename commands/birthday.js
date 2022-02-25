@@ -23,13 +23,12 @@ module.exports.run = async(client, msg, args) => {
                     k += 10
                     birthdays = ""
                     for (m in current) {
-                        users = msg.guild.members.cache.get(current[m].userID)
+                        users = await msg.guild.members.cache.get(current[m].userID)
                         if (!users) {
-                            console.log(current[m].userID)
                             continue
                         }
                         else {
-                            birthdays += `**${++j}.**  **${users.nickname}**: ${current[m].birthday.getDate()} ${current[m].birthday.toLocaleString('default', { month: 'long' })}\n`
+                            birthdays += `**${++j}.**  **${users.displayName}**: ${current[m].birthday.getDate()} ${current[m].birthday.toLocaleString('default', { month: 'long' })}\n`
                         }
                     }
                     const embed = new MessageEmbed()
@@ -63,8 +62,8 @@ module.exports.run = async(client, msg, args) => {
                 .setTitle(`Birthdays`)
                 .setDescription(`These are all the birthdays of the people in this server.`);
                 for (x in birthdaykids) {
-                    users = msg.guild.members.cache.get(birthdaykids[x].userID)
-                    birthdaylist += `**${n}.** **${users.nickname}**: ${birthdaykids[x].birthday.getDate()} ${birthdaykids[x].birthday.toLocaleString('default', { month: 'long' })}\n`
+                    users = await msg.guild.members.cache.get(birthdaykids[x].userID)
+                    birthdaylist += `**${n}.** **${users.displayName}**: ${birthdaykids[x].birthday.getDate()} ${birthdaykids[x].birthday.toLocaleString('default', { month: 'long' })}\n`
                     n++
                 }
                 embed.addFields({name: `Birthdays`, value: `${birthdaylist}`})
