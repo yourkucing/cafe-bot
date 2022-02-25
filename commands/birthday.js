@@ -1,5 +1,5 @@
 const { Client, Intents, MessageEmbed, Permissions, MessageButton } = require('discord.js');
-const birthdayModel = require('../../models/birthdaySchema')
+const birthdayModel = require('./birthdaySchema')
 const paginationEmbed = require('discordjs-button-pagination');
 
 module.exports.run = async(client, msg, args) => {
