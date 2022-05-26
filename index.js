@@ -184,7 +184,7 @@ client.on('ready', () => {
     function sleep(sec) {
         return new Promise(resolve => setTimeout(resolve, sec*1000));
     }
-
+    
     var message = msg.content.toLowerCase()
 
     if (msg.author.bot) return
