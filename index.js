@@ -5,6 +5,9 @@ const fs = require('fs').promises;
 const path = require('path');
 const mongoose = require('mongoose');
 const birthdayModel = require('./commands/birthdaySchema');
+const channelModel = require('./commands/innsmouth/channelSchema');
+const innsmouthModel = require('./commands/innsmouth/innsmouthSchema');
+const cards = require('./commands/innsmouth/cards.json')
 
 client.commands = new Map();
 
@@ -184,10 +187,28 @@ client.on('ready', () => {
     function sleep(sec) {
         return new Promise(resolve => setTimeout(resolve, sec*1000));
     }
-    
-    var message = msg.content.toLowerCase()
 
     if (msg.author.bot) return
+
+    channelModel.findOne({channelID: msg.channel.id}).then(userexistence => {
+        if (userexistence) {
+            userID = msg.author.id
+            innsmouthModel.findOne({userID: userID}).then(cards => {
+                if (cards) {}
+                else {
+                    //dice = (Math.floor(Math.random() * 100) + 1)
+                    dice = 80
+                    if (dice >= 75) {
+                        const randomCards = cards[0];
+                        msg.channel.send(randomCards);
+                    }
+                }
+            })
+        }
+    })
+
+    var message = msg.content.toLowerCase()
+    
     if (message.includes('hi cafe bot')) {
         msg.channel.send('Greetings ' + msg.author.toString() +'! I hope you\'re having a lovely day!');
     }
