@@ -199,7 +199,7 @@ client.on('ready', () => {
             }
             else {
                 userID = msg.author.id
-                msg.channel.send(cards.answers.every(checkAnswers))
+                msg.channel.send(card.answers.every(checkAnswers))
                 innsmouthModel.findOne({userID: userID}).then(cards => {
                     if (cards) {}
                     else {
