@@ -217,7 +217,6 @@ client.on('ready', () => {
                                         }
                                     });
                                     collector.on('end', (collected, reason) => {
-                                        m1.delete()
                                         m2.delete()
                                         collected.forEach(msg => {
                                             msg.delete();
