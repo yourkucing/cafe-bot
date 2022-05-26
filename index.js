@@ -191,8 +191,14 @@ client.on('ready', () => {
     if (msg.author.bot) return
 
     channelModel.findOne({channelID: msg.channel.id}).then(userexistence => {
+        function checkAnswers(ans) {
+            return ans.answers == msg.content.toLowerCase()
+        }
+
         if (userexistence) {
-            if (msg.content.includes("cafe disable-cards")) {
+            if (msg.content.toLowerCase().includes("cafe disable-cards")) {
+            }
+            else if (cards.answers.every(checkAnswers)) {
             }
             else {
                 userID = msg.author.id
@@ -208,7 +214,7 @@ client.on('ready', () => {
                                     setTimeout(() => m1.delete(), 20000)
                                     const filter = m => m.author.id == userID;
                                     const collector = msg.channel.createMessageCollector(
-                                        {filter, time: 20000}
+                                        {filter, time: 60000}
                                     );
                                     collector.on('collect', m => {
                                         if (m.content.toLowerCase() == randomCards.answers) {
