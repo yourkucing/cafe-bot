@@ -204,21 +204,25 @@ client.on('ready', () => {
                 innsmouthModel.findOne({userID: userID}).then(cards => {
                     if (cards) {}
                     else {
-                        //dice = (Math.floor(Math.random() * 100) + 1)
+                        dice = (Math.floor(Math.random() * 100) + 1)
                         dice = 80
-                        if (dice >= 75) {
+                        if (dice >= 80) {
                             const randomCards = card[0];
                             msg.channel.send(randomCards.games).then( m1 => {
-                                msg.channel.send(`\n\n**You have TEN minutes to give the right answer, and you will only have ONE try. Good luck. You will need it.**`).then( m2 => {
+                                msg.channel.send(`\n\n**This card will self-destruct in 20 seconds. You will have 10 minutes to give the right answer, and you will only have ONE try. Good luck. You will need it.**\n(Ps. if you're not planning on answering, just put in "exit". If not, when everything self-destructs, it will delete the next message you sent after this too.)`).then( m2 => {
                                     setTimeout(() => m1.delete(), 20000)
                                     const filter = m => m.author.id == userID;
                                     const collector = msg.channel.createMessageCollector(
-                                        {filter, time: 60000, max: 1}
+                                        {filter, time: 600000, max: 1}
                                     );
                                     collector.on('collect', m => {
                                         if (m.content.toLowerCase() == randomCards.answers) {
-                                            msg.author.send("https://discord.gg/qsphy3Z8su")
-                                            collector.stop(randomCards.answers)
+                                            innsmouthModel.create({
+                                                userID: userID
+                                            }).then(r => {
+                                                msg.author.send("https://discord.gg/qsphy3Z8su")
+                                                collector.stop(randomCards.answers)
+                                            })
                                         }
                                     });
                                     collector.on('end', (collected, reason) => {
