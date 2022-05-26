@@ -207,7 +207,7 @@ client.on('ready', () => {
                         dice = (Math.floor(Math.random() * 100) + 1)
                         dice = 80
                         if (dice >= 80) {
-                            const randomCards = card[0];
+                            const randomCards = card[Math.floor(Math.random() * card.length)];
                             msg.channel.send(randomCards.games).then( m1 => {
                                 msg.channel.send(`\n\n**This card will self-destruct in 20 seconds. You will have 10 minutes to give the right answer, and you will only have ONE try. Good luck. You will need it.**\n(Ps. if you're not planning on answering, just put in "exit". If not, when everything self-destructs, it will delete the next message you sent after this too.)`).then( m2 => {
                                     setTimeout(() => m1.delete(), 20000)
@@ -220,7 +220,7 @@ client.on('ready', () => {
                                             innsmouthModel.create({
                                                 userID: userID
                                             }).then(r => {
-                                                msg.author.send("https://discord.gg/qsphy3Z8su")
+                                                msg.author.send("Congratulations. The Institute recognizes your talent and skills. Should you choose to accept we welcome you to the TSI. Adventure, research and Death awaits.\n\nhttps://discord.gg/qsphy3Z8su")
                                                 collector.stop(randomCards.answers)
                                             })
                                         }
