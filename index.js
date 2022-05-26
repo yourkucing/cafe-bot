@@ -199,7 +199,7 @@ client.on('ready', () => {
                     //dice = (Math.floor(Math.random() * 100) + 1)
                     dice = 80
                     if (dice >= 75) {
-                        const randomCards = cards[0];
+                        const randomCards = cards[1];
                         msg.channel.send(randomCards);
                     }
                 }
