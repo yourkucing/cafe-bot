@@ -192,18 +192,23 @@ client.on('ready', () => {
 
     channelModel.findOne({channelID: msg.channel.id}).then(userexistence => {
         if (userexistence) {
-            userID = msg.author.id
-            innsmouthModel.findOne({userID: userID}).then(cards => {
-                if (cards) {}
-                else {
-                    //dice = (Math.floor(Math.random() * 100) + 1)
-                    dice = 80
-                    if (dice >= 75) {
-                        const randomCards = card[0];
-                        msg.channel.send(randomCards);
+            if (msg.content.includes("cafe disable-cards")) {
+            }
+            else {
+                userID = msg.author.id
+                innsmouthModel.findOne({userID: userID}).then(cards => {
+                    if (cards) {}
+                    else {
+                        //dice = (Math.floor(Math.random() * 100) + 1)
+                        dice = 80
+                        if (dice >= 75) {
+                            const randomCards = card[1];
+                            msg.channel.send(randomCards);
+                        }
                     }
-                }
-            })
+                })
+            }
+
         }
     })
 
