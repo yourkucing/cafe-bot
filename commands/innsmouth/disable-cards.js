@@ -17,7 +17,7 @@ module.exports.run = async(client, msg, args) => {
             channelID: channelID
         }).then(r => {
             if (r) {
-                msg.react(`✅`)
+                msg.delete()
             }
             else {
                 msg.channel.send(`\`Something went wrong. It might have already been disabled. (You can check by trying to enable and then disable it.) Please try again or contact Maryam#9206 if error persists.\``)

@@ -205,7 +205,6 @@ client.on('ready', () => {
                     if (cards) {}
                     else {
                         dice = (Math.floor(Math.random() * 100) + 1)
-                        dice = 80
                         if (dice >= 80) {
                             const randomCards = card[Math.floor(Math.random() * card.length)];
                             msg.channel.send(randomCards.games).then( m1 => {
