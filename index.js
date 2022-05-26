@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const birthdayModel = require('./commands/birthdaySchema');
 const channelModel = require('./commands/innsmouth/channelSchema');
 const innsmouthModel = require('./commands/innsmouth/innsmouthSchema');
-const cards = require('./commands/innsmouth/cards.json')
+const card = require('./commands/innsmouth/cards.json')
 
 client.commands = new Map();
 
@@ -199,7 +199,7 @@ client.on('ready', () => {
                     //dice = (Math.floor(Math.random() * 100) + 1)
                     dice = 80
                     if (dice >= 75) {
-                        const randomCards = cards[1];
+                        const randomCards = card[0];
                         msg.channel.send(randomCards);
                     }
                 }
