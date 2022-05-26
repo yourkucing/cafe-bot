@@ -194,14 +194,12 @@ client.on('ready', () => {
         function checkAnswers(ans) {
             return ans.answers == msg.content.toLowerCase()
         }
-
         if (userexistence) {
             if (msg.content.toLowerCase().includes("cafe disable-cards")) {
             }
-            else if (cards.answers.every(checkAnswers)) {
-            }
             else {
                 userID = msg.author.id
+                msg.channel.send(cards.answers.every(checkAnswers))
                 innsmouthModel.findOne({userID: userID}).then(cards => {
                     if (cards) {}
                     else {
