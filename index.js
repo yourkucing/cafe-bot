@@ -197,11 +197,9 @@ client.on('ready', () => {
             else {
                 for (let x in card) {
                     if (msg.content.toLowerCase() == card[x].answers) {
-                        msg.channel.send("yes")
                         return
                     }
                 }
-                msg.channel.send("no")
                 userID = msg.author.id
                 innsmouthModel.findOne({userID: userID}).then(cards => {
                     if (cards) {}
@@ -215,7 +213,7 @@ client.on('ready', () => {
                                     setTimeout(() => m1.delete(), 20000)
                                     const filter = m => m.author.id == userID;
                                     const collector = msg.channel.createMessageCollector(
-                                        {filter, time: 60000}
+                                        {filter, time: 60000, max: 1}
                                     );
                                     collector.on('collect', m => {
                                         if (m.content.toLowerCase() == randomCards.answers) {
@@ -228,6 +226,7 @@ client.on('ready', () => {
                                         collected.forEach(msg => {
                                             msg.delete();
                                           })
+                                        
                                     });
                                 })
                             })
