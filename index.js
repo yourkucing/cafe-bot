@@ -203,7 +203,28 @@ client.on('ready', () => {
                         dice = 80
                         if (dice >= 75) {
                             const randomCards = card[0];
-                            msg.channel.send(randomCards.games);
+                            msg.channel.send(randomCards.games).then( m1 => {
+                                msg.channel.send(`\n\n**You have TEN minutes to give the right answer, and you will only have ONE try. Good luck. You will need it.**`).then( m2 => {
+                                    setTimeout(() => m1.delete(), 20000)
+                                    const filter = m => m.author.id == userID;
+                                    const collector = msg.channel.createMessageCollector(
+                                        {filter, time: 20000}
+                                    );
+                                    collector.on('collect', m => {
+                                        if (m.content.toLowerCase() == randomCards.answers) {
+                                            msg.author.send("https://discord.gg/qsphy3Z8su")
+                                            collector.stop(randomCards.answers)
+                                        }
+                                    });
+                                    collector.on('end', (collected, reason) => {
+                                        m1.delete()
+                                        m2.delete()
+                                        collected.forEach(msg => {
+                                            msg.delete();
+                                          })
+                                    });
+                                })
+                            })
                         }
                     }
                 })
