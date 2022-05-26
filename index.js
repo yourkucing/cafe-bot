@@ -191,15 +191,18 @@ client.on('ready', () => {
     if (msg.author.bot) return
 
     channelModel.findOne({channelID: msg.channel.id}).then(userexistence => {
-        function checkAnswers(ans) {
-            return ans.answers == msg.content.toLowerCase()
-        }
         if (userexistence) {
             if (msg.content.toLowerCase().includes("cafe disable-cards")) {
             }
             else {
+                for (let x in card) {
+                    if (msg.content.toLowerCase() == card[x].answers) {
+                        msg.channel.send("yes")
+                        return
+                    }
+                }
+                msg.channel.send("no")
                 userID = msg.author.id
-                msg.channel.send(card.answers.every(checkAnswers))
                 innsmouthModel.findOne({userID: userID}).then(cards => {
                     if (cards) {}
                     else {
