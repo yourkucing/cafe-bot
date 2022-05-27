@@ -10,20 +10,6 @@ const innsmouthModel = require('./commands/innsmouth/innsmouthSchema');
 const card = require('./commands/innsmouth/cards.json')
 const ballroom = require('./commands/wain/ballroom.json')
 
-winecellarID = "979258357309382759"
-garageID = "979258754526744586"
-loungeID = "979258451089850388"
-libraryID = "979258595092869242"
-diningroomID = "979258638218715168"
-conservatoryID = "979258678844747836"
-kitchenID = "979258836416348170"
-billiardroomID = "979258920117886976"
-ballroomID = "979258946206445588"
-thestudyID = "979259110841278464"
-servantsquartersID = "979258524834099210"
-childhoodbedroomID = "979258799800074270"
-guestbedroomID = "979259001281867788"
-
 client.commands = new Map();
 
 mongoose.connect(process.env.MONGODB_SRV, {
@@ -259,6 +245,20 @@ client.on('ready', () => {
     var message = msg.content.toLowerCase()
 
     if (msg.guild.id == "979221828876791839") {
+        winecellarID = "979258357309382759"
+        garageID = "979258754526744586"
+        loungeID = "979258451089850388"
+        libraryID = "979258595092869242"
+        diningroomID = "979258638218715168"
+        conservatoryID = "979258678844747836"
+        kitchenID = "979258836416348170"
+        billiardroomID = "979258920117886976"
+        ballroomID = "979258946206445588"
+        thestudyID = "979259110841278464"
+        servantsquartersID = "979258524834099210"
+        childhoodbedroomID = "979258799800074270"
+        guestbedroomID = "979259001281867788"
+
         if (msg.channel.id == winecellarID) {
 
         }
@@ -286,7 +286,7 @@ client.on('ready', () => {
         if (msg.channel.id == ballroomID) {
             for (let x in ballroom) {
                 if (message == ballroom[x].question) {
-                    ballroomchannel = msg.guild.channels.cache.get("979258946206445588")
+                    ballroomchannel = msg.guild.channels.cache.get(ballroomID)
                     ballroomchannel.send(ballroom[x].answer)
                 }
             }
