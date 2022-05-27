@@ -8,6 +8,21 @@ const birthdayModel = require('./commands/birthdaySchema');
 const channelModel = require('./commands/innsmouth/channelSchema');
 const innsmouthModel = require('./commands/innsmouth/innsmouthSchema');
 const card = require('./commands/innsmouth/cards.json')
+const ballroom = require('./commands/wain/ballroom.json')
+
+winecellarID = "979258357309382759"
+garageID = "979258754526744586"
+loungeID = "979258451089850388"
+libraryID = "979258595092869242"
+diningroomID = "979258638218715168"
+conservatoryID = "979258678844747836"
+kitchenID = "979258836416348170"
+billiardroomID = "979258920117886976"
+ballroomID = "979258946206445588"
+thestudyID = "979259110841278464"
+servantsquartersID = "979258524834099210"
+childhoodbedroomID = "979258799800074270"
+guestbedroomID = "979259001281867788"
 
 client.commands = new Map();
 
@@ -242,6 +257,53 @@ client.on('ready', () => {
     })
 
     var message = msg.content.toLowerCase()
+
+    if (msg.guild.id == "979221828876791839") {
+        if (msg.channel.id == winecellarID) {
+
+        }
+        if (msg.channel.id == garageID) {
+
+        }
+        if (msg.channel.id == loungeID) {
+
+        }
+        if (msg.channel.id == libraryID) {
+
+        }
+        if (msg.channel.id == diningroomID) {
+
+        }
+        if (msg.channel.id == conservatoryID) {
+
+        }
+        if (msg.channel.id == kitchenID) {
+
+        }
+        if (msg.channel.id == billiardroomID) {
+
+        }
+        if (msg.channel.id == ballroomID) {
+            for (let x in ballroom) {
+                if (message == ballroom[x].question) {
+                    ballroomchannel = msg.guild.channels.cache.get("979258946206445588")
+                    ballroomchannel.send(ballroom[x].answer)
+                }
+            }
+        }
+        if (msg.channel.id == thestudyID) {
+
+        }
+        if (msg.channel.id == servantsquartersID) {
+
+        }
+        if (msg.channel.id == childhoodbedroomID) {
+
+        }
+        if (msg.channel.id == guestbedroomID) {
+
+        }
+    }
     
     if (message.includes('hi cafe bot')) {
         msg.channel.send('Greetings ' + msg.author.toString() +'! I hope you\'re having a lovely day!');
