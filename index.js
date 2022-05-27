@@ -285,9 +285,8 @@ client.on('ready', () => {
         }
         if (msg.channel.id == ballroomID) {
             for (let x in ballroom) {
-                if (message == ballroom[x].question) {
-                    ballroomchannel = msg.guild.channels.cache.get(ballroomID)
-                    ballroomchannel.send(ballroom[x].answer)
+                if (message.includes(ballroom[x].question)) {
+                    msg.channel.send(ballroom[x].answer)
                 }
             }
         }
