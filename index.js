@@ -9,6 +9,17 @@ const channelModel = require('./commands/innsmouth/channelSchema');
 const innsmouthModel = require('./commands/innsmouth/innsmouthSchema');
 const card = require('./commands/innsmouth/cards.json')
 const ballroom = require('./commands/wain/ballroom.json')
+const billiardroom = require('./commands/wain/billiardroom.json')
+const childhoodbedroom = require('./commands/wain/childhoodbedroom.json')
+const conservatory = require('./commands/wain/conservatory.json')
+const diningroom = require('./commands/wain/diningroom.json')
+const garage = require('./commands/wain/garage.json')
+const guestbedroom = require('./commands/wain/guestbedroom.json')
+const kitchen = require('./commands/wain/kitchen.json')
+const library = require('./commands/wain/library.json')
+const lounge = require('./commands/wain/lounge.json')
+const servantsquarters = require('./commands/wain/servantsquarters.json')
+const winecellar = require('./commands/wain/winecellar.json')
 
 client.commands = new Map();
 
@@ -177,6 +188,15 @@ client.on('ready', () => {
 	})
  });
 
+ client.on('guildMemberAdd', member => {
+     userID = member.id
+     serverID = member.guild.id
+     if (userID == "267130234522828801" && serverID == "979221828876791839") {
+        const detectiverole = member.guild.roles.cache.get('979263010461855774')
+        member.roles.add(detectiverole.id)
+     }
+ })
+
  client.on('guildMemberRemove', member => {
 	userID = member.id
 	serverID = member.guild.id
@@ -260,28 +280,60 @@ client.on('ready', () => {
         guestbedroomID = "979259001281867788"
 
         if (msg.channel.id == winecellarID) {
-
+            for (let x in winecellar) {
+                if (message.includes(winecellar[x].question)) {
+                    msg.channel.send(winecellar[x].answer)
+                }
+            }
         }
         if (msg.channel.id == garageID) {
-
+            for (let x in garage) {
+                if (message.includes(garage[x].question)) {
+                    msg.channel.send(garage[x].answer)
+                }
+            }
         }
         if (msg.channel.id == loungeID) {
-
+            for (let x in lounge) {
+                if (message.includes(lounge[x].question)) {
+                    msg.channel.send(lounge[x].answer)
+                }
+            }
         }
         if (msg.channel.id == libraryID) {
-
+            for (let x in library) {
+                if (message.includes(library[x].question)) {
+                    msg.channel.send(library[x].answer)
+                }
+            }
         }
         if (msg.channel.id == diningroomID) {
-
+            for (let x in diningroom) {
+                if (message.includes(diningroom[x].question)) {
+                    msg.channel.send(diningroom[x].answer)
+                }
+            }
         }
         if (msg.channel.id == conservatoryID) {
-
+            for (let x in conservatory) {
+                if (message.includes(conservatory[x].question)) {
+                    msg.channel.send(conservatory[x].answer)
+                }
+            }
         }
         if (msg.channel.id == kitchenID) {
-
+            for (let x in kitchen) {
+                if (message.includes(kitchen[x].question)) {
+                    msg.channel.send(kitchen[x].answer)
+                }
+            }
         }
         if (msg.channel.id == billiardroomID) {
-
+            for (let x in billiardroom) {
+                if (message.includes(billiardroom[x].question)) {
+                    msg.channel.send(billiardroom[x].answer)
+                }
+            }
         }
         if (msg.channel.id == ballroomID) {
             for (let x in ballroom) {
@@ -294,13 +346,25 @@ client.on('ready', () => {
 
         }
         if (msg.channel.id == servantsquartersID) {
-
+            for (let x in servantsquarters) {
+                if (message.includes(servantsquarters[x].question)) {
+                    msg.channel.send(servantsquarters[x].answer)
+                }
+            }
         }
         if (msg.channel.id == childhoodbedroomID) {
-
+            for (let x in childhoodbedroom) {
+                if (message.includes(childhoodbedroom[x].question)) {
+                    msg.channel.send(childhoodbedroom[x].answer)
+                }
+            }
         }
         if (msg.channel.id == guestbedroomID) {
-
+            for (let x in guestbedroom) {
+                if (message.includes(guestbedroom[x].question)) {
+                    msg.channel.send(guestbedroom[x].answer)
+                }
+            }
         }
     }
     
