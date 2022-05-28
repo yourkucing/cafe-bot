@@ -294,7 +294,7 @@ client.on('ready', () => {
                         }
                     },
                     {
-                        returnDocument: after
+                        returnDocument: "after"
                     }).then(r => {
                         if (r) {
                             console.log(r)
