@@ -280,8 +280,6 @@ client.on('ready', () => {
         childhoodbedroomID = "979258799800074270"
         guestbedroomID = "979259001281867788"
 
-        var k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12 = 0
-
         if (msg.channel.id == winecellarID) {
             for (let x in winecellar) {
                 if (message.includes(winecellar[x].question)) {
@@ -297,7 +295,6 @@ client.on('ready', () => {
                         returnDocument: "after"
                     }).then(r => {
                         if (r) {
-                            console.log(r)
                             if (r.num == 3) {
                                 msg.channel.send("HERE'S YOUR CHALLENGE MUAHAHAHA")
                                 countingModel.findOneAndUpdate({name: "k1"},
@@ -317,7 +314,29 @@ client.on('ready', () => {
             for (let x in garage) {
                 if (message.includes(garage[x].question)) {
                     msg.channel.send(garage[x].answer)
-                    k2 += 1
+                    countingModel.findOneAndUpdate({name: "k2"},
+                    {
+                        $inc:
+                        {
+                            num: 1
+                        }
+                    },
+                    {
+                        returnDocument: "after"
+                    }).then(r => {
+                        if (r) {
+                            if (r.num == 3) {
+                                msg.channel.send("HERE'S YOUR CHALLENGE MUAHAHAHA")
+                                countingModel.findOneAndUpdate({name: "k2"},
+                                {
+                                    $set:
+                                    {
+                                        num: 0
+                                    }
+                                }).then()
+                            }
+                        }
+                    })
                 }
             }
         }
@@ -325,7 +344,29 @@ client.on('ready', () => {
             for (let x in lounge) {
                 if (message.includes(lounge[x].question)) {
                     msg.channel.send(lounge[x].answer)
-                    k3 += 1
+                    countingModel.findOneAndUpdate({name: "k3"},
+                    {
+                        $inc:
+                        {
+                            num: 1
+                        }
+                    },
+                    {
+                        returnDocument: "after"
+                    }).then(r => {
+                        if (r) {
+                            if (r.num == 3) {
+                                msg.channel.send("HERE'S YOUR CHALLENGE MUAHAHAHA")
+                                countingModel.findOneAndUpdate({name: "k3"},
+                                {
+                                    $set:
+                                    {
+                                        num: 0
+                                    }
+                                }).then()
+                            }
+                        }
+                    })
                 }
             }
         }
@@ -333,7 +374,29 @@ client.on('ready', () => {
             for (let x in library) {
                 if (message.includes(library[x].question)) {
                     msg.channel.send(library[x].answer)
-                    k4 += 1
+                    countingModel.findOneAndUpdate({name: "k4"},
+                    {
+                        $inc:
+                        {
+                            num: 1
+                        }
+                    },
+                    {
+                        returnDocument: "after"
+                    }).then(r => {
+                        if (r) {
+                            if (r.num == 3) {
+                                msg.channel.send("HERE'S YOUR CHALLENGE MUAHAHAHA")
+                                countingModel.findOneAndUpdate({name: "k4"},
+                                {
+                                    $set:
+                                    {
+                                        num: 0
+                                    }
+                                }).then()
+                            }
+                        }
+                    })
                 }
             }
         }
@@ -341,7 +404,29 @@ client.on('ready', () => {
             for (let x in diningroom) {
                 if (message.includes(diningroom[x].question)) {
                     msg.channel.send(diningroom[x].answer)
-                    k5 += 1
+                    countingModel.findOneAndUpdate({name: "k5"},
+                    {
+                        $inc:
+                        {
+                            num: 1
+                        }
+                    },
+                    {
+                        returnDocument: "after"
+                    }).then(r => {
+                        if (r) {
+                            if (r.num == 3) {
+                                msg.channel.send("HERE'S YOUR CHALLENGE MUAHAHAHA")
+                                countingModel.findOneAndUpdate({name: "k5"},
+                                {
+                                    $set:
+                                    {
+                                        num: 0
+                                    }
+                                }).then()
+                            }
+                        }
+                    })
                 }
             }
         }
@@ -349,7 +434,29 @@ client.on('ready', () => {
             for (let x in conservatory) {
                 if (message.includes(conservatory[x].question)) {
                     msg.channel.send(conservatory[x].answer)
-                    k6 += 1
+                    countingModel.findOneAndUpdate({name: "k6"},
+                    {
+                        $inc:
+                        {
+                            num: 1
+                        }
+                    },
+                    {
+                        returnDocument: "after"
+                    }).then(r => {
+                        if (r) {
+                            if (r.num == 3) {
+                                msg.channel.send("HERE'S YOUR CHALLENGE MUAHAHAHA")
+                                countingModel.findOneAndUpdate({name: "k6"},
+                                {
+                                    $set:
+                                    {
+                                        num: 0
+                                    }
+                                }).then()
+                            }
+                        }
+                    })
                 }
             }
         }
@@ -357,7 +464,29 @@ client.on('ready', () => {
             for (let x in kitchen) {
                 if (message.includes(kitchen[x].question)) {
                     msg.channel.send(kitchen[x].answer)
-                    k7 += 1
+                    countingModel.findOneAndUpdate({name: "k7"},
+                    {
+                        $inc:
+                        {
+                            num: 1
+                        }
+                    },
+                    {
+                        returnDocument: "after"
+                    }).then(r => {
+                        if (r) {
+                            if (r.num == 3) {
+                                msg.channel.send("HERE'S YOUR CHALLENGE MUAHAHAHA")
+                                countingModel.findOneAndUpdate({name: "k7"},
+                                {
+                                    $set:
+                                    {
+                                        num: 0
+                                    }
+                                }).then()
+                            }
+                        }
+                    })
                 }
             }
         }
@@ -365,7 +494,29 @@ client.on('ready', () => {
             for (let x in billiardroom) {
                 if (message.includes(billiardroom[x].question)) {
                     msg.channel.send(billiardroom[x].answer)
-                    k8 += 1
+                    countingModel.findOneAndUpdate({name: "k8"},
+                    {
+                        $inc:
+                        {
+                            num: 1
+                        }
+                    },
+                    {
+                        returnDocument: "after"
+                    }).then(r => {
+                        if (r) {
+                            if (r.num == 3) {
+                                msg.channel.send("HERE'S YOUR CHALLENGE MUAHAHAHA")
+                                countingModel.findOneAndUpdate({name: "k8"},
+                                {
+                                    $set:
+                                    {
+                                        num: 0
+                                    }
+                                }).then()
+                            }
+                        }
+                    })
                 }
             }
         }
@@ -373,18 +524,75 @@ client.on('ready', () => {
             for (let x in ballroom) {
                 if (message.includes(ballroom[x].question)) {
                     msg.channel.send(ballroom[x].answer)
-                    k9 += 1
+                    countingModel.findOneAndUpdate({name: "k9"},
+                    {
+                        $inc:
+                        {
+                            num: 1
+                        }
+                    },
+                    {
+                        returnDocument: "after"
+                    }).then(r => {
+                        if (r) {
+                            if (r.num == 3) {
+                                msg.channel.send("HERE'S YOUR CHALLENGE MUAHAHAHA")
+                                countingModel.findOneAndUpdate({name: "k9"},
+                                {
+                                    $set:
+                                    {
+                                        num: 0
+                                    }
+                                }).then()
+                            }
+                        }
+                    })
                 }
             }
         }
         if (msg.channel.id == thestudyID) {
-
+            if (message != "answer") {
+                msg.channel.send("OPE THAT'S WRONG. UNFORTUNATELY YOU HAVE TO RESTART. BYEBYE. This will self-destruct in 5 seconds.")
+                sleep(5).then(r => {
+                    //msg.author.roles.set([])
+                    //.then(member => {
+                        //member.roles.add(msg.guild.roles.cache.get('979263010461855774'))
+                        msg.guild.channels.cache.get(ballroomID).messages.fetch({limit: 99}).then(m => {
+                            msg.guild.channels.cache.get(ballroomID).bulkDelete(messages)
+                            msg.guild.channels.cache.get(ballroomID).send(`Soft music fills the large space of the ballroom, beautifully-decorated for dancing that may have occurred had not been for the disaster that followed dinner the previous night before. Over the music is the faint clicking of heels as a lone figure spins herself around in an elegant, straw-yellow dress that swished on the polished floor. Her face is concealed by a wide-brimmed hat, but the scuffle of shoes by the entrance is enough to alert the woman. She turns toward the door, face initially scrunched into a frown, but her features quickly shift into curiosity. From the front, the detective is able to note the string of pearls and matching earrings that the woman is showing off, and she’s even equipped with frilled gloves to complete the ensemble.`)
+                        })
+                    })
+                    //.catch(console.error);
+                //})
+            }
         }
         if (msg.channel.id == servantsquartersID) {
             for (let x in servantsquarters) {
                 if (message.includes(servantsquarters[x].question)) {
                     msg.channel.send(servantsquarters[x].answer)
-                    k10 += 1
+                    countingModel.findOneAndUpdate({name: "k10"},
+                    {
+                        $inc:
+                        {
+                            num: 1
+                        }
+                    },
+                    {
+                        returnDocument: "after"
+                    }).then(r => {
+                        if (r) {
+                            if (r.num == 3) {
+                                msg.channel.send("HERE'S YOUR CHALLENGE MUAHAHAHA")
+                                countingModel.findOneAndUpdate({name: "k10"},
+                                {
+                                    $set:
+                                    {
+                                        num: 0
+                                    }
+                                }).then()
+                            }
+                        }
+                    })
                 }
             }
         }
@@ -392,7 +600,29 @@ client.on('ready', () => {
             for (let x in childhoodbedroom) {
                 if (message.includes(childhoodbedroom[x].question)) {
                     msg.channel.send(childhoodbedroom[x].answer)
-                    k11 += 1
+                    countingModel.findOneAndUpdate({name: "k11"},
+                    {
+                        $inc:
+                        {
+                            num: 1
+                        }
+                    },
+                    {
+                        returnDocument: "after"
+                    }).then(r => {
+                        if (r) {
+                            if (r.num == 3) {
+                                msg.channel.send("HERE'S YOUR CHALLENGE MUAHAHAHA")
+                                countingModel.findOneAndUpdate({name: "k11"},
+                                {
+                                    $set:
+                                    {
+                                        num: 0
+                                    }
+                                }).then()
+                            }
+                        }
+                    })
                 }
             }
         }
@@ -400,7 +630,29 @@ client.on('ready', () => {
             for (let x in guestbedroom) {
                 if (message.includes(guestbedroom[x].question)) {
                     msg.channel.send(guestbedroom[x].answer)
-                    k12 += 1
+                    countingModel.findOneAndUpdate({name: "k12"},
+                    {
+                        $inc:
+                        {
+                            num: 1
+                        }
+                    },
+                    {
+                        returnDocument: "after"
+                    }).then(r => {
+                        if (r) {
+                            if (r.num == 3) {
+                                msg.channel.send("HERE'S YOUR CHALLENGE MUAHAHAHA")
+                                countingModel.findOneAndUpdate({name: "k12"},
+                                {
+                                    $set:
+                                    {
+                                        num: 0
+                                    }
+                                }).then()
+                            }
+                        }
+                    })
                 }
             }
         }
