@@ -294,7 +294,7 @@ client.on('ready', () => {
                         }
                     },
                     {
-                        returnNewDocument: true
+                        returnDocument: after
                     }).then(r => {
                         if (r) {
                             console.log(r)
@@ -306,9 +306,6 @@ client.on('ready', () => {
                                     {
                                         num: 0
                                     }
-                                },
-                                {
-                                    returnDocument: after
                                 }).then()
                             }
                         }
