@@ -297,8 +297,7 @@ client.on('ready', () => {
                         returnNewDocument: true
                     }).then(r => {
                         if (r) {
-                            msg.channel.send("hi")
-                            msg.channel.send(r.num)
+                            console.log(r)
                             if (r.num == 3) {
                                 msg.channel.send("HERE'S YOUR CHALLENGE MUAHAHAHA")
                                 countingModel.findOneAndUpdate({name: "k1"},
