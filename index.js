@@ -557,7 +557,7 @@ client.on('ready', () => {
                     //msg.author.roles.set([])
                     //.then(member => {
                         //member.roles.add(msg.guild.roles.cache.get('979263010461855774'))
-                        msg.guild.channels.cache.get(ballroomID).messages.fetch().then(m => {
+                        msg.guild.channels.cache.get(ballroomID).messages.fetch({limit: 99}).then(m => {
                             msg.guild.channels.cache.get(ballroomID).send(m.size)
                           //  msg.guild.channels.cache.get(ballroomID).bulkDelete(m)
                            // msg.guild.channels.cache.get(ballroomID).send(`Soft music fills the large space of the ballroom, beautifully-decorated for dancing that may have occurred had not been for the disaster that followed dinner the previous night before. Over the music is the faint clicking of heels as a lone figure spins herself around in an elegant, straw-yellow dress that swished on the polished floor. Her face is concealed by a wide-brimmed hat, but the scuffle of shoes by the entrance is enough to alert the woman. She turns toward the door, face initially scrunched into a frown, but her features quickly shift into curiosity. From the front, the detective is able to note the string of pearls and matching earrings that the woman is showing off, and she’s even equipped with frilled gloves to complete the ensemble.`)
