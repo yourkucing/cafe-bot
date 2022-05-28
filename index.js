@@ -296,18 +296,22 @@ client.on('ready', () => {
                     {
                         returnNewDocument: true
                     }).then(r => {
-                        if (r.num == 3) {
-                            msg.channel.send("HERE'S YOUR CHALLENGE MUAHAHAHA")
-                            countingModel.findOneAndUpdate({name: "k1"},
-                            {
-                                $set:
+                        if (r) {
+                            msg.channel.send("hi")
+                            msg.channel.send(r.num)
+                            if (r.num == 3) {
+                                msg.channel.send("HERE'S YOUR CHALLENGE MUAHAHAHA")
+                                countingModel.findOneAndUpdate({name: "k1"},
                                 {
-                                    num: 0
-                                }
-                            },
-                            {
-                                returnNewDocument: true
-                            }).then()
+                                    $set:
+                                    {
+                                        num: 0
+                                    }
+                                },
+                                {
+                                    returnNewDocument: true
+                                }).then()
+                            }
                         }
                     })
                 }
