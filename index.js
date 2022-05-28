@@ -308,7 +308,7 @@ client.on('ready', () => {
                                     }
                                 },
                                 {
-                                    returnNewDocument: true
+                                    returnDocument: after
                                 }).then()
                             }
                         }
