@@ -20,6 +20,7 @@ const library = require('./commands/wain/library.json')
 const lounge = require('./commands/wain/lounge.json')
 const servantsquarters = require('./commands/wain/servantsquarters.json')
 const winecellar = require('./commands/wain/winecellar.json')
+const countingModel = require('./commands/wain/countingSchema')
 
 client.commands = new Map();
 
@@ -279,10 +280,19 @@ client.on('ready', () => {
         childhoodbedroomID = "979258799800074270"
         guestbedroomID = "979259001281867788"
 
+        var k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12 = 0
+
         if (msg.channel.id == winecellarID) {
             for (let x in winecellar) {
                 if (message.includes(winecellar[x].question)) {
                     msg.channel.send(winecellar[x].answer)
+                    await countingModel.findOneAndUpdate({name: "k1"},
+                    {
+                        $inc:
+                        {
+                            num: 1
+                        }
+                    })
                 }
             }
         }
@@ -290,6 +300,7 @@ client.on('ready', () => {
             for (let x in garage) {
                 if (message.includes(garage[x].question)) {
                     msg.channel.send(garage[x].answer)
+                    k2 += 1
                 }
             }
         }
@@ -297,6 +308,7 @@ client.on('ready', () => {
             for (let x in lounge) {
                 if (message.includes(lounge[x].question)) {
                     msg.channel.send(lounge[x].answer)
+                    k3 += 1
                 }
             }
         }
@@ -304,6 +316,7 @@ client.on('ready', () => {
             for (let x in library) {
                 if (message.includes(library[x].question)) {
                     msg.channel.send(library[x].answer)
+                    k4 += 1
                 }
             }
         }
@@ -311,6 +324,7 @@ client.on('ready', () => {
             for (let x in diningroom) {
                 if (message.includes(diningroom[x].question)) {
                     msg.channel.send(diningroom[x].answer)
+                    k5 += 1
                 }
             }
         }
@@ -318,6 +332,7 @@ client.on('ready', () => {
             for (let x in conservatory) {
                 if (message.includes(conservatory[x].question)) {
                     msg.channel.send(conservatory[x].answer)
+                    k6 += 1
                 }
             }
         }
@@ -325,6 +340,7 @@ client.on('ready', () => {
             for (let x in kitchen) {
                 if (message.includes(kitchen[x].question)) {
                     msg.channel.send(kitchen[x].answer)
+                    k7 += 1
                 }
             }
         }
@@ -332,6 +348,7 @@ client.on('ready', () => {
             for (let x in billiardroom) {
                 if (message.includes(billiardroom[x].question)) {
                     msg.channel.send(billiardroom[x].answer)
+                    k8 += 1
                 }
             }
         }
@@ -339,6 +356,7 @@ client.on('ready', () => {
             for (let x in ballroom) {
                 if (message.includes(ballroom[x].question)) {
                     msg.channel.send(ballroom[x].answer)
+                    k9 += 1
                 }
             }
         }
@@ -349,6 +367,7 @@ client.on('ready', () => {
             for (let x in servantsquarters) {
                 if (message.includes(servantsquarters[x].question)) {
                     msg.channel.send(servantsquarters[x].answer)
+                    k10 += 1
                 }
             }
         }
@@ -356,6 +375,7 @@ client.on('ready', () => {
             for (let x in childhoodbedroom) {
                 if (message.includes(childhoodbedroom[x].question)) {
                     msg.channel.send(childhoodbedroom[x].answer)
+                    k11 += 1
                 }
             }
         }
@@ -363,6 +383,7 @@ client.on('ready', () => {
             for (let x in guestbedroom) {
                 if (message.includes(guestbedroom[x].question)) {
                     msg.channel.send(guestbedroom[x].answer)
+                    k12 += 1
                 }
             }
         }
