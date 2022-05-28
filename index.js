@@ -286,13 +286,13 @@ client.on('ready', () => {
             for (let x in winecellar) {
                 if (message.includes(winecellar[x].question)) {
                     msg.channel.send(winecellar[x].answer)
-                    await countingModel.findOneAndUpdate({name: "k1"},
+                    countingModel.findOneAndUpdate({name: "k1"},
                     {
                         $inc:
                         {
                             num: 1
                         }
-                    })
+                    }).then()
                 }
             }
         }
