@@ -292,7 +292,24 @@ client.on('ready', () => {
                         {
                             num: 1
                         }
-                    }).then()
+                    },
+                    {
+                        returnNewDocument: true
+                    }).then(r => {
+                        if (r.num == 3) {
+                            msg.channel.send("HERE'S YOUR CHALLENGE MUAHAHAHA")
+                            countingModel.findOneAndUpdate({name: "k1"},
+                            {
+                                $set:
+                                {
+                                    num: 0
+                                }
+                            },
+                            {
+                                returnNewDocument: true
+                            }).then()
+                        }
+                    })
                 }
             }
         }
