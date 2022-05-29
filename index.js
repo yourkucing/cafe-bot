@@ -296,33 +296,35 @@ client.on('ready', () => {
                     }).then(r => {
                         if (r) {
                             if (r.num == 3) {
-                                msg.channel.send(`**The Challenge**\n\nPeregrine pulled his attention away from the conversation, trailing his fingers over the wine bottles. He pulled one out particularly, handling it with care. “Before you arrived, I had found this bottle of wine that looks pretty old. But the label looks faded out. Could you perhaps decipher the year marked on it? I won’t answer another question until you do.”`)
-                                msg.channel.send(`https://cdn.discordapp.com/attachments/887018748945514649/979230164753977384/Wpuzzle1.png`)
-                                msg.channel.send(`\`You have unlimited tries until you get the right answer or you say "I don't know". Good luck.\``)
-                                countingModel.findOneAndUpdate({name: "k1"},
-                                {
-                                    $set:
+                                sleep(5).then(r => {
+                                    msg.channel.send(`**The Challenge**\n\nPeregrine pulled his attention away from the conversation, trailing his fingers over the wine bottles. He pulled one out particularly, handling it with care. “Before you arrived, I had found this bottle of wine that looks pretty old. But the label looks faded out. Could you perhaps decipher the year marked on it? I won’t answer another question until you do.”`)
+                                    msg.channel.send(`https://cdn.discordapp.com/attachments/887018748945514649/979230164753977384/Wpuzzle1.png`)
+                                    msg.channel.send(`\`You have unlimited tries until you get the right answer or you say "I don't know". Good luck.\``)
+                                    countingModel.findOneAndUpdate({name: "k1"},
                                     {
-                                        num: 0
-                                    }
-                                }).then(ans => {
-                                    const filter = m => m.author.id == hooman;
-                                    const collector = msg.channel.createMessageCollector(
-                                        {filter}
-                                    );
-                                    collector.on('collect', m => {
-                                        if (m.content.toLowerCase() == "once in a blue moon") {
-                                            msg.channel.send(`“Ah!” Peregrine looked back at the bottle. “Indeed, that is very old! I can’t wait to taste some of this wine! Well, perhaps if you are done questioning me, I could take this back home with me. And there is something you need to know. Miss Mallard and her niece were quite close when they were young girls. Almost like siblings. However, they drifted apart when Miss Crane was in college and only recently when Miss Mallard moved away, Miss Crane returned to take care of Dr. Mallard.”\n\nPeregrine gave a saucy wink, and chuckled to himself. “Spicy, isn’t it? Now, if you are done questioning me, I would suggest that you question those rude employees of the Manor, the cook, or  the young driver. They were very eager to kick me out last night.”`)
-                                            collector.stop()
+                                        $set:
+                                        {
+                                            num: 0
                                         }
-                                        else if (m.content.toLowerCase() == "i don't know") {
-                                            msg.channel.send(`Peregrine sighed. “Alas, such a pity. Nevertheless I am taking this bottle with me. Now, if you are done, I would like to go and taste this wine. You should probably go talk to the driver. He would likely know more about this terrible business.”`)
-                                            collector.stop()
-                                        }
-                                    });
-                                    collector.on('end', (collected, reason) => {
-                                        return
-                                    });
+                                    }).then(ans => {
+                                        const filter = m => m.author.id == msg.author.id;
+                                        const collector = msg.channel.createMessageCollector(
+                                            {filter}
+                                        );
+                                        collector.on('collect', m => {
+                                            if (m.content.toLowerCase() == "once in a blue moon") {
+                                                msg.channel.send(`“Ah!” Peregrine looked back at the bottle. “Indeed, that is very old! I can’t wait to taste some of this wine! Well, perhaps if you are done questioning me, I could take this back home with me. And there is something you need to know. Miss Mallard and her niece were quite close when they were young girls. Almost like siblings. However, they drifted apart when Miss Crane was in college and only recently when Miss Mallard moved away, Miss Crane returned to take care of Dr. Mallard.”\n\nPeregrine gave a saucy wink, and chuckled to himself. “Spicy, isn’t it? Now, if you are done questioning me, I would suggest that you question those rude employees of the Manor, the cook, or  the young driver. They were very eager to kick me out last night.”`)
+                                                collector.stop()
+                                            }
+                                            else if (m.content.toLowerCase() == "i don't know") {
+                                                msg.channel.send(`Peregrine sighed. “Alas, such a pity. Nevertheless I am taking this bottle with me. Now, if you are done, I would like to go and taste this wine. You should probably go talk to the driver. He would likely know more about this terrible business.”`)
+                                                collector.stop()
+                                            }
+                                        });
+                                        collector.on('end', (collected, reason) => {
+                                            return
+                                        });
+                                    })
                                 })
                             }
                         }
