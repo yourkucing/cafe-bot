@@ -252,12 +252,13 @@ client.on('messageReactionAdd', async (reaction, user) => {
                 const userReactions = msg.reactions.cache.filter(reaction => reaction.users.cache.has(user.id));
                 try {
                     for (const reaction of userReactions.values()) {
-                        await reaction.users.remove(user.id);
+                        reaction.users.remove(user.id).then(r => {
+                            setTimeout(() => repliedMessage.delete(), 10000);
+                        })
                     }
                 } catch (error) {
                     console.error('Failed to remove reactions.');
                 }
-                setTimeout(() => repliedMessage.delete(), 20000);
               })
               .catch();
         }
