@@ -249,7 +249,14 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979248960608825374/ezgif.com-gif-maker2.png")
             .setDescription(`**Miss Mallard** is the only child of Dr. Mallard. She is 28, and has been making her own way in life since the age of 22.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
-                msg.reactions.user.remove()
+                const userReactions = msg.reactions.cache.filter(reaction => reaction.users.cache.has(user.id));
+                try {
+                    for (const reaction of userReactions.values()) {
+                        await reaction.users.remove(user.id);
+                    }
+                } catch (error) {
+                    console.error('Failed to remove reactions.');
+                }
                 setTimeout(() => repliedMessage.delete(), 20000);
               })
               .catch();
