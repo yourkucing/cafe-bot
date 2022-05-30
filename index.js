@@ -190,18 +190,18 @@ client.on('ready', () => {
 	})
  	client.channels.fetch("979257748040589332").then(channel => {
 		channel.messages.fetch("980875214005080095").then(message => {
-			message.react("❤️").then(message =>
+			message.react("❤️").then(m =>
                 {
-                    message.react("🧡").then(message => {
-                        message.react("💛").then(message => {
-                            message.react("💚").then(message => {
-                                message.react("💙").then(message => {
-                                    message.react("💜").then(message => {
-                                        message.react("🖤").then(message => {
-                                            message.react("🤎").then(message => {
-                                                message.react("🤍").then(message => {
-                                                    message.react("❤️‍🔥").then(message => {
-                                                        message.react("💘").then(message => {
+                    message.react("🧡").then(a => {
+                        message.react("💛").then(b => {
+                            message.react("💚").then(c => {
+                                message.react("💙").then(d => {
+                                    message.react("💜").then(e => {
+                                        message.react("🖤").then(f => {
+                                            message.react("🤎").then(g => {
+                                                message.react("🤍").then(h => {
+                                                    message.react("❤️‍🔥").then(i => {
+                                                        message.react("💘").then(j => {
                                                             message.react("💟")
                                                         })
                                                     })
