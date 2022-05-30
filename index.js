@@ -20,7 +20,8 @@ const library = require('./commands/wain/library.json')
 const lounge = require('./commands/wain/lounge.json')
 const servantsquarters = require('./commands/wain/servantsquarters.json')
 const winecellar = require('./commands/wain/winecellar.json')
-const countingModel = require('./commands/wain/countingSchema')
+const countingModel = require('./commands/wain/countingSchema');
+const { channel } = require('diagnostics_channel');
 
 client.commands = new Map();
 
@@ -187,6 +188,34 @@ client.on('ready', () => {
     checkforBirthdays().catch((err) => {
 		console.log(err)
 	})
+ 	client.channels.fetch("979257748040589332").then(channel => {
+		channel.messages.fetch("980875214005080095").then(message => {
+			message.react("❤️").then(message =>
+                {
+                    message.react("🧡").then(message => {
+                        message.react("💛").then(message => {
+                            message.react("💚").then(message => {
+                                message.react("💙").then(message => {
+                                    message.react("💜").then(message => {
+                                        message.react("🖤").then(message => {
+                                            message.react("🤎").then(message => {
+                                                message.react("🤍").then(message => {
+                                                    message.react("❤️‍🔥").then(message => {
+                                                        message.react("💘").then(message => {
+                                                            message.react("💟")
+                                                        })
+                                                    })
+                                                })
+                                            })
+                                        })
+                                    })
+                                })
+                            })
+                        })
+                    })
+                })
+		})
+	})
  });
 
  client.on('guildMemberAdd', member => {
@@ -203,6 +232,19 @@ client.on('ready', () => {
 	serverID = member.guild.id
 	eboylog = client.channels.cache.get('867744429657292810')
 	birthdayModel.deleteOne({serverID: member.guild.id, userID: member.id}).then().catch(e => eboylog.send(`(CAFE): <@279101053750870017>, unable to delete birthday from database [${userID}].\n${e}`))
+})
+
+client.on('messageReactionAdd', async (reaction, user) => {
+    if (user.bot) return
+    messageID = reaction.message.id
+    emojiID = reaction.emoji.id
+    guild = client.guilds.cache.get(reaction.message.guild.id)
+    channel = guild.channels.cache.get(reaction.message.channel.id)
+    if (messageID == "980875214005080095") {
+        if (emoji == "❤️") {
+            channel.send("The Daughter")
+        }
+    }
 })
 
  client.on('messageCreate', msg => {
@@ -470,7 +512,7 @@ client.on('ready', () => {
                                             {filter}
                                         );
                                         collector.on('collect', m => {
-                                            if (m.content.toLowerCase() == "that hits the point") {
+                                            if (m.content.toLowerCase() == "that hits the spot") {
                                                 msg.channel.send(`Ms. Wren flipped the offered book around in her hands. A smile stretched across her lips and her eyebrows twitched with some modicum of approval. “Dan Brown…The Lost Symbol… hmm fitting. Do you fancy yourself a Robert Langdon sort, detective?” She gave them another subtle look up and down like she was analysing their very soul. “This investigation should be a breeze for you, then.”\n\nShe seated herself again with the book and Fernando, propping it open on her knees. “Speaking of hidden details! I'm sure you’ve already heard of Dr. Mallard’s… dalliance.” She started casually, gauging the detective's expression as she wet her index finger and flipped a page.\n\n“But did you know that beast Lord Cuckoo had got his knickers twisted for all the wrong reasons? It wasn't his wife who'd been pussyfooting around with the Dr. behind his back, but his very own brother!” She burst into a short and slightly forced bout of laughter. “Everyone presumed it was the Lady. I mean, she's just got that atmosphere about her, doesn't she? No disrespect, I'm sure she's a fine woman, aside from her taste in men, very well endowed. And Dr. Mallard would wreck a thousand homes before he felt a tinge of remorse.”\n\n“Well, I even thought so myself about the Lady, until I caught the pair, Dr. Mallard and Professor Cuckoo, defiling that very aisle over there,” she pointed, “contesting to see who could reach the other’s throat with their tongue first.” Her knuckles tinged with white around the book as she let that sit for a beat. “Isn't that the funniest thing?” She didn't sound like she found it very funny. “All that outcry from Dr. Mallard about his daughter and her love, and yet…” She trailed off with a sigh. “Anyhow. What a ghastly little pairing. All the more horrible for its sheer sanctimony.”`)
                                                 msg.channel.send(`“But it makes you think, doesn't it? About that sad wretch Lord Cuckoo. Where his thoughts on the situation may have strayed and perhaps led to… actions? Of course, you and I know the truth about Dr. Mallard’s dalliance, but Lord Cuckoo has always been physically unable to extract his visage from his ass long enough to see beyond it. Thinks the whole entire world is after him. Why, the man’s wrought like a neurotic chihuahua, and sturdy as a plastic fork. Who's to say Dr. Mallard wasn't the tough steak to his plastic fork? Who's to say he didn’t… snap, perhaps, take matters with Dr. Mallard into his own hands? Now there's something to think about.”\n\nThere was a long and significant stretch of silence, save for the sound of pages being turned. Fernando was apparently a very fast reader.\n\n“Well, I hate to cut this short, but I’m afraid that's all I can offer you today, dearie. If you want the whole good truth, I recommend you consult Miss Crane.” She flipped another page. “Or even that poor sap Professor Cuckoo, if you'd like to know more about the affair. God knows, I'd want to know what was going through his sap mind during *that* entire ordeal.” She gave a shudder, and Fernando jumped in her lap.\n\n“See ya,” she singsonged without lifting her gaze from the book, wiggling her fingers, “wouldn't wanna be ya.”`)
                                                 collector.stop()
