@@ -254,6 +254,149 @@ client.on('messageReactionAdd', async (reaction, user) => {
               })
               .catch();
         }
+        else if (reaction.emoji.name == "🧡") {
+            const embed = new MessageEmbed()
+            .setColor('#FF69B4')
+            .setTitle('THE GIRLFRIEND')
+            .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979248961128898560/ezgif.com-gif-maker.png")
+            .setDescription(`**Colonel Kestral** is in her early 30s. She is intimidating to look at, and she's well-decorated from her time in the army. She is closely guarded with her secrets, and judges other based on strength and willpower.`);
+            channelID.send({embeds: [embed]}).then(repliedMessage => {
+                console.log(msg)
+                msg.reactions.cache.find(reaction => reaction.emoji.name == "🧡").users.remove(user.id)
+                setTimeout(() => repliedMessage.delete(), 10000);
+              })
+              .catch();
+        }
+        else if (reaction.emoji.name == "💛") {
+            const embed = new MessageEmbed()
+            .setColor('#FF69B4')
+            .setTitle('THE CHEF')
+            .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979248961728688168/ezgif.com-gif-maker1.png")
+            .setDescription(`**Ms. Gannet** is in her mid-30s, and is the daughter of a single mother who has had to pay her way to get to America and care for her family of 3. Ms. Gannet cares deeply for her family, and has worked for the Mallard household for the past 10 years.`);
+            channelID.send({embeds: [embed]}).then(repliedMessage => {
+                console.log(msg)
+                msg.reactions.cache.find(reaction => reaction.emoji.name == "💛").users.remove(user.id)
+                setTimeout(() => repliedMessage.delete(), 10000);
+              })
+              .catch();
+        }
+        else if (reaction.emoji.name == "💚") {
+            const embed = new MessageEmbed()
+            .setColor('#FF69B4')
+            .setTitle('THE NIECE')
+            .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979251377375178832/ezgif.com-gif-maker.png")
+            .setDescription(`**Miss Crane** is in her early 30s, and has lived in Mallard Manor for the past 3 years. After her own parents passed away when she was young, she came to live in the Mallard household, treated as a daughter by Dr. Mallard, and as a sister by Miss Mallard. When she learned of Dr. Mallard's illness, she came to stay with him and help run the household.`);
+            channelID.send({embeds: [embed]}).then(repliedMessage => {
+                console.log(msg)
+                msg.reactions.cache.find(reaction => reaction.emoji.name == "💚").users.remove(user.id)
+                setTimeout(() => repliedMessage.delete(), 10000);
+              })
+              .catch();
+        }
+        else if (reaction.emoji.name == "💙") {
+            const embed = new MessageEmbed()
+            .setColor('#FF69B4')
+            .setTitle('THE GARDENER')
+            .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979252851014533130/ezgif.com-gif-maker1.png")
+            .setDescription(`**Mr. Jay** is in his early 60s, and has worked the Mallard yards for years. He is nearly ready to retire, but continues to put it off due to his love of the gardens. He seems to be a kindly enough old man, but doesn't pay attention to any of the goings-ons of the household, beyond his lovely plants.`);
+            channelID.send({embeds: [embed]}).then(repliedMessage => {
+                console.log(msg)
+                msg.reactions.cache.find(reaction => reaction.emoji.name == "💙").users.remove(user.id)
+                setTimeout(() => repliedMessage.delete(), 10000);
+              })
+              .catch();
+        }
+        else if (reaction.emoji.name == "💜") {
+            const embed = new MessageEmbed()
+            .setColor('#FF69B4')
+            .setTitle('THE SCHOLAR')
+            .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979254512852303892/ezgif.com-gif-maker3.png")
+            .setDescription(`**Professor Cuckoo** is in his early 50s, and is the younger brother of Lord Cuckoo. He lives at the family manor, and teaches at a local university. Books and learning is his passion, and he would much rather be reading than speaking to others.`);
+            channelID.send({embeds: [embed]}).then(repliedMessage => {
+                console.log(msg)
+                msg.reactions.cache.find(reaction => reaction.emoji.name == "💜").users.remove(user.id)
+                setTimeout(() => repliedMessage.delete(), 10000);
+              })
+              .catch();
+        }
+        else if (reaction.emoji.name == "🖤") {
+            const embed = new MessageEmbed()
+            .setColor('#FF69B4')
+            .setTitle('THE DRIVER')
+            .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979256385919385650/ezgif.com-gif-maker5.png")
+            .setDescription(`**Mr. Falcon** is only 17, and doesn't know much about anything. He was hired on as Dr. Mallard's driver because his father and Dr. Mallard were old colleagues, and his father believes Mr. Falcon needed some real world work experience.`);
+            channelID.send({embeds: [embed]}).then(repliedMessage => {
+                console.log(msg)
+                msg.reactions.cache.find(reaction => reaction.emoji.name == "🖤").users.remove(user.id)
+                setTimeout(() => repliedMessage.delete(), 10000);
+              })
+              .catch();
+        }
+        else if (reaction.emoji.name == "🤎") {
+            const embed = new MessageEmbed()
+            .setColor('#FF69B4')
+            .setTitle('THE LIBRARIAN')
+            .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979453371100573726/ezgif.com-gif-maker6.png")
+            .setDescription(`**Mrs. Wren** is in her late 50s, and has worked for the Mallard Manor for the past 30 years. Not only does she know the library like the back of her hand, she knows all the goings-ons of the entire Manor. And then some!`);
+            channelID.send({embeds: [embed]}).then(repliedMessage => {
+                console.log(msg)
+                msg.reactions.cache.find(reaction => reaction.emoji.name == "🤎").users.remove(user.id)
+                setTimeout(() => repliedMessage.delete(), 10000);
+              })
+              .catch();
+        }
+        else if (reaction.emoji.name == "🤍") {
+            const embed = new MessageEmbed()
+            .setColor('#FF69B4')
+            .setTitle('THE BUTLER')
+            .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979924152041488414/ezgif.com-gif-maker7.png")
+            .setDescription(`**Mr. Penguin** is 60 years old, and has worked as a butler in the Mallard household for years. His is always incredibly professional and formal, with immaculate manners.`);
+            channelID.send({embeds: [embed]}).then(repliedMessage => {
+                console.log(msg)
+                msg.reactions.cache.find(reaction => reaction.emoji.name == "🤍").users.remove(user.id)
+                setTimeout(() => repliedMessage.delete(), 10000);
+              })
+              .catch();
+        }
+        else if (reaction.emoji.name == "❤️‍🔥") {
+            const embed = new MessageEmbed()
+            .setColor('#FF69B4')
+            .setTitle('THE TEMPTRESS')
+            .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979255531757797386/ezgif.com-gif-maker4.png")
+            .setDescription(`**Lady Cuckoo** is in her early 50s, and enjoys the lifestyle of the upper crust. She is nearly 10 years younger than her husband Lord Cuckoo, and married more for wealth than for true love.`);
+            channelID.send({embeds: [embed]}).then(repliedMessage => {
+                console.log(msg)
+                msg.reactions.cache.find(reaction => reaction.emoji.name == "❤️‍🔥").users.remove(user.id)
+                setTimeout(() => repliedMessage.delete(), 10000);
+              })
+              .catch();
+        }
+        else if (reaction.emoji.name == "💘") {
+            const embed = new MessageEmbed()
+            .setColor('#FF69B4')
+            .setTitle('THE BETRAYED')
+            .setImage("https://cdn.discordapp.com/attachments/720470821902090258/980318588487487508/ezgif.com-gif-maker9.png")
+            .setDescription(`**Lord Cuckoo** is in his early 60s. He is an incredibly wealthy man due to family wealth, and married a younger woman. However, he himself has accomplished little in his life, and is constantly worried about being compared to his peers.`);
+            channelID.send({embeds: [embed]}).then(repliedMessage => {
+                console.log(msg)
+                msg.reactions.cache.find(reaction => reaction.emoji.name == "💘").users.remove(user.id)
+                setTimeout(() => repliedMessage.delete(), 10000);
+              })
+              .catch();
+        }
+        else if (reaction.emoji.name == "💟") {
+            const embed = new MessageEmbed()
+            .setColor('#FF69B4')
+            .setTitle('THE BUSYBODY')
+            .setImage("https://cdn.discordapp.com/attachments/910649799609581598/979925818031628328/ezgif.com-gif-maker8.png")
+            .setDescription(`**Professor Peregrine** is the man next door. Literally! The 40-something year old professor spends more time with his ear to the wall than at the school he supposedly teaches. He wasn't well liked by Dr. Mallard, but he somehow continues to find himself at their doorstep, no matter the situation.`);
+            channelID.send({embeds: [embed]}).then(repliedMessage => {
+                console.log(msg)
+                msg.reactions.cache.find(reaction => reaction.emoji.name == "💟").users.remove(user.id)
+                setTimeout(() => repliedMessage.delete(), 10000);
+              })
+              .catch();
+        }
     }
 })
 
@@ -365,11 +508,11 @@ client.on('messageReactionAdd', async (reaction, user) => {
                                         );
                                         collector.on('collect', m => {
                                             if (m.content.toLowerCase() == "once in a blue moon") {
-                                                msg.channel.send(`“Ah!” Peregrine looked back at the bottle. “Indeed, that is very old! I can’t wait to taste some of this wine! Well, perhaps if you are done questioning me, I could take this back home with me. And there is something you need to know. Miss Mallard and her niece were quite close when they were young girls. Almost like siblings. However, they drifted apart when Miss Crane was in college and only recently when Miss Mallard moved away, Miss Crane returned to take care of Dr. Mallard.”\n\nPeregrine gave a saucy wink, and chuckled to himself. “Spicy, isn’t it? Now, if you are done questioning me, I would suggest that you question those rude employees of the Manor, the cook, or  the young driver. They were very eager to kick me out last night.”`)
+                                                msg.channel.send(`“Ah!” Peregrine looked back at the bottle. “Indeed, that is very old! I can’t wait to taste some of this wine! Well, perhaps if you are done questioning me, I could take this back home with me. And there is something you need to know. Miss Mallard and her niece were quite close when they were young girls. Almost like siblings. However, they drifted apart when Miss Crane was in college and only recently when Miss Mallard moved away, Miss Crane returned to take care of Dr. Mallard.”\n\nPeregrine gave a saucy wink, and chuckled to himself. “Spicy, isn’t it? Now, if you are done questioning me, I would suggest that you question those rude employees of the Manor, the… Librarian, I believe, Mrs. Wren. Or else that young driver fellow, Mr. Falcon. They were very eager to kick me out last night.”`)
                                                 collector.stop()
                                             }
                                             else if (m.content.toLowerCase() == "i don't know") {
-                                                msg.channel.send(`Peregrine sighed. “Alas, such a pity. Nevertheless I am taking this bottle with me. Now, if you are done, I would like to go and taste this wine. You should probably go talk to the driver. He would likely know more about this terrible business.”`)
+                                                msg.channel.send(`Peregrine sighed. “Alas, such a pity. Nevertheless I am taking this bottle with me. Now, if you are done, I would like to go and taste this wine. You should probably go talk to the driver, Mr. Falcon. He would likely know more about this terrible business.”`)
                                                 collector.stop()
                                             }
                                         });
@@ -471,11 +614,11 @@ client.on('messageReactionAdd', async (reaction, user) => {
                                         collector.on('collect', m => {
                                             if (m.content.toLowerCase() == "checkers") {
                                                 msg.channel.send(`Professor Cuckoo’s eyes well up slightly, and he looks away from the detective. “Sorry, it’s just… Thank you, really detective. This means a lot to me, to know his last little message to me. I appreciate your help.”\n\nHe takes the scrap back and takes a few deep steadying breaths, preparing himself for some kind of confession.\n\n“Listen, detective… You’re crafty, clearly, you pick up on the details. So this probably doesn’t come as a giant surprise, but me and Dr. Mallard were, well, we were a little more than friends.” His hands clench nervously, meeting the detective’s eyes for a moment before staring back down at the scrap. “Sorry, it’s just that you’re the first person I’ve told. Ever, really. I wish that wasn’t the truth but, well, Mallard just wasn’t comfortable being out. He was raised in the kind of environment that just beat self hatred into him, told him it was shameful… But we really had something. I could see him coming out of his shell, slowly but surely, shedding all those barriers. If anyone had known the real him, the doctor I knew, they would know how much he changed.” The professor wipes away tears, sniffles a little, but he looks more stable now that he’s put the truth out there. “Of course, what happened with his daughter… I was devastated , I felt like we had been set back to square one again. All of that fear just welled up in him and he shut down. I think he was afraid that it was his fault that she was a ‘deviant’, like he hadn’t raised her like a good straight man would. But that came out as anger towards her instead.” He shakes his head slowly.`)
-                                                msg.channel.send(`“If you ask me? I have no idea who would do this to my dear doctor. People hated him, sure, the facade he put up… but his cancer was taking him over. I don’t understand why they’d decide to kill a dying man, if they wanted him out of this world. I can only hope you’ll figure this all out. I think I trust you to do it, though,” the professor nods, and suddenly looks up. “You know what? If you do figure things out, you should go over to the study. That’s all I can think of. Sorry if I wasn’t much help, you know, and sorry for dumping all this on you, but… Just, solve it for me, won’t you?”\n\nProfessor Cuckoo gives the detective a sad smile and shakes the man’s hand again. He slowly sits down on the nearest chair in the lounge, exhausted but with a chest much lighter from secrets.`)
+                                                msg.channel.send(`“If you ask me? I have no idea who would do this to my dear doctor. People hated him, sure, the facade he put up… but his cancer was taking him over. I don’t understand why they’d decide to kill a dying man, if they wanted him out of this world. I can only hope you’ll figure this all out. I think I trust you to do it, though,” the professor nods, and suddenly looks up. “You know what? If you do figure things out, you should go over to the study. That’s all I can think of. Sorry if I wasn’t much help, you know, and sorry for dumping all this on you, but… Just, solve it for me, won’t you? I think its time for you to go to the **Study**.\n\nProfessor Cuckoo gives the detective a sad smile and shakes the man’s hand again. He slowly sits down on the nearest chair in the lounge, exhausted but with a chest much lighter from secrets.`)
                                                 collector.stop()
                                             }
                                             else if (m.content.toLowerCase() == "i don't know") {
-                                                msg.channel.send(`The professor frowns, taking back the scrap of paper quickly.\n\n“No, I don’t think so. Sorry, I just thought,” his frown deepens and he clears his throat, buttoning up his cardigan. “Well, I thought you might actually have the skills to solve something like this. I just hope you’ll solve my friend’s murder a little more easily than a simple case of quick hand, but maybe you’re not really much of a detective.” He looks the detective up and down and narrows his eyes. “Who hired you, anyways? I hope you’re an actual professional and not just some hack who believes all the lies about Dr. Mallard being a ‘horrible person’ or whatever the others here have told you. Bias is a terrible thing, you know.”\n\nThe professor folds up the scrap of paper carefully, fingers shaking a little now. “Just… go and do some REAL detective work, alright? There’s at least one person here who actually cares, so don’t think you can slack off.”\n\nHe seems too angry now to answer any further questions.`)
+                                                msg.channel.send(`The professor frowns, taking back the scrap of paper quickly.\n\n“No, I don’t think so. Sorry, I just thought,” his frown deepens and he clears his throat, buttoning up his cardigan. “Well, I thought you might actually have the skills to solve something like this. I just hope you’ll solve my friend’s murder a little more easily than a simple case of quick hand, but maybe you’re not really much of a detective.” He looks the detective up and down and narrows his eyes. “Who hired you, anyways? I hope you’re an actual professional and not just some hack who believes all the lies about Dr. Mallard being a ‘horrible person’ or whatever the others here have told you. Bias is a terrible thing, you know.”\n\nThe professor folds up the scrap of paper carefully, fingers shaking a little now. “Just… go and do some REAL detective work, alright? There’s at least one person here who actually cares, so don’t think you can slack off. Go to the **Study** and leave me along!”\n\nHe seems too angry now to answer any further questions.`)
                                                 collector.stop()
                                             }
                                         });
@@ -528,7 +671,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                                                 collector.stop()
                                             }
                                             else if (m.content.toLowerCase() == "i don't know") {
-                                                msg.channel.send(`Ms. Wren traced a finger over the title of the offered book, which was gilded in gold lettering. *Great Expectations*. She didn't seem at all very moved. “Ah, the Dickens. It's in the name, really, isn't it? Foreseeable. But I suppose it'll do!”\n\n“Will that be all for today? Yes? Brilliant. Lovely chatting with you, dear. Mm. Do send my regards to Miss Mallard and Miss Crane, if you can.” She seated herself again, lifting the book in front of her face with an air of finality, and acknowledged the detective’s presence in the room no more. `)
+                                                msg.channel.send(`Ms. Wren traced a finger over the title of the offered book, which was gilded in gold lettering. *Great Expectations*. She didn't seem at all very moved. “Ah, the Dickens. It's in the name, really, isn't it? Foreseeable. But I suppose it'll do!”\n\n“Will that be all for today? Yes? Brilliant. Lovely chatting with you, dear. Mm. Do send my regards to Miss Crane, if you can.” She seated herself again, lifting the book in front of her face with an air of finality, and acknowledged the detective’s presence in the room no more.`)
                                                 collector.stop()
                                             }
                                         });
@@ -732,7 +875,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                                         );
                                         collector.on('collect', m => {
                                             if (m.content.toLowerCase() == "stop") {
-                                                msg.channel.send(`Lord Cuckoo drew back from the billiard table, eyebrows high. He offered his hand to shake. “Well, I think I misjudged you, detective. That was some damn good playing. Fine, okay, what do you want? Information?”\n\nLord Cuckoo leaned against the table and considered. “I didn’t go straight home, like I said I did. After that bastard blew up on his own daughter, he made eyes at my wife, and went off to his office, like he was expecting her to follow. She was terribly upset about the whole thing, and a gentleman defends his woman’s honor. So I go down to his office to give him a piece of my mind.”\n\nLord Cuckoo shrugged, struggling to hide a disgusted sneer. “He's been trying to have his way with my wife for YEARS. So I spoke to him, bluntly, and let him know in no uncertain terms is has to stop. He tries to laugh it off, deny it – Even called the Lady names. Ugly. Deflated. As if he hasn’t been oogling her all night!” Lord Cuckoo seethed. “Well, yeah, maybe I hit him, or whatever. But I never killed him. I collected Professor and Lady Cuckoo, and we left, dignity intact. Whatever happened to him was far after I spoke with him. In fact, I think I even passed someone as I came out of the study. Whoever that was, they can tell you. I had nothing to do with any of it.”\n\nHe straightened, suddenly. “I know how it all sounds, right? But it wasn’t me. Hell, I think he deserved it, and I’d like to shake the hand of the man who took that shot. If I had to guess? Probably the butler. Can’t imagine working for that pig. And it’s always the butler whodunnit, isn’t it?”\n\nHe let out a barking laugh. “You want more information? Talk to that cook, Gannet. Or his niece, Miss Crane. Women in the kitchen always hear all the whispers, don’t they?”\n\nHe gave a half-hearted salute. “You’re not all bad, detective. Best of luck with things.”`)
+                                                msg.channel.send(`Lord Cuckoo drew back from the billiard table, eyebrows high. He offered his hand to shake. “Well, I think I misjudged you, detective. That was some damn good playing. Fine, okay, what do you want? Information?”\n\nLord Cuckoo leaned against the table and considered. “I didn’t go straight home, like I said I did. After that bastard blew up on his own daughter, he made eyes at my wife, and went off to his office, like he was expecting her to follow. She was terribly upset about the whole thing, and a gentleman defends his woman’s honor. So I go down to his office to give him a piece of my mind.”\n\nLord Cuckoo shrugged, struggling to hide a disgusted sneer. “He's been trying to have his way with my wife for YEARS. So I spoke to him, bluntly, and let him know in no uncertain terms is has to stop. He tries to laugh it off, deny it – Even called the Lady names. Ugly. Deflated. As if he hasn’t been oogling her all night!” Lord Cuckoo seethed. “Well, yeah, maybe I hit him, or whatever. But I never killed him. I collected Professor and Lady Cuckoo, and we left, dignity intact. Whatever happened to him was far after I spoke with him. In fact, I think I even passed someone as I came out of the study. Whoever that was, they can tell you. I had nothing to do with any of it.”\n\nHe straightened, suddenly. “I know how it all sounds, right? But it wasn’t me. Hell, I think he deserved it, and I’d like to shake the hand of the man who took that shot. If I had to guess? Probably the butler. Can’t imagine working for that pig. And it’s always the butler whodunnit, isn’t it?”\n\nHe let out a barking laugh. “You want more information? Talk to that cook, Gannet. Or, hell, even my wife, Lady Cuckoo. Women in the kitchen always hear all the whispers, don’t they?”\n\nHe gave a half-hearted salute. “You’re not all bad, detective. Best of luck with things.”`)
                                                 collector.stop()
                                             }
                                             else if (m.content.toLowerCase() == "i don't know") {
@@ -865,7 +1008,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                                                                                                             nummessages = m.size - 1
                                                                                                             msg.guild.channels.cache.get(servantsquartersID).messages.fetch({limit: nummessages}).then(k => {
                                                                                                                 msg.guild.channels.cache.get(servantsquartersID).bulkDelete(k)
-                                                                                                                msg.guild.channels.cache.get(servantsquartersID).send(`Ms. Gannet sat on the little bed staring at the floor. She was a petite woman with pale blonde hair and light blue eyes that seemed anxious. Her room was pretty bare save for a small bag of luggage at the end of the bed, a dresser and lamp next to the bed. When the detective walked in she stood up and cleared her throat, meeting their eyes reluctantly. “Good day, Detective,” she said without much feeling, “I hope this won’t take long, I don’t know much of anything.” Her gaze went past the detective towards the door, it was obvious she didn’t want to be there.`)
+                                                                                                                msg.guild.channels.cache.get(servantsquartersID).send(`Ms. Gannet sat on the little bed staring at the floor. She was a petite woman with dark hair and dark eyes that seemed anxious. Her room was pretty bare save for a small bag of luggage at the end of the bed, a dresser and lamp next to the bed. When the detective walked in she stood up and cleared her throat, meeting their eyes reluctantly. “Good day, Detective,” she said without much feeling, “I hope this won’t take long, I don’t know much of anything.” Her gaze went past the detective towards the door, it was obvious she didn’t want to be there.`)
                                                                                                                 msg.guild.channels.cache.get(winecellarID).messages.fetch({limit: 99}).then(m => {
                                                                                                                     nummessages = m.size - 1
                                                                                                                     msg.guild.channels.cache.get(winecellarID).messages.fetch({limit: nummessages}).then(k => {
@@ -941,7 +1084,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                                         );
                                         collector.on('collect', m => {
                                             if (m.content.toLowerCase() == "pudding") {
-                                                msg.channel.send(`Her blonde eyebrows raised as he asked her about the photo, hesitating slightly before unfolding it and sharing it with the detective. The photo itself was worn and a bit discolored, it was obvious the cook had carried it with her everyday and held it in her hand to bring her comfort in difficult moments. The faces of an older woman, a younger Ms. Gannet and two younger people looked up at the detective from the photo. Her face became warm looking at them. “My mother and siblings, Hannah and Steven. They’re waiting for me.”\n\nSoftening to the detective she folded the photo and turned back to him, “I’m going home. As soon as I heard about Dr. Mallard, I gave Miss Crane my notice. I’m eager to be rid of him, rid of this place. It feels more like a prison than a home and my family needs me, I need them.”\n\nShe paused for a moment biting her lip, “I think this may have something to do with Professor Cuckoo. I hear things in passing, people don’t really see you when you work in the kitchen and they might let things slip that they normally wouldn’t. And I’ve seen the Professor and the Doctor talk to each other, real quiet like, a few times. I don’t understand why they would be whispering about something, but it can’t be good if they didn’t want anyone to hear about it. Someone like Dr. Mallard… well… I wouldn’t put it past him if he was trying to–steal the Professor’s work. I don’t know that for a fact mind you, but it would be very like him.”\n\n“If you haven’t spoken to her, I would ask Lady Cuckoo, or Mr. Jay… he tends to hear things as well.”`)
+                                                msg.channel.send(`Her eyebrows raised as he asked her about the photo, hesitating slightly before unfolding it and sharing it with the detective. The photo itself was worn and a bit discolored, it was obvious the cook had carried it with her everyday and held it in her hand to bring her comfort in difficult moments. The faces of an older woman, a younger Ms. Gannet and two younger people looked up at the detective from the photo. Her face became warm looking at them. “My mother and siblings, Hannah and Steven. They’re waiting for me.”\n\nSoftening to the detective she folded the photo and turned back to him, “I’m going home. As soon as I heard about Dr. Mallard, I gave Miss Crane my notice. I’m eager to be rid of him, rid of this place. It feels more like a prison than a home and my family needs me, I need them.”\n\nShe paused for a moment biting her lip, “I think this may have something to do with Professor Cuckoo. I hear things in passing, people don’t really see you when you work in the kitchen and they might let things slip that they normally wouldn’t. And I’ve seen the Professor and the Doctor talk to each other, real quiet like, a few times. I don’t understand why they would be whispering about something, but it can’t be good if they didn’t want anyone to hear about it. Someone like Dr. Mallard… well… I wouldn’t put it past him if he was trying to–steal the Professor’s work. I don’t know that for a fact mind you, but it would be very like him.”\n\n“If you haven’t spoken to her, I would ask Lady Cuckoo, or Mr. Jay. He might be out of the way, but Mr. Jay certainly sees things around these parts.”`)
                                                 collector.stop()
                                             }
                                             else if (m.content.toLowerCase() == "i don't know") {
@@ -997,7 +1140,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                                                 collector.stop()
                                             }
                                             else if (m.content.toLowerCase() == "i don't know") {
-                                                msg.channel.send(`The woman slumped back on the bed. “I… lost it.” Her eyes looked dazed as she said it aloud once more. “I lost it. It was the only thing I have left… of our… of us… and I lost it.” Her entire demeanor suddenly changed as she pushed the pillows and blankets off her bed onto the ground hard. Looking back up at the detective, she suddenly glared at him. “What are you still doing here? Please leave. Leave me alone! Talk to Jennifer if you must but leave me alone! Do your job, you’re a detective, aren’t you?!” She grabbed a pillow from the ground and threw it at the detective before turning facedown onto the bed and sobbing.`)
+                                                msg.channel.send(`The woman slumped back on the bed. “I… lost it.” Her eyes looked dazed as she said it aloud once more. “I lost it. It was the only thing I have left… of our… of us… and I lost it.” Her entire demeanor suddenly changed as she pushed the pillows and blankets off her bed onto the ground hard. Looking back up at the detective, she suddenly glared at him. “What are you still doing here? Please leave. Leave me alone! Talk to Jennifer - Colonel Kestral -  if you must but leave me alone! Do your job, you’re a detective, aren’t you?!” She grabbed a pillow from the ground and threw it at the detective before turning facedown onto the bed and sobbing.`)
                                                 collector.stop()
                                             }
                                         });
@@ -1046,11 +1189,11 @@ client.on('messageReactionAdd', async (reaction, user) => {
                                         );
                                         collector.on('collect', m => {
                                             if (m.content.toLowerCase() == "stained glass") {
-                                                msg.channel.send(`Kestrel had been watching the entire time, her face betraying nothing. But when the detective finished, she rose and approached him; and while before there had been challenge and threat in her stance and tone; it was gone now as she held out a hand for him to shake. When she spoke again, there was a hint of respect and acknowledgement in her voice.\n\n“Andrea ran from the room after her father said some vile things to her in front of everyone there. I knew I hated him then, wanted to confront him immediately… but Andrea needed me. So I followed her just in time to see her slam the door of her bedroom on the second floor. I pleaded with her to let me in. Miss Crane was there as well and tried to assist. But she left and it was just me for who knows how long; listening to the woman I loved crying herself to sleep. Even when I knew she wasn’t awake anymore, I stayed. At least until Miss Crane came back and implored me to take to bed in one of the guest rooms.”\n\nRecounting the events of the evening brought the now familiar scowl to Kestrel’s face. “I understand more and more why Andrea was against coming here. It wasn’t just her father, you know. Lady Cuckoo was just as bad. I saw her. During the entire dinner, even with her husband yelling at Dr. Mallard, and then what happened between Dr. Mallard and Andrea, she just sat there the whole time wearing a shit-eating grin, loving the drama of it all. It was obvious to me and probably everyone else there that she’s heartless.”\n\nAfter one more appraising look at the investigator, Kestrel sat back down, this time in a recliner by the window. “If you need to confirm anything I am telling you, I would suggest that you speak with either Miss Crane or Ms. Gannet next. They were there and witnessed everything happen as well. If you’ve already spoke. With them… well, maybe you ARE capable of solving this mystery.”`)
+                                                msg.channel.send(`Kestrel had been watching the entire time, her face betraying nothing. But when the detective finished, she rose and approached him; and while before there had been challenge and threat in her stance and tone; it was gone now as she held out a hand for him to shake. When she spoke again, there was a hint of respect and acknowledgement in her voice.\n\n“Andrea ran from the room after her father said some vile things to her in front of everyone there. I knew I hated him then, wanted to confront him immediately… but Andrea needed me. So I followed her just in time to see her slam the door of her bedroom on the second floor. I pleaded with her to let me in. Miss Crane was there as well and tried to assist. But she left and it was just me for who knows how long; listening to the woman I loved crying herself to sleep. Even when I knew she wasn’t awake anymore, I stayed. At least until Miss Crane came back and implored me to take to bed in one of the guest rooms.”\n\nRecounting the events of the evening brought the now familiar scowl to Kestrel’s face. “I understand more and more why Andrea was against coming here. It wasn’t just her father, you know. Lady Cuckoo was just as bad. I saw her. During the entire dinner, even with her husband yelling at Dr. Mallard, and then what happened between Dr. Mallard and Andrea, she just sat there the whole time wearing a shit-eating grin, loving the drama of it all. It was obvious to me and probably everyone else there that she’s heartless.”\n\nAfter one more appraising look at the investigator, Kestrel sat back down, this time in a recliner by the window. “If you need to confirm anything I am telling you, I would suggest that you speak with either Lord Cuckoo or Ms. Gannet next. They were there and witnessed everything happen as well. If you’ve already spoke. With them… well, maybe you ARE capable of solving this mystery.”`)
                                                 collector.stop()
                                             }
                                             else if (m.content.toLowerCase() == "i don't know") {
-                                                msg.channel.send(`Kestrel, who up until that point had been watching intently, seemed to come to a decision at that point. She turned her back on him and went to look out of the window. “Just as I thought.” Did her shoulders sag a little, and did her voice sound disappointed? It was difficult to tell. But she did not turn back around. “I am done with this conversation. If you wish to get more information, obtain it elsewhere. Ms. Gannet may be able to assist you more.”  The tone of finality was unmistakable. The Colonel had deemed them unworthy, and would give nothing more.`)
+                                                msg.channel.send(`Kestrel, who up until that point had been watching intently, seemed to come to a decision at that point. She turned her back on him and went to look out of the window. “Just as I thought.” Did her shoulders sag a little, and did her voice sound disappointed? It was difficult to tell. But she did not turn back around. “I am done with this conversation. If you wish to get more information, obtain it elsewhere. Lord Cuckoo may be able to assist you more.”  The tone of finality was unmistakable. The Colonel had deemed them unworthy, and would give nothing more.`)
                                                 collector.stop()
                                             }
                                         });
