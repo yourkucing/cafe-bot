@@ -467,16 +467,16 @@ client.on('messageReactionAdd', async (reaction, user) => {
 
         if (msg.channel.id == entrancehallID) {
             if (message == "mr. penguin" || message == "mrs penguin") {
-                msg.author.roles.add("979263289240461332")
+                msg.member.roles.add("979263289240461332")
             }
         }
 
         if (msg.channel.id == winecellarID) {
             if (message == "mrs. wren" || message == "mrs wren") {
-                msg.author.roles.add("979263326565572648")
+                msg.member.roles.add("979263326565572648")
             }
             if (message == "mr. falcon" || message == "mr falcon") {
-                msg.author.roles.add("979263402218237972")
+                msg.member.roles.add("979263402218237972")
             }
             else {
                 for (let x in winecellar) {
@@ -533,10 +533,10 @@ client.on('messageReactionAdd', async (reaction, user) => {
         }
         if (msg.channel.id == garageID) {
             if (message == "mrs. wren" || message == "mrs wren") {
-                msg.author.roles.add("979263326565572648")
+                msg.member.roles.add("979263326565572648")
             }
             if (message == "miss crane") {
-                msg.author.roles.add("979263197905301564")
+                msg.member.roles.add("979263197905301564")
             }
             else {
                 for (let x in garage) {
@@ -593,7 +593,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
         }
         if (msg.channel.id == loungeID) {
             if (message == "the study" || message == "study") {
-                msg.author.roles.add("980877815325003846")
+                msg.member.roles.add("980877815325003846")
             }
             else {
                 for (let x in lounge) {
@@ -652,10 +652,10 @@ client.on('messageReactionAdd', async (reaction, user) => {
         }
         if (msg.channel.id == libraryID) {
             if (message == "miss crane") {
-                msg.author.roles.add("979263197905301564")
+                msg.member.roles.add("979263197905301564")
             }
             if (message == "professor cuckoo") {
-                msg.author.roles.add("979263070805323817")
+                msg.member.roles.add("979263070805323817")
             }
             else {
             for (let x in library) {
@@ -713,10 +713,10 @@ client.on('messageReactionAdd', async (reaction, user) => {
         }
         if (msg.channel.id == diningroomID) {
             if (message == "miss mallard") {
-                msg.author.roles.add("979262714406903808")
+                msg.member.roles.add("979262714406903808")
             }
             if (message == "colonel kestral") {
-                msg.author.roles.add("979263158805999666")
+                msg.member.roles.add("979263158805999666")
             }
             else {
             for (let x in diningroom) {
@@ -773,10 +773,10 @@ client.on('messageReactionAdd', async (reaction, user) => {
         }
         if (msg.channel.id == conservatoryID) {
             if (message == "professor peregrine") {
-                msg.author.roles.add("979263235289124885")
+                msg.member.roles.add("979263235289124885")
             }
             if (message == "mr. falcon" || message == "mr falcon") {
-                msg.author.roles.add("979263402218237972")
+                msg.member.roles.add("979263402218237972")
             }
             else {
             for (let x in conservatory) {
@@ -833,7 +833,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
         }
         if (msg.channel.id == kitchenID) {
             if (message == "professor cuckoo") {
-                msg.author.roles.add("979263070805323817")
+                msg.member.roles.add("979263070805323817")
             }
             else {
             for (let x in kitchen) {
@@ -890,10 +890,10 @@ client.on('messageReactionAdd', async (reaction, user) => {
         }
         if (msg.channel.id == billiardroomID) {
             if (message == "miss gannet" || message == "ms gannet" || message == "ms. gannet") {
-                msg.author.roles.add("979263354663227442")
+                msg.member.roles.add("979263354663227442")
             }
             if (message == "lady cuckoo") {
-                msg.author.roles.add("979263137108873256")
+                msg.member.roles.add("979263137108873256")
             }
             else {
             for (let x in billiardroom) {
@@ -950,10 +950,10 @@ client.on('messageReactionAdd', async (reaction, user) => {
         }
         if (msg.channel.id == ballroomID) {
             if (message == "mr. jay" || message == "mr jay") {
-                msg.author.roles.add("979263378587537449")
+                msg.member.roles.add("979263378587537449")
             }
             if (message == "professor peregrine") {
-                msg.author.roles.add("979263235289124885")
+                msg.member.roles.add("979263235289124885")
             }
             else {
             for (let x in ballroom) {
@@ -1044,9 +1044,9 @@ client.on('messageReactionAdd', async (reaction, user) => {
                     msg.channel.send(`As soon as her name was called, Miss Mallard let out a note of alarm, and threw her arms around Colonel Kestral. Kestrel herself just pulled herself straighter, staring at the detective with burning eyes. “Me? You think - _I_ did it?”\n\nSeveral police officers entered. Colonel Kestral growled at one, who cowered, but in general she allowed them to cuff her hands behind her back. “I hated him. He was an awful person, and what he did to Andrea was horrible. But he wasn’t worth my time.” She twisted to look around the room. “None of you are, after how Andrea was treated here. Him - Mallard - His legacy can’t be to keep making us all miserable one last time. I’m innocent.” She looked back at the detective. “I’m innocent of everything, besides loving Andrea Mallard. That is, and has always been, my only crime. If only it wasn’t seen as a crime, to all you old fucks.”\n\nThe cops pulled Colonel Kestral away as Miss Mallard sobbed. The detective felt as if there was something… off about her reaction. Maybe a few details had slipped past, the first time. Was Colonel Kestral really the killer at all?\n\n**The server will reset in 1 minute**`)
                 }
                 sleep(60).then(r => {
-                    msg.author.roles.set([])
-                    .then(member => {
-                        msg.author.roles.add("979263010461855774")
+                    msg.member.roles.set([])
+                    .then(fs => {
+                        msg.member.roles.add("979263010461855774")
                         msg.guild.channels.cache.get(ballroomID).messages.fetch({limit: 99}).then(m => {
                             nummessages = m.size - 1
                             msg.guild.channels.cache.get(ballroomID).messages.fetch({limit: nummessages}).then(k => {
@@ -1150,16 +1150,16 @@ client.on('messageReactionAdd', async (reaction, user) => {
                 sleep(5).then(r => {
                     msg.channel.send(`**Congratulations! You’ve solved the murder of Who Killed Dr. Mallard. WELL DONE! We all believed in you!**\n\n**HAPPIEST OF BIRTHDAYS, Wain, from all of us! You’ve had so many great ideas and adventures for us, and we wanted to give you one back from all of us. Hope your birthday is fantastic, and the riddles and puzzles weren’t… _Too_ torturous**\n\n**We have a little momento of the journey here** - https://aesthete-space.w3spaces.com/Wain_bday.html\n\n**Congrats again, and happy birthday! You’re not too shabby at this whole detective thing. Might be able to give Sherlock a run for his money.**`)
                     msg.channel.send("https://media.discordapp.net/attachments/979257682844332072/980929413304684615/Product_1.jpeg")
-                    msg.author.roles.add("980906927959736360")
+                    msg.member.roles.add("980906927959736360")
                 })
             }
         }
         if (msg.channel.id == servantsquartersID) {
             if (message == "mr. jay" || message == "mr jay") {
-                msg.author.roles.add("979263378587537449")
+                msg.member.roles.add("979263378587537449")
             }
             if (message == "lady cuckoo") {
-                msg.author.roles.add("979263137108873256")
+                msg.member.roles.add("979263137108873256")
             }
             else {
             for (let x in servantsquarters) {
@@ -1216,10 +1216,10 @@ client.on('messageReactionAdd', async (reaction, user) => {
         }
         if (msg.channel.id == childhoodbedroomID) {
             if (message == "colonel kestral") {
-                msg.author.roles.add("979263158805999666")
+                msg.member.roles.add("979263158805999666")
             }
             if (message == "lord cuckoo") {
-                msg.author.roles.add("979263106419142747")
+                msg.member.roles.add("979263106419142747")
             }
             else {
             for (let x in childhoodbedroom) {
@@ -1276,10 +1276,10 @@ client.on('messageReactionAdd', async (reaction, user) => {
         }
         if (msg.channel.id == guestbedroomID) {
             if (message == "ms. gannet" || message == "miss gannet" || message == "ms gannet") {
-                msg.author.roles.add("979263354663227442")
+                msg.member.roles.add("979263354663227442")
             }
             if (message == "lord cuckoo") {
-                msg.author.roles.add("979263106419142747")
+                msg.member.roles.add("979263106419142747")
             }
             else {
             for (let x in guestbedroom) {
