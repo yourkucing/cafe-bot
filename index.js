@@ -222,8 +222,7 @@ client.on('ready', () => {
      userID = member.id
      serverID = member.guild.id
      if (userID == "267130234522828801" && serverID == "979221828876791839") {
-        const detectiverole = member.guild.roles.cache.get('979263010461855774')
-        member.roles.add(detectiverole.id)
+        member.roles.add("979263010461855774")
      }
  })
 
@@ -248,7 +247,6 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979248960608825374/ezgif.com-gif-maker2.png")
             .setDescription(`**Miss Mallard** is the only child of Dr. Mallard. She is 28, and has been making her own way in life since the age of 22.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
-                console.log(msg)
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "❤️").users.remove(user.id)
                 setTimeout(() => repliedMessage.delete(), 10000);
               })
@@ -261,7 +259,6 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979248961128898560/ezgif.com-gif-maker.png")
             .setDescription(`**Colonel Kestral** is in her early 30s. She is intimidating to look at, and she's well-decorated from her time in the army. She is closely guarded with her secrets, and judges other based on strength and willpower.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
-                console.log(msg)
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "🧡").users.remove(user.id)
                 setTimeout(() => repliedMessage.delete(), 10000);
               })
@@ -274,7 +271,6 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979248961728688168/ezgif.com-gif-maker1.png")
             .setDescription(`**Ms. Gannet** is in her mid-30s, and is the daughter of a single mother who has had to pay her way to get to America and care for her family of 3. Ms. Gannet cares deeply for her family, and has worked for the Mallard household for the past 10 years.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
-                console.log(msg)
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "💛").users.remove(user.id)
                 setTimeout(() => repliedMessage.delete(), 10000);
               })
@@ -313,7 +309,6 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979254512852303892/ezgif.com-gif-maker3.png")
             .setDescription(`**Professor Cuckoo** is in his early 50s, and is the younger brother of Lord Cuckoo. He lives at the family manor, and teaches at a local university. Books and learning is his passion, and he would much rather be reading than speaking to others.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
-                console.log(msg)
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "💜").users.remove(user.id)
                 setTimeout(() => repliedMessage.delete(), 10000);
               })
@@ -326,7 +321,6 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979256385919385650/ezgif.com-gif-maker5.png")
             .setDescription(`**Mr. Falcon** is only 17, and doesn't know much about anything. He was hired on as Dr. Mallard's driver because his father and Dr. Mallard were old colleagues, and his father believes Mr. Falcon needed some real world work experience.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
-                console.log(msg)
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "🖤").users.remove(user.id)
                 setTimeout(() => repliedMessage.delete(), 10000);
               })
@@ -339,7 +333,6 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979453371100573726/ezgif.com-gif-maker6.png")
             .setDescription(`**Mrs. Wren** is in her late 50s, and has worked for the Mallard Manor for the past 30 years. Not only does she know the library like the back of her hand, she knows all the goings-ons of the entire Manor. And then some!`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
-                console.log(msg)
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "🤎").users.remove(user.id)
                 setTimeout(() => repliedMessage.delete(), 10000);
               })
@@ -352,7 +345,6 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979924152041488414/ezgif.com-gif-maker7.png")
             .setDescription(`**Mr. Penguin** is 60 years old, and has worked as a butler in the Mallard household for years. His is always incredibly professional and formal, with immaculate manners.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
-                console.log(msg)
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "🤍").users.remove(user.id)
                 setTimeout(() => repliedMessage.delete(), 10000);
               })
@@ -365,7 +357,6 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979255531757797386/ezgif.com-gif-maker4.png")
             .setDescription(`**Lady Cuckoo** is in her early 50s, and enjoys the lifestyle of the upper crust. She is nearly 10 years younger than her husband Lord Cuckoo, and married more for wealth than for true love.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
-                console.log(msg)
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "❤️‍🔥").users.remove(user.id)
                 setTimeout(() => repliedMessage.delete(), 10000);
               })
@@ -378,7 +369,6 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setImage("https://cdn.discordapp.com/attachments/720470821902090258/980318588487487508/ezgif.com-gif-maker9.png")
             .setDescription(`**Lord Cuckoo** is in his early 60s. He is an incredibly wealthy man due to family wealth, and married a younger woman. However, he himself has accomplished little in his life, and is constantly worried about being compared to his peers.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
-                console.log(msg)
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "💘").users.remove(user.id)
                 setTimeout(() => repliedMessage.delete(), 10000);
               })
@@ -391,7 +381,6 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setImage("https://cdn.discordapp.com/attachments/910649799609581598/979925818031628328/ezgif.com-gif-maker8.png")
             .setDescription(`**Professor Peregrine** is the man next door. Literally! The 40-something year old professor spends more time with his ear to the wall than at the school he supposedly teaches. He wasn't well liked by Dr. Mallard, but he somehow continues to find himself at their doorstep, no matter the situation.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
-                console.log(msg)
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "💟").users.remove(user.id)
                 setTimeout(() => repliedMessage.delete(), 10000);
               })
@@ -476,164 +465,192 @@ client.on('messageReactionAdd', async (reaction, user) => {
         guestbedroomID = "979259001281867788"
 
         if (msg.channel.id == winecellarID) {
-            for (let x in winecellar) {
-                if (message.includes(winecellar[x].question)) {
-                    msg.channel.send(winecellar[x].answer)
-                    countingModel.findOneAndUpdate({name: "k1"},
-                    {
-                        $inc:
+            if (message == "mrs. wren" || message == "mrs wren") {
+                msg.author.roles.add("979263326565572648")
+            }
+            if (message == "mr. falcon" || message == "mr falcon") {
+                msg.author.roles.add("979263402218237972")
+            }
+            else {
+                for (let x in winecellar) {
+                    if (message.includes(winecellar[x].question)) {
+                        msg.channel.send(winecellar[x].answer)
+                        countingModel.findOneAndUpdate({name: "k1"},
                         {
-                            num: 1
-                        }
-                    },
-                    {
-                        returnDocument: "after"
-                    }).then(r => {
-                        if (r) {
-                            if (r.num == 3) {
-                                sleep(5).then(r => {
-                                    msg.channel.send(`**The Challenge**\n\nPeregrine pulled his attention away from the conversation, trailing his fingers over the wine bottles. He pulled one out particularly, handling it with care. “Before you arrived, I had found this bottle of wine that looks pretty old. But the label looks faded out. Could you perhaps decipher the year marked on it? I won’t answer another question until you do.”`)
-                                    msg.channel.send(`https://cdn.discordapp.com/attachments/887018748945514649/979230164753977384/Wpuzzle1.png`)
-                                    msg.channel.send(`\`You have unlimited tries until you get the right answer or you say "I don't know". Good luck.\``)
-                                    countingModel.findOneAndUpdate({name: "k1"},
-                                    {
-                                        $set:
-                                        {
-                                            num: 0
-                                        }
-                                    }).then(ans => {
-                                        const filter = m => m.author.id == msg.author.id;
-                                        const collector = msg.channel.createMessageCollector(
-                                            {filter}
-                                        );
-                                        collector.on('collect', m => {
-                                            if (m.content.toLowerCase() == "once in a blue moon") {
-                                                msg.channel.send(`“Ah!” Peregrine looked back at the bottle. “Indeed, that is very old! I can’t wait to taste some of this wine! Well, perhaps if you are done questioning me, I could take this back home with me. And there is something you need to know. Miss Mallard and her niece were quite close when they were young girls. Almost like siblings. However, they drifted apart when Miss Crane was in college and only recently when Miss Mallard moved away, Miss Crane returned to take care of Dr. Mallard.”\n\nPeregrine gave a saucy wink, and chuckled to himself. “Spicy, isn’t it? Now, if you are done questioning me, I would suggest that you question those rude employees of the Manor, the… Librarian, I believe, Mrs. Wren. Or else that young driver fellow, Mr. Falcon. They were very eager to kick me out last night.”`)
-                                                collector.stop()
-                                            }
-                                            else if (m.content.toLowerCase() == "i don't know") {
-                                                msg.channel.send(`Peregrine sighed. “Alas, such a pity. Nevertheless I am taking this bottle with me. Now, if you are done, I would like to go and taste this wine. You should probably go talk to the driver, Mr. Falcon. He would likely know more about this terrible business.”`)
-                                                collector.stop()
-                                            }
-                                        });
-                                        collector.on('end', (collected, reason) => {
-                                            return
-                                        });
-                                    })
-                                })
+                            $inc:
+                            {
+                                num: 1
                             }
-                        }
-                    })
+                        },
+                        {
+                            returnDocument: "after"
+                        }).then(r => {
+                            if (r) {
+                                if (r.num == 3) {
+                                    sleep(5).then(r => {
+                                        msg.channel.send(`**The Challenge**\n\nPeregrine pulled his attention away from the conversation, trailing his fingers over the wine bottles. He pulled one out particularly, handling it with care. “Before you arrived, I had found this bottle of wine that looks pretty old. But the label looks faded out. Could you perhaps decipher the year marked on it? I won’t answer another question until you do.”`)
+                                        msg.channel.send(`https://cdn.discordapp.com/attachments/887018748945514649/979230164753977384/Wpuzzle1.png`)
+                                        msg.channel.send(`\`You have unlimited tries until you get the right answer or you say "I don't know". Good luck.\``)
+                                        countingModel.findOneAndUpdate({name: "k1"},
+                                        {
+                                            $set:
+                                            {
+                                                num: 0
+                                            }
+                                        }).then(ans => {
+                                            const filter = m => m.author.id == msg.author.id;
+                                            const collector = msg.channel.createMessageCollector(
+                                                {filter}
+                                            );
+                                            collector.on('collect', m => {
+                                                if (m.content.toLowerCase() == "once in a blue moon") {
+                                                    msg.channel.send(`“Ah!” Peregrine looked back at the bottle. “Indeed, that is very old! I can’t wait to taste some of this wine! Well, perhaps if you are done questioning me, I could take this back home with me. And there is something you need to know. Miss Mallard and her niece were quite close when they were young girls. Almost like siblings. However, they drifted apart when Miss Crane was in college and only recently when Miss Mallard moved away, Miss Crane returned to take care of Dr. Mallard.”\n\nPeregrine gave a saucy wink, and chuckled to himself. “Spicy, isn’t it? Now, if you are done questioning me, I would suggest that you question those rude employees of the Manor, the… Librarian, I believe, Mrs. Wren. Or else that young driver fellow, Mr. Falcon. They were very eager to kick me out last night.”`)
+                                                    collector.stop()
+                                                }
+                                                else if (m.content.toLowerCase() == "i don't know") {
+                                                    msg.channel.send(`Peregrine sighed. “Alas, such a pity. Nevertheless I am taking this bottle with me. Now, if you are done, I would like to go and taste this wine. You should probably go talk to the driver, Mr. Falcon. He would likely know more about this terrible business.”`)
+                                                    collector.stop()
+                                                }
+                                            });
+                                            collector.on('end', (collected, reason) => {
+                                                return
+                                            });
+                                        })
+                                    })
+                                }
+                            }
+                        })
+                    }
                 }
             }
         }
         if (msg.channel.id == garageID) {
-            for (let x in garage) {
-                if (message.includes(garage[x].question)) {
-                    msg.channel.send(garage[x].answer)
-                    countingModel.findOneAndUpdate({name: "k2"},
-                    {
-                        $inc:
+            if (message == "mrs. wren" || message == "mrs wren") {
+                msg.author.roles.add("979263326565572648")
+            }
+            if (message == "miss crane") {
+                msg.author.roles.add("979263197905301564")
+            }
+            else {
+                for (let x in garage) {
+                    if (message.includes(garage[x].question)) {
+                        msg.channel.send(garage[x].answer)
+                        countingModel.findOneAndUpdate({name: "k2"},
                         {
-                            num: 1
-                        }
-                    },
-                    {
-                        returnDocument: "after"
-                    }).then(r => {
-                        if (r) {
-                            if (r.num == 3) {
-                                sleep(5).then(r => {
-                                    msg.channel.send(`**The Challenge**\n\nMr. Falcon was clearly tiring of the questions. He slouched in place, and kept shooting back suspicious glances. “How do I even know you’re a real detective, or whatever? Maybe you’re the real killer, and you’re trying to throw suspicions off yourself by saying you’re a detective. Heard that on the radio, one time, that that happened.”\n\nHe gave a half shrug, willfully. “Maybe I’d trust you more if you told me some real cool story. Some sort of super cool detective shit. If so, I’ll tell you everything I know.”`)
-                                    msg.channel.send(`https://cdn.discordapp.com/attachments/720470821902090258/979231323237519360/puzzle.png`)
-                                    msg.channel.send(`\`You have unlimited tries until you get the right answer or you say "I don't know". Good luck.\``)
-                                    countingModel.findOneAndUpdate({name: "k2"},
-                                    {
-                                        $set:
-                                        {
-                                            num: 0
-                                        }
-                                    }).then(ans => {
-                                        const filter = m => m.author.id == msg.author.id;
-                                        const collector = msg.channel.createMessageCollector(
-                                            {filter}
-                                        );
-                                        collector.on('collect', m => {
-                                            if (m.content.toLowerCase() == "photograph") {
-                                                msg.channel.send(`“Whooooa.” Mr. Falcon had given up on pretending to be cool, staring with open-mouthed awe. “Okay, that’s a cool story. You’re a real detective, for sure. I knew that. Always did.”\n\nHe sat up and ran a hand through his hair. “Okay, so like, this is all on the down low, right? But I heard that last night, Dr. Mallard had that yelling match with his daughter – Miss Mallard – And he threatened to take her out of his will for good. But that means, like, he hadn’t taken her out before. So if he died before he did that – which he did – she’d be the first in line for the money, right?”\n\nMr. Falcon leaned back, grinning as if he had just solved the entire case. “I mean, I’m not saying anything. But ever since I’ve been working here, I haven’t heard her name being mentioned, like, EVER. Dr. Mallard would always go all red in the face, and anything that was said was always said in whispers. And she came at a reaaaaalllly suspicious time, didn’t she? Showed up, boom, he’s dead.” He shrugged. “Not sayin’ nothin’. But if I was, my bet would be on her.”\n\nWith the gossip aside, he realized maybe the detective would want to talk to people beside himself. “I guess you might wanna talk to more people. Maybe try Mrs. Wren? Or Miss Crane? They’re both really smart. I bet they know something. Good luck, though, detective. You’re the realest out here, you know?”`)
-                                                collector.stop()
-                                            }
-                                            else if (m.content.toLowerCase() == "i don't know") {
-                                                msg.channel.send(`“Ahhh, you almost got me. Answering those other questions like a schmuck.” Mr. Falcon folded his arms. “That was a shit story. You probably read that in some sort of penny detective novel. Nah, man, I don’t believe it for a second. If you really want to ask someone, talk to Mrs. Wren. Or else just leave. Fake detectives aren’t worth my time.”`)
-                                                collector.stop()
-                                            }
-                                        });
-                                        collector.on('end', (collected, reason) => {
-                                            return
-                                        });
-                                    })
-                                })
+                            $inc:
+                            {
+                                num: 1
                             }
-                        }
-                    })
+                        },
+                        {
+                            returnDocument: "after"
+                        }).then(r => {
+                            if (r) {
+                                if (r.num == 3) {
+                                    sleep(5).then(r => {
+                                        msg.channel.send(`**The Challenge**\n\nMr. Falcon was clearly tiring of the questions. He slouched in place, and kept shooting back suspicious glances. “How do I even know you’re a real detective, or whatever? Maybe you’re the real killer, and you’re trying to throw suspicions off yourself by saying you’re a detective. Heard that on the radio, one time, that that happened.”\n\nHe gave a half shrug, willfully. “Maybe I’d trust you more if you told me some real cool story. Some sort of super cool detective shit. If so, I’ll tell you everything I know.”`)
+                                        msg.channel.send(`https://cdn.discordapp.com/attachments/720470821902090258/979231323237519360/puzzle.png`)
+                                        msg.channel.send(`\`You have unlimited tries until you get the right answer or you say "I don't know". Good luck.\``)
+                                        countingModel.findOneAndUpdate({name: "k2"},
+                                        {
+                                            $set:
+                                            {
+                                                num: 0
+                                            }
+                                        }).then(ans => {
+                                            const filter = m => m.author.id == msg.author.id;
+                                            const collector = msg.channel.createMessageCollector(
+                                                {filter}
+                                            );
+                                            collector.on('collect', m => {
+                                                if (m.content.toLowerCase() == "photograph") {
+                                                    msg.channel.send(`“Whooooa.” Mr. Falcon had given up on pretending to be cool, staring with open-mouthed awe. “Okay, that’s a cool story. You’re a real detective, for sure. I knew that. Always did.”\n\nHe sat up and ran a hand through his hair. “Okay, so like, this is all on the down low, right? But I heard that last night, Dr. Mallard had that yelling match with his daughter – Miss Mallard – And he threatened to take her out of his will for good. But that means, like, he hadn’t taken her out before. So if he died before he did that – which he did – she’d be the first in line for the money, right?”\n\nMr. Falcon leaned back, grinning as if he had just solved the entire case. “I mean, I’m not saying anything. But ever since I’ve been working here, I haven’t heard her name being mentioned, like, EVER. Dr. Mallard would always go all red in the face, and anything that was said was always said in whispers. And she came at a reaaaaalllly suspicious time, didn’t she? Showed up, boom, he’s dead.” He shrugged. “Not sayin’ nothin’. But if I was, my bet would be on her.”\n\nWith the gossip aside, he realized maybe the detective would want to talk to people beside himself. “I guess you might wanna talk to more people. Maybe try Mrs. Wren? Or Miss Crane? They’re both really smart. I bet they know something. Good luck, though, detective. You’re the realest out here, you know?”`)
+                                                    collector.stop()
+                                                }
+                                                else if (m.content.toLowerCase() == "i don't know") {
+                                                    msg.channel.send(`“Ahhh, you almost got me. Answering those other questions like a schmuck.” Mr. Falcon folded his arms. “That was a shit story. You probably read that in some sort of penny detective novel. Nah, man, I don’t believe it for a second. If you really want to ask someone, talk to Mrs. Wren. Or else just leave. Fake detectives aren’t worth my time.”`)
+                                                    collector.stop()
+                                                }
+                                            });
+                                            collector.on('end', (collected, reason) => {
+                                                return
+                                            });
+                                        })
+                                    })
+                                }
+                            }
+                        })
+                    }
                 }
             }
         }
         if (msg.channel.id == loungeID) {
-            for (let x in lounge) {
-                if (message.includes(lounge[x].question)) {
-                    msg.channel.send(lounge[x].answer)
-                    countingModel.findOneAndUpdate({name: "k3"},
-                    {
-                        $inc:
+            if (message == "the study" || message == "study") {
+                msg.author.roles.add("980877815325003846")
+            }
+            else {
+                for (let x in lounge) {
+                    if (message.includes(lounge[x].question)) {
+                        msg.channel.send(lounge[x].answer)
+                        countingModel.findOneAndUpdate({name: "k3"},
                         {
-                            num: 1
-                        }
-                    },
-                    {
-                        returnDocument: "after"
-                    }).then(r => {
-                        if (r) {
-                            if (r.num == 3) {
-                                sleep(5).then(r => {
-                                    msg.channel.send(`**The Challenge**\n\nThe professor fidgets with his pockets and produces a small scrap of paper with scrawled writing on. He looks down a little surprised, and then smiles.\n\n“Oh, detective. Would you mind helping me solve something? I figure that’s in your skill set,” he asks, raising the scrap of paper. “Dr. Mallard often gave me book suggestions, things he thought I’d find interesting. But he had the most terrible of doctor’s handwriting, see? It was always a task to figure out what in God’s name he was trying to tell me, most of the time I’d have to break down and ask him. But since… Well, that’s not an option anymore… Maybe you could help me out a bit?”\n\nHe allows the detective to take the scrap from his hand and lets out a small, relieved sigh when the detective agrees to help.`)
-                                    msg.channel.send(`https://cdn.discordapp.com/attachments/720470821902090258/979232716509835264/puzzle.png`)
-                                    msg.channel.send(`A game of chess is in progress. The players are apparently beginners but are eager to learn and are noting down their moves. Here is a part of the game:\n\n……………..,D3-QD8, ND5-xD3,QD2-NxD5,BE2-NE3,............\n\nWant a hint? || D3,D8,D5,D3,D2,D5,E2,E3 ||\n\nNeed a second hint? || 43,48,45,43,4B,45,52,53 - hexadecimal ASCII code ||`)
-                                    msg.channel.send(`\`You have unlimited tries until you get the right answer or you say "I don't know". Good luck.\``)
-                                    countingModel.findOneAndUpdate({name: "k3"},
-                                    {
-                                        $set:
-                                        {
-                                            num: 0
-                                        }
-                                    }).then(ans => {
-                                        const filter = m => m.author.id == msg.author.id;
-                                        const collector = msg.channel.createMessageCollector(
-                                            {filter}
-                                        );
-                                        collector.on('collect', m => {
-                                            if (m.content.toLowerCase() == "checkers") {
-                                                msg.channel.send(`Professor Cuckoo’s eyes well up slightly, and he looks away from the detective. “Sorry, it’s just… Thank you, really detective. This means a lot to me, to know his last little message to me. I appreciate your help.”\n\nHe takes the scrap back and takes a few deep steadying breaths, preparing himself for some kind of confession.\n\n“Listen, detective… You’re crafty, clearly, you pick up on the details. So this probably doesn’t come as a giant surprise, but me and Dr. Mallard were, well, we were a little more than friends.” His hands clench nervously, meeting the detective’s eyes for a moment before staring back down at the scrap. “Sorry, it’s just that you’re the first person I’ve told. Ever, really. I wish that wasn’t the truth but, well, Mallard just wasn’t comfortable being out. He was raised in the kind of environment that just beat self hatred into him, told him it was shameful… But we really had something. I could see him coming out of his shell, slowly but surely, shedding all those barriers. If anyone had known the real him, the doctor I knew, they would know how much he changed.” The professor wipes away tears, sniffles a little, but he looks more stable now that he’s put the truth out there. “Of course, what happened with his daughter… I was devastated , I felt like we had been set back to square one again. All of that fear just welled up in him and he shut down. I think he was afraid that it was his fault that she was a ‘deviant’, like he hadn’t raised her like a good straight man would. But that came out as anger towards her instead.” He shakes his head slowly.`)
-                                                msg.channel.send(`“If you ask me? I have no idea who would do this to my dear doctor. People hated him, sure, the facade he put up… but his cancer was taking him over. I don’t understand why they’d decide to kill a dying man, if they wanted him out of this world. I can only hope you’ll figure this all out. I think I trust you to do it, though,” the professor nods, and suddenly looks up. “You know what? If you do figure things out, you should go over to the study. That’s all I can think of. Sorry if I wasn’t much help, you know, and sorry for dumping all this on you, but… Just, solve it for me, won’t you? I think its time for you to go to the **Study**.\n\nProfessor Cuckoo gives the detective a sad smile and shakes the man’s hand again. He slowly sits down on the nearest chair in the lounge, exhausted but with a chest much lighter from secrets.`)
-                                                collector.stop()
-                                            }
-                                            else if (m.content.toLowerCase() == "i don't know") {
-                                                msg.channel.send(`The professor frowns, taking back the scrap of paper quickly.\n\n“No, I don’t think so. Sorry, I just thought,” his frown deepens and he clears his throat, buttoning up his cardigan. “Well, I thought you might actually have the skills to solve something like this. I just hope you’ll solve my friend’s murder a little more easily than a simple case of quick hand, but maybe you’re not really much of a detective.” He looks the detective up and down and narrows his eyes. “Who hired you, anyways? I hope you’re an actual professional and not just some hack who believes all the lies about Dr. Mallard being a ‘horrible person’ or whatever the others here have told you. Bias is a terrible thing, you know.”\n\nThe professor folds up the scrap of paper carefully, fingers shaking a little now. “Just… go and do some REAL detective work, alright? There’s at least one person here who actually cares, so don’t think you can slack off. Go to the **Study** and leave me along!”\n\nHe seems too angry now to answer any further questions.`)
-                                                collector.stop()
-                                            }
-                                        });
-                                        collector.on('end', (collected, reason) => {
-                                            return
-                                        });
-                                    })
-                                })
+                            $inc:
+                            {
+                                num: 1
                             }
-                        }
-                    })
+                        },
+                        {
+                            returnDocument: "after"
+                        }).then(r => {
+                            if (r) {
+                                if (r.num == 3) {
+                                    sleep(5).then(r => {
+                                        msg.channel.send(`**The Challenge**\n\nThe professor fidgets with his pockets and produces a small scrap of paper with scrawled writing on. He looks down a little surprised, and then smiles.\n\n“Oh, detective. Would you mind helping me solve something? I figure that’s in your skill set,” he asks, raising the scrap of paper. “Dr. Mallard often gave me book suggestions, things he thought I’d find interesting. But he had the most terrible of doctor’s handwriting, see? It was always a task to figure out what in God’s name he was trying to tell me, most of the time I’d have to break down and ask him. But since… Well, that’s not an option anymore… Maybe you could help me out a bit?”\n\nHe allows the detective to take the scrap from his hand and lets out a small, relieved sigh when the detective agrees to help.`)
+                                        msg.channel.send(`https://cdn.discordapp.com/attachments/720470821902090258/979232716509835264/puzzle.png`)
+                                        msg.channel.send(`A game of chess is in progress. The players are apparently beginners but are eager to learn and are noting down their moves. Here is a part of the game:\n\n……………..,D3-QD8, ND5-xD3,QD2-NxD5,BE2-NE3,............\n\nWant a hint? || D3,D8,D5,D3,D2,D5,E2,E3 ||\n\nNeed a second hint? || 43,48,45,43,4B,45,52,53 - hexadecimal ASCII code ||`)
+                                        msg.channel.send(`\`You have unlimited tries until you get the right answer or you say "I don't know". Good luck.\``)
+                                        countingModel.findOneAndUpdate({name: "k3"},
+                                        {
+                                            $set:
+                                            {
+                                                num: 0
+                                            }
+                                        }).then(ans => {
+                                            const filter = m => m.author.id == msg.author.id;
+                                            const collector = msg.channel.createMessageCollector(
+                                                {filter}
+                                            );
+                                            collector.on('collect', m => {
+                                                if (m.content.toLowerCase() == "checkers") {
+                                                    msg.channel.send(`Professor Cuckoo’s eyes well up slightly, and he looks away from the detective. “Sorry, it’s just… Thank you, really detective. This means a lot to me, to know his last little message to me. I appreciate your help.”\n\nHe takes the scrap back and takes a few deep steadying breaths, preparing himself for some kind of confession.\n\n“Listen, detective… You’re crafty, clearly, you pick up on the details. So this probably doesn’t come as a giant surprise, but me and Dr. Mallard were, well, we were a little more than friends.” His hands clench nervously, meeting the detective’s eyes for a moment before staring back down at the scrap. “Sorry, it’s just that you’re the first person I’ve told. Ever, really. I wish that wasn’t the truth but, well, Mallard just wasn’t comfortable being out. He was raised in the kind of environment that just beat self hatred into him, told him it was shameful… But we really had something. I could see him coming out of his shell, slowly but surely, shedding all those barriers. If anyone had known the real him, the doctor I knew, they would know how much he changed.” The professor wipes away tears, sniffles a little, but he looks more stable now that he’s put the truth out there. “Of course, what happened with his daughter… I was devastated , I felt like we had been set back to square one again. All of that fear just welled up in him and he shut down. I think he was afraid that it was his fault that she was a ‘deviant’, like he hadn’t raised her like a good straight man would. But that came out as anger towards her instead.” He shakes his head slowly.`)
+                                                    msg.channel.send(`“If you ask me? I have no idea who would do this to my dear doctor. People hated him, sure, the facade he put up… but his cancer was taking him over. I don’t understand why they’d decide to kill a dying man, if they wanted him out of this world. I can only hope you’ll figure this all out. I think I trust you to do it, though,” the professor nods, and suddenly looks up. “You know what? If you do figure things out, you should go over to the study. That’s all I can think of. Sorry if I wasn’t much help, you know, and sorry for dumping all this on you, but… Just, solve it for me, won’t you? I think its time for you to go to the **Study**.\n\nProfessor Cuckoo gives the detective a sad smile and shakes the man’s hand again. He slowly sits down on the nearest chair in the lounge, exhausted but with a chest much lighter from secrets.`)
+                                                    collector.stop()
+                                                }
+                                                else if (m.content.toLowerCase() == "i don't know") {
+                                                    msg.channel.send(`The professor frowns, taking back the scrap of paper quickly.\n\n“No, I don’t think so. Sorry, I just thought,” his frown deepens and he clears his throat, buttoning up his cardigan. “Well, I thought you might actually have the skills to solve something like this. I just hope you’ll solve my friend’s murder a little more easily than a simple case of quick hand, but maybe you’re not really much of a detective.” He looks the detective up and down and narrows his eyes. “Who hired you, anyways? I hope you’re an actual professional and not just some hack who believes all the lies about Dr. Mallard being a ‘horrible person’ or whatever the others here have told you. Bias is a terrible thing, you know.”\n\nThe professor folds up the scrap of paper carefully, fingers shaking a little now. “Just… go and do some REAL detective work, alright? There’s at least one person here who actually cares, so don’t think you can slack off. Go to the **Study** and leave me along!”\n\nHe seems too angry now to answer any further questions.`)
+                                                    collector.stop()
+                                                }
+                                            });
+                                            collector.on('end', (collected, reason) => {
+                                                return
+                                            });
+                                        })
+                                    })
+                                }
+                            }
+                        })
+                    }
                 }
             }
         }
         if (msg.channel.id == libraryID) {
+            if (message == "miss crane") {
+                msg.author.roles.add("979263197905301564")
+            }
+            if (message == "professor cuckoo") {
+                msg.author.roles.add("979263070805323817")
+            }
+            else {
             for (let x in library) {
                 if (message.includes(library[x].question)) {
                     msg.channel.send(library[x].answer)
@@ -686,7 +703,15 @@ client.on('messageReactionAdd', async (reaction, user) => {
                 }
             }
         }
+        }
         if (msg.channel.id == diningroomID) {
+            if (message == "miss mallard") {
+                msg.author.roles.add("979262714406903808")
+            }
+            if (message == "colonel kestral") {
+                msg.author.roles.add("979263158805999666")
+            }
+            else {
             for (let x in diningroom) {
                 if (message.includes(diningroom[x].question)) {
                     msg.channel.send(diningroom[x].answer)
@@ -738,7 +763,15 @@ client.on('messageReactionAdd', async (reaction, user) => {
                 }
             }
         }
+        }
         if (msg.channel.id == conservatoryID) {
+            if (message == "professor peregrine") {
+                msg.author.roles.add("979263235289124885")
+            }
+            if (message == "mr. falcon" || message == "mr falcon") {
+                msg.author.roles.add("979263402218237972")
+            }
+            else {
             for (let x in conservatory) {
                 if (message.includes(conservatory[x].question)) {
                     msg.channel.send(conservatory[x].answer)
@@ -790,7 +823,12 @@ client.on('messageReactionAdd', async (reaction, user) => {
                 }
             }
         }
+        }
         if (msg.channel.id == kitchenID) {
+            if (message == "professor cuckoo") {
+                msg.author.roles.add("979263070805323817")
+            }
+            else {
             for (let x in kitchen) {
                 if (message.includes(kitchen[x].question)) {
                     msg.channel.send(kitchen[x].answer)
@@ -842,7 +880,15 @@ client.on('messageReactionAdd', async (reaction, user) => {
                 }
             }
         }
+        }
         if (msg.channel.id == billiardroomID) {
+            if (message == "miss gannet" || message == "ms gannet" || message == "ms. gannet") {
+                msg.author.roles.add("979263354663227442")
+            }
+            if (message == "lady cuckoo") {
+                msg.author.roles.add("979263137108873256")
+            }
+            else {
             for (let x in billiardroom) {
                 if (message.includes(billiardroom[x].question)) {
                     msg.channel.send(billiardroom[x].answer)
@@ -894,7 +940,15 @@ client.on('messageReactionAdd', async (reaction, user) => {
                 }
             }
         }
+        }
         if (msg.channel.id == ballroomID) {
+            if (message == "mr. jay" || message == "mr jay") {
+                msg.author.roles.add("979263378587537449")
+            }
+            if (message == "professor peregrine") {
+                msg.author.roles.add("979263235289124885")
+            }
+            else {
             for (let x in ballroom) {
                 if (message.includes(ballroom[x].question)) {
                     msg.channel.send(ballroom[x].answer)
@@ -946,10 +1000,43 @@ client.on('messageReactionAdd', async (reaction, user) => {
                 }
             }
         }
+        }
         if (msg.channel.id == thestudyID) {
-            if (message != "answer") {
-                msg.channel.send("OPE THAT'S WRONG. UNFORTUNATELY YOU HAVE TO RESTART. BYEBYE. This will self-destruct in 5 seconds.")
-                sleep(5).then(r => {
+            if (!message.includes("miss crane")) {
+                if (message.includes("professor peregrine")) {
+                    msg.channel.send(`The man laughed as all the eyes went to him, then paused, looking for the detective to go on. When there was no next accusation, Professor Peregrine began to scoff. “What, me? You think - What?!” From the door, several police officers entered, and began to cuff Professor Peregrine’s hands behind his back. The rest of the suspects stood aside, no one raising a hand to help him. “You can’t! I know I snuck back in, but - I didn’t do it! You have the wrong man! You - You’re WRONG! Someone tell this - This IDIOT how wrong he is! You can’t arrest me!”\n\nThe cops pulled Professor Peregrine away. The detective felt as if there was something… off about his reaction. Maybe a few details had slipped past, the first time. Was Professor Peregrine really the killer at all?\n\n**The server will reset in 1 minute**`)
+                }
+                else if (message.includes("professor cuckoo")) {
+                    msg.channel.send(`Professor Cuckoo stared at the detective, speechless. His face grew pale, and his hands shook. “You thought I killed - You thought -” He made a distressed sound and backed away a few steps, until his back hit the wall. “I would never. I would never kill Robert.”\n\nSeveral police officers entered, and began to cuff Professor Cuckoo’s hands behind his back. The man looked desperately between Miss Mallard and Lord Cuckoo. “Please. Please believe me. I loved him. I would never kill him. Please. Please, you have to understand. There’s been some kind of misunderstanding.”\n\nThe cops pulled Professor Cuckoo away. The detective felt as if there was something… off about his reaction. Maybe a few details had slipped past, the first time. Was Professor Cuckoo really the killer at all?\n\n**The server will reset in 1 minute**`)
+                }
+                else if (message.includes("ms. gannet") || message.includes("ms gannet")) {
+                    msg.channel.send(`Ms. Gannet had been hard to get into the Study to begin with, and at the accusation, she began to laugh. “Of course. Of course, I’m about to escape all this, and - This was part of his plan, wasn’t it? Mallard could never let me escape his grip.”\n\nSeveral police officers entered, and began to cuff Ms. Gannet’s hands behind her back. She was shaking with nerves, but managed to spit at the detective’s feet. “I was just trying to provide for my family. This whole time, I was just doing what was right for them. I didn’t kill your rich ass white man. But now? I wish I had.”\n\nThe cops pulled Ms. Gannet away. The detective felt as if there was something… off about her reaction. Maybe a few details had slipped past, the first time. Was Ms. Gannet really the killer at all?\n\n**The server will reset in 1 minute**`)
+                }
+                else if (message.includes("mrs. wren") || message.includes("mrs wren")) {
+                    msg.channel.send(`Mrs. Wren let out a gail of laughter. “Oh, so you’re just a bad detective. What a pity, I had quite hoped you might be good. Or at least interesting.”\n\nSeveral police officers entered, and began to cuff Mrs. Wren’s hands behind her back. Mrs. Wren let them, cheerfully, not too concerned about just being accused of murder. “You know, detective, there’s something so special about knowledge. The more you have, the closer you come to the truth. And you, silly boy - Well, you have lots more to learn.” She tried to reach out and touch his face, but the handcuffs prevented her. She frowned. “Come find me when you’ve learned. I can help you. And Miss Crane?” She called to the pale-faced woman as she was being led away. “No, dear, don’t cry. Just make sure to watch out for Fernado until I get back, alright?”\n\nThe cops pulled Mrs. Wren away. The detective felt as if there was something… off about her reaction. Maybe a few details had slipped past, the first time. Was Mrs. Wren really the killer at all?\n\n**The server will reset in 1 minute**`)
+                }
+                else if (message.includes("mr. penguin") || message.includes("mr penguin")) {
+                    msg.channel.send(`For the first time since the detective’s arrival, Mr. Penguin looked slightly unraveled. Miss Mallard reached for him immediately, and he waved her away. “Surely there’s been a mistake.” He looked over to the detective, pulling himself straighter. “I know there’s a joke about it ‘always being the butler’, but I thought so much better of you, dear man. I would never do this.”\n\nSeveral police officers arrived, and began to cuff Mr. Penguin’s hands behind his back. Miss Mallard protested, trying to pull them off of him, but Mr. Penguin stood firm, and let it happen. “I’ve worked in this manor for the past 30 years. I would never kill anyone. You’ve made a horrible mistake.”\n\nThe cops pulled Mr. Penguin away, while Miss Mallard sobbed, and Colonel Kestral held her. The detective felt as if there was something… off about his reaction. Maybe a few details had slipped past, the first time. Was Mr. Penguin really the killer at all?\n\n**The server will reset in 1 minute**`)
+                }
+                else if (message.includes("mr. jay") || message.includes("mr jay")) {
+                    msg.channel.send(`The older man stared, in disbelief, at the detective. “Me? I’m sorry, my hearing is starting to go. I thought you said that - I had killed him?”\n\nSeveral police officers entered, and began to cuff Mr. Jay’s hands behind his back. Miss Crane let out a gasp of horror and tried to bat the cops away from the older man. “Please. I’ve only been tending to the gardens. I wouldn’t kill Dr. Mallard. I would never kill anyone.” Mr. Jay tried to take a step toward, the detective, but the cops forced him back. “Please.”\n\nThe cops pulled Mr. Jay away. The detective felt as if there was something… off about his reaction. Maybe a few details had slipped past, the first time. Was Mr. Jay really the killer at all?\n\n**The server will reset in 1 minute**`)
+                }
+                else if (message.includes("mr. falcon") || message.includes("mr falcon")) {
+                    msg.channel.send(`Mr. Falcon began to laugh, before he saw everyone staring at him. “Whoa. Wait, hang on a second, this isn’t cool. Are you being, like, for real right now?”\n\nSeveral police officers entered, and began to cuff Mr. Falcon’s hands behind his back. The kid began to panic, trying to wiggle away as he hyperventilated. “This isn’t cool! I’m 17! I’m not a killer! I - Don’t touch me! My father will hear about this!”\n\nThe cops pulled Mr. Falcon away as he blubbered like a child. The detective felt as if there was something… off about his reaction. Maybe a few details had slipped past, the first time. Was Mr. Falcon really the killer at all?\n\n**The server will reset in 1 minute**`)
+                }
+                else if (message.includes("miss mallard")) {
+                    msg.channel.send(`Miss Crane and Colonel Kestral immediately made disbelieving sounds, and Kestral threw her arms around Miss Mallard to protect her, but Miss Mallard just stared at the detective in quiet shock. Finally, when she found her voice, she whispered, “you - you think I killed my own father?”\n\nSeveral police officers entered, and began to cuff Miss Mallard’s hands behind her back. Colonel Kestral actually fought the first officer off, but Miss Mallard calmed her and offered her hands up. “It’s okay, my love. I’m sure - I’m sure this is all a big misunderstanding. I’m sure it’ll - Be settled.”\n\nThe cops began to pull Miss Mallard away, but she turned one last time to the detective. “I didn’t do this. You have to understand that. Sometimes I hated him, but I would never kill my own father. You - You have to keep looking. You have to find who really did this.” She was pulled away. The detective felt as if there was something… off about her reaction. Maybe a few details had slipped past, the first time. Was Miss Mallard really the killer at all?\n\n**The server will reset in 1 minute**`)
+                }
+                else if (message.includes("lord cuckoo")) {
+                    msg.channel.send(`Lady Cuckoo was the first to react, unable to hide a laugh. Professor Cuckoo made a sound of distress, but Lord Cuckoo kept getting redder and redder. “I can’t - You - You DARE accuse me?”\n\nSeveral police officers entered, and began to cuff Lord Cuckoo’s hands behind his back. He fought them away best he could, until they overpowered him. “I’m Lord Cuckoo! I come from money! I’m - I’m more important than any of you will ever be. You can’t - Get your hands off me, you scum!”\n\nThe cops pulled Lord Cuckoo away. The detective felt as if there was something… off about his reaction. Maybe a few details had slipped past, the first time. Was Lord Cuckoo really the killer at all?\n\n**The server will reset in 1 minute**`)
+                }
+                else if (message.includes("lady cuckoo")) {
+                    msg.channel.send(`Lady Cuckoo’s eyebrows raised. Professor Cuckoo let out a sound of distress, but Lady Cuckoo just let out a small laugh. “Of course. All this drama, all this gossip and you accuse _me_ . You truly are an idiot, aren’t you?”\n\nSeveral police officers entered, and began to cuff Lady Cuckoo’s hands behind her back. Lord Cuckoo attempted to fight a few of them off, but Lady Cuckoo didn’t fight. “You know, I never slept with him,” she addressed the entire room. “Everyone talks. They claim I’m some sort of cheat, or a slut. That’s why you accused me, isn’t it? You think I was having an affair?” She let out a patronizing laugh. “You men are all the same. Everything is about sex to you. I didn’t do it. Any of it. You’ll see.”\n\nThe cops pulled Lady Cuckoo away. The detective felt as if there was something… off about her reaction. Maybe a few details had slipped past, the first time. Was Lady Cuckoo really the killer at all?\n\n**The server will reset in 1 minute**`)
+                }
+                else if (message.includes("colonel kestral")) {
+                    msg.channel.send(`As soon as her name was called, Miss Mallard let out a note of alarm, and threw her arms around Colonel Kestral. Kestrel herself just pulled herself straighter, staring at the detective with burning eyes. “Me? You think - _I_ did it?”\n\nSeveral police officers entered. Colonel Kestral growled at one, who cowered, but in general she allowed them to cuff her hands behind her back. “I hated him. He was an awful person, and what he did to Andrea was horrible. But he wasn’t worth my time.” She twisted to look around the room. “None of you are, after how Andrea was treated here. Him - Mallard - His legacy can’t be to keep making us all miserable one last time. I’m innocent.” She looked back at the detective. “I’m innocent of everything, besides loving Andrea Mallard. That is, and has always been, my only crime. If only it wasn’t seen as a crime, to all you old fucks.”\n\nThe cops pulled Colonel Kestral away as Miss Mallard sobbed. The detective felt as if there was something… off about her reaction. Maybe a few details had slipped past, the first time. Was Colonel Kestral really the killer at all?\n\n**The server will reset in 1 minute**`)
+                }
+                sleep(60).then(r => {
                     //msg.author.roles.set([])
                     //.then(member => {
                         //member.roles.add(msg.guild.roles.cache.get('979263010461855774'))
@@ -1050,8 +1137,23 @@ client.on('messageReactionAdd', async (reaction, user) => {
                     //.catch(console.error);
                 //})
             }
+            else {
+                msg.channel.send(`Miss Crane felt her heart beating wildly in her chest as the detective made the accusation. At first she just stood there in disbelief, feeling like the walls were suddenly closing in around her. Her throat ran dry as she tried to swallow the lump that had formed there, but she wasn’t going to be able to lie her way out of this one anymore. She inhaled a deep breath and relented.\n\n“Alright, fine! So I did it.” Miss Crane gave a little shrug of her shoulders and then let out the breath. It felt good to get it out, so she continued. “It was a necessary evil. You don’t know how horrifically he treated Andrea for loving someone of the same gender, and he was a total hypocrite at the same time! I thought that the affair he was having with Professor Cuckoo would mean that we could bring the family together again and all would be well between them, but it wasn’t! He still treated her like she was disgusting even though he was doing the same thing behind everyone’s backs!” She waved her hands around as she spoke, becoming quite emotional.`)
+                msg.channel.send(`“I couldn’t believe he could still act like that towards his own flesh and blood despite everything, so when Ms. Gannet told me where he went after dinner, I planned on confronting him about it. I don’t know what came over me, but I had to have snapped because I grabbed the gun along the way before going to his study.” Miss Crane gripped the edge of the counter to try and support herself while letting it all out since she had started shaking with fury all over again. “I told him exactly what I thought about him doing what he did to Andrea and called him out on all the hypocrisies, but he laughed in my face! I had no proof about any of it, and he was going to write Andrea and I both out of the will without a single smudge across his own name. I had to do something…he couldn’t get away with treating human beings like that. His own daughter, and also the staff members who work here for less than they deserve while some are blackmailed to accept it.”\n\nShe took a few calming breaths as the truth poured out of her. After a pause, she spoke again more quietly. “So I shot him, and I burned the new copy of the will he was writing up so that Andrea would be able to inherit what she so rightfully deserved. And so the people who work here could finally work for me; someone who cares about them and pays them a decent wage.” After she finished speaking, Miss Crane looked to the detective almost defiantly, as if challenging him to think she was some malicious killer regardless of her reasoning for doing it.`)
+                sleep(5).then(r => {
+                    msg.channel.send(`**Congratulations! You’ve solved the murder of Who Killed Dr. Mallard. WELL DONE! We all believed in you!**\n\n**HAPPIEST OF BIRTHDAYS, Wain, from all of us! You’ve had so many great ideas and adventures for us, and we wanted to give you one back from all of us. Hope your birthday is fantastic, and the riddles and puzzles weren’t… _Too_ torturous**\n\n**We have a little momento of the journey here** - https://aesthete-space.w3spaces.com/Wain_bday.html\n\n**Congrats again, and happy birthday! You’re not too shabby at this whole detective thing. Might be able to give Sherlock a run for his money.**`)
+                    msg.channel.send("https://media.discordapp.net/attachments/979257682844332072/980929413304684615/Product_1.jpeg")
+                })
+            }
         }
         if (msg.channel.id == servantsquartersID) {
+            if (message == "mr. jay" || message == "mr jay") {
+                msg.author.roles.add("979263378587537449")
+            }
+            if (message == "lady cuckoo") {
+                msg.author.roles.add("979263137108873256")
+            }
+            else {
             for (let x in servantsquarters) {
                 if (message.includes(servantsquarters[x].question)) {
                     msg.channel.send(servantsquarters[x].answer)
@@ -1103,7 +1205,15 @@ client.on('messageReactionAdd', async (reaction, user) => {
                 }
             }
         }
+        }
         if (msg.channel.id == childhoodbedroomID) {
+            if (message == "colonel kestral") {
+                msg.author.roles.add("979263158805999666")
+            }
+            if (message == "lord cuckoo") {
+                msg.author.roles.add("979263106419142747")
+            }
+            else {
             for (let x in childhoodbedroom) {
                 if (message.includes(childhoodbedroom[x].question)) {
                     msg.channel.send(childhoodbedroom[x].answer)
@@ -1155,7 +1265,15 @@ client.on('messageReactionAdd', async (reaction, user) => {
                 }
             }
         }
+        }
         if (msg.channel.id == guestbedroomID) {
+            if (message == "ms. gannet" || message == "miss gannet" || message == "ms gannet") {
+                msg.author.roles.add("979263354663227442")
+            }
+            if (message == "lord cuckoo") {
+                msg.author.roles.add("979263106419142747")
+            }
+            else {
             for (let x in guestbedroom) {
                 if (message.includes(guestbedroom[x].question)) {
                     msg.channel.send(guestbedroom[x].answer)
