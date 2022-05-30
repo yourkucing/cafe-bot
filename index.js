@@ -239,8 +239,8 @@ client.on('messageReactionAdd', async (reaction, user) => {
     messageID = reaction.message.id
     emojiID = reaction.emoji.id
     guild = client.guilds.cache.get(reaction.message.guild.id)
-    msg = guild.messages.cache.get(messageID)
     channelID = guild.channels.cache.get(reaction.message.channel.id)
+    msg = channelID.messages.cache.get(messageID)
     if (messageID == "980875214005080095") {
         if (emojiID == "❤️") {
             const embed = new MessageEmbed()
@@ -249,7 +249,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979248960608825374/ezgif.com-gif-maker2.png")
             .setDescription(`**Miss Mallard** is the only child of Dr. Mallard. She is 28, and has been making her own way in life since the age of 22.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
-                repliedMessage.reactions.user.remove()
+                msg.reactions.user.remove()
                 setTimeout(() => repliedMessage.delete(), 20000);
               })
               .catch();
