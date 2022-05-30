@@ -238,11 +238,11 @@ client.on('messageReactionAdd', async (reaction, user) => {
     if (user.bot) return
     messageID = reaction.message.id
     guild = client.guilds.cache.get(reaction.message.guild.id)
-    emojiID = guild.emojis.cache.get(reaction.emoji.id)
     channelID = guild.channels.cache.get(reaction.message.channel.id)
     msg = channelID.messages.cache.get(messageID)
     if (messageID == "980875214005080095") {
-        if (emojiID == "❤️") {
+        console.log(reaction)
+        if (reaction == "❤️") {
             const embed = new MessageEmbed()
             .setColor('#FF69B4')
             .setTitle('THE DAUGHTER')
