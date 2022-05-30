@@ -1105,7 +1105,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                                                                                                                             nummessages = m.size - 1
                                                                                                                             msg.guild.channels.cache.get(thestudyID).messages.fetch({limit: nummessages}).then(k => {
                                                                                                                                 msg.guild.channels.cache.get(thestudyID).bulkDelete(k)
-                                                                                                                                msg.guild.channels.cache.get(thestudyID).send(``)
+                                                                                                                                msg.guild.channels.cache.get(thestudyID).send(`Dr. Mallard’s body had been removed, but the Study still felt hallowed. As the detective approached the room, the suspects filed in behind. Reactions were different - Some quiet, and solitary, others barely hiding their curiosity as they examined the room where a man had just been murdered.\n\nDespite mixed reactions, no one dared speak as their eyes went to the detective. Everyone waited for the final accusation. To figure out… Whoddunit.\n\n\n**OOG** - This is your opportunity to make your FINAL ACCUSATION. Remember, this is final, and if you get it incorrect, there will be consequences. Not only will the wrong person be imprisoned, but your progress in the server so far will _all be deleted_ .\n\nIf you haven’t already, make sure you’ve gone through and spoken to EVERYONE. Look at all the information you’ve gathered.\n\nWhen you’re ready, make sure your response includes “The killer is…” , and then the name of whomever you thought did it. For example “The killer is… Professor Plum”.`)
                                                                                                                                 
                                                                                                                             })
                                                                                                                         })
@@ -1205,7 +1205,6 @@ client.on('messageReactionAdd', async (reaction, user) => {
                     })
                 }
             }
-        }
         }
         }
         if (msg.channel.id == childhoodbedroomID) {
@@ -1327,6 +1326,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                     })
                 }
             }
+        }
         }
     }
     
