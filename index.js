@@ -188,7 +188,7 @@ client.on('ready', () => {
     checkforBirthdays().catch((err) => {
 		console.log(err)
 	})
- 	client.channels.fetch("979257748040589332").then(channel => {
+/*  	client.channels.fetch("979257748040589332").then(channel => {
 		channel.messages.fetch("980875214005080095").then(message => {
 			message.react("❤️").then(m =>
                 {
@@ -215,7 +215,7 @@ client.on('ready', () => {
                     })
                 })
 		})
-	})
+	}) */
  });
 
  client.on('guildMemberAdd', member => {
@@ -239,10 +239,10 @@ client.on('messageReactionAdd', async (reaction, user) => {
     messageID = reaction.message.id
     emojiID = reaction.emoji.id
     guild = client.guilds.cache.get(reaction.message.guild.id)
-    channel = guild.channels.cache.get(reaction.message.channel.id)
+    channelID = guild.channels.cache.get(reaction.message.channel.id)
     if (messageID == "980875214005080095") {
         if (emoji == "❤️") {
-            channel.send("The Daughter")
+            channelID.send("The Daughter")
         }
     }
 })
