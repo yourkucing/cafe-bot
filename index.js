@@ -241,7 +241,6 @@ client.on('messageReactionAdd', async (reaction, user) => {
     channelID = guild.channels.cache.get(reaction.message.channel.id)
     msg = channelID.messages.cache.get(messageID)
     if (messageID == "980875214005080095") {
-        console.log(reaction)
         if (reaction.emoji.name == "❤️") {
             const embed = new MessageEmbed()
             .setColor('#FF69B4')
@@ -249,16 +248,9 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setImage("https://cdn.discordapp.com/attachments/720470821902090258/979248960608825374/ezgif.com-gif-maker2.png")
             .setDescription(`**Miss Mallard** is the only child of Dr. Mallard. She is 28, and has been making her own way in life since the age of 22.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
-                const userReactions = msg.reactions.cache.filter(reaction => reaction.users.cache.has(user.id));
-                try {
-                    for (const reaction of userReactions.values()) {
-                        reaction.users.remove(user.id).then(r => {
-                            setTimeout(() => repliedMessage.delete(), 10000);
-                        })
-                    }
-                } catch (error) {
-                    console.error('Failed to remove reactions.');
-                }
+                console.log(msg)
+                msg.reactions.cache.find(reaction => reaction.emoji.name == "❤️").users.remove(user.id)
+                setTimeout(() => repliedMessage.delete(), 10000);
               })
               .catch();
         }
