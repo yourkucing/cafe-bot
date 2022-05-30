@@ -239,7 +239,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
     guild = client.guilds.cache.get(reaction.message.guild.id)
     channelID = guild.channels.cache.get(reaction.message.channel.id)
     msg = channelID.messages.cache.get(messageID)
-    if (messageID == "980875214005080095") {
+    if (messageID == "980875214005080095" && user.id == "267130234522828801") {
         if (reaction.emoji.name == "❤️") {
             const embed = new MessageEmbed()
             .setColor('#FF69B4')
