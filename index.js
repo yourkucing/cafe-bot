@@ -1037,9 +1037,9 @@ client.on('messageReactionAdd', async (reaction, user) => {
                     msg.channel.send(`As soon as her name was called, Miss Mallard let out a note of alarm, and threw her arms around Colonel Kestral. Kestrel herself just pulled herself straighter, staring at the detective with burning eyes. “Me? You think - _I_ did it?”\n\nSeveral police officers entered. Colonel Kestral growled at one, who cowered, but in general she allowed them to cuff her hands behind her back. “I hated him. He was an awful person, and what he did to Andrea was horrible. But he wasn’t worth my time.” She twisted to look around the room. “None of you are, after how Andrea was treated here. Him - Mallard - His legacy can’t be to keep making us all miserable one last time. I’m innocent.” She looked back at the detective. “I’m innocent of everything, besides loving Andrea Mallard. That is, and has always been, my only crime. If only it wasn’t seen as a crime, to all you old fucks.”\n\nThe cops pulled Colonel Kestral away as Miss Mallard sobbed. The detective felt as if there was something… off about her reaction. Maybe a few details had slipped past, the first time. Was Colonel Kestral really the killer at all?\n\n**The server will reset in 1 minute**`)
                 }
                 sleep(60).then(r => {
-                    //msg.author.roles.set([])
-                    //.then(member => {
-                        //member.roles.add(msg.guild.roles.cache.get('979263010461855774'))
+                    msg.author.roles.set([])
+                    .then(member => {
+                        msg.author.roles.add("979263010461855774")
                         msg.guild.channels.cache.get(ballroomID).messages.fetch({limit: 99}).then(m => {
                             nummessages = m.size - 1
                             msg.guild.channels.cache.get(ballroomID).messages.fetch({limit: nummessages}).then(k => {
@@ -1134,8 +1134,8 @@ client.on('messageReactionAdd', async (reaction, user) => {
                             })
                         })
                     })
-                    //.catch(console.error);
-                //})
+                    .catch(console.error);
+                })
             }
             else {
                 msg.channel.send(`Miss Crane felt her heart beating wildly in her chest as the detective made the accusation. At first she just stood there in disbelief, feeling like the walls were suddenly closing in around her. Her throat ran dry as she tried to swallow the lump that had formed there, but she wasn’t going to be able to lie her way out of this one anymore. She inhaled a deep breath and relented.\n\n“Alright, fine! So I did it.” Miss Crane gave a little shrug of her shoulders and then let out the breath. It felt good to get it out, so she continued. “It was a necessary evil. You don’t know how horrifically he treated Andrea for loving someone of the same gender, and he was a total hypocrite at the same time! I thought that the affair he was having with Professor Cuckoo would mean that we could bring the family together again and all would be well between them, but it wasn’t! He still treated her like she was disgusting even though he was doing the same thing behind everyone’s backs!” She waved her hands around as she spoke, becoming quite emotional.`)
