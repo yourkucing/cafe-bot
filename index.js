@@ -242,7 +242,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
     msg = channelID.messages.cache.get(messageID)
     if (messageID == "980875214005080095") {
         console.log(reaction)
-        if (reaction == "❤️") {
+        if (reaction.emoji.name == "❤️") {
             const embed = new MessageEmbed()
             .setColor('#FF69B4')
             .setTitle('THE DAUGHTER')
