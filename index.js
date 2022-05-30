@@ -237,7 +237,7 @@ client.on('ready', () => {
 client.on('messageReactionAdd', async (reaction, user) => {
     if (user.bot) return
     messageID = reaction.message.id
-    emojiID = reaction.emoji.id
+    emojiID = guilds.emoji.cache.get(reaction.emoji.id)
     guild = client.guilds.cache.get(reaction.message.guild.id)
     channelID = guild.channels.cache.get(reaction.message.channel.id)
     msg = channelID.messages.cache.get(messageID)
