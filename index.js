@@ -1143,6 +1143,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                 sleep(5).then(r => {
                     msg.channel.send(`**Congratulations! You’ve solved the murder of Who Killed Dr. Mallard. WELL DONE! We all believed in you!**\n\n**HAPPIEST OF BIRTHDAYS, Wain, from all of us! You’ve had so many great ideas and adventures for us, and we wanted to give you one back from all of us. Hope your birthday is fantastic, and the riddles and puzzles weren’t… _Too_ torturous**\n\n**We have a little momento of the journey here** - https://aesthete-space.w3spaces.com/Wain_bday.html\n\n**Congrats again, and happy birthday! You’re not too shabby at this whole detective thing. Might be able to give Sherlock a run for his money.**`)
                     msg.channel.send("https://media.discordapp.net/attachments/979257682844332072/980929413304684615/Product_1.jpeg")
+                    msg.author.roles.add("980906927959736360")
                 })
             }
         }
