@@ -1206,6 +1206,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
             }
         }
         }
+        }
         if (msg.channel.id == childhoodbedroomID) {
             if (message == "colonel kestral") {
                 msg.author.roles.add("979263158805999666")
