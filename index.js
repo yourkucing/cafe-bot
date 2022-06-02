@@ -1010,7 +1010,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
         }
         if (msg.channel.id == thestudyID) {
             
-                    if (message == "the killer is... professor peregrine") {
+                    if (message.toLowerCase() == "the killer is... professor peregrine") {
                         msg.channel.send(`The man laughed as all the eyes went to him, then paused, looking for the detective to go on. When there was no next accusation, Professor Peregrine began to scoff. “What, me? You think - What?!” From the door, several police officers entered, and began to cuff Professor Peregrine’s hands behind his back. The rest of the suspects stood aside, no one raising a hand to help him. “You can’t! I know I snuck back in, but - I didn’t do it! You have the wrong man! You - You’re WRONG! Someone tell this - This IDIOT how wrong he is! You can’t arrest me!”\n\nThe cops pulled Professor Peregrine away. The detective felt as if there was something… off about his reaction. Maybe a few details had slipped past, the first time. Was Professor Peregrine really the killer at all?\n\n**The server will reset in 1 minute**`)
                         sleep(60).then(r => {
                             msg.guild.channels.cache.get(ballroomID).messages.fetch({limit: 99}).then(m => {
@@ -1122,7 +1122,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                     .catch(console.error);
                 })
                     }
-                    if (message == "the killer is... professor cuckoo") {
+                    if (message.toLowerCase() == "the killer is... professor cuckoo") {
                         msg.channel.send(`Professor Cuckoo stared at the detective, speechless. His face grew pale, and his hands shook. “You thought I killed - You thought -” He made a distressed sound and backed away a few steps, until his back hit the wall. “I would never. I would never kill Robert.”\n\nSeveral police officers entered, and began to cuff Professor Cuckoo’s hands behind his back. The man looked desperately between Miss Mallard and Lord Cuckoo. “Please. Please believe me. I loved him. I would never kill him. Please. Please, you have to understand. There’s been some kind of misunderstanding.”\n\nThe cops pulled Professor Cuckoo away. The detective felt as if there was something… off about his reaction. Maybe a few details had slipped past, the first time. Was Professor Cuckoo really the killer at all?\n\n**The server will reset in 1 minute**`)
                         sleep(60).then(r => {
                             msg.guild.channels.cache.get(ballroomID).messages.fetch({limit: 99}).then(m => {
@@ -1234,7 +1234,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                     .catch(console.error);
                 })
                     }
-                    if (message == "the killer is... ms. gannet" || message == "the killer is... ms gannet") {
+                    if (message.toLowerCase() == "the killer is... ms. gannet" || message.toLowerCase() == "the killer is... ms gannet") {
                         msg.channel.send(`Ms. Gannet had been hard to get into the Study to begin with, and at the accusation, she began to laugh. “Of course. Of course, I’m about to escape all this, and - This was part of his plan, wasn’t it? Mallard could never let me escape his grip.”\n\nSeveral police officers entered, and began to cuff Ms. Gannet’s hands behind her back. She was shaking with nerves, but managed to spit at the detective’s feet. “I was just trying to provide for my family. This whole time, I was just doing what was right for them. I didn’t kill your rich ass white man. But now? I wish I had.”\n\nThe cops pulled Ms. Gannet away. The detective felt as if there was something… off about her reaction. Maybe a few details had slipped past, the first time. Was Ms. Gannet really the killer at all?\n\n**The server will reset in 1 minute**`)
                         sleep(60).then(r => {
                             msg.guild.channels.cache.get(ballroomID).messages.fetch({limit: 99}).then(m => {
@@ -1346,7 +1346,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                     .catch(console.error);
                 })
                     }
-                    if (message == "the killer is... mrs. wren" || message == "the killer is... mrs wren") {
+                    if (message.toLowerCase() == "the killer is... mrs. wren" || message.toLowerCase() == "the killer is... mrs wren") {
                         msg.channel.send(`Mrs. Wren let out a gail of laughter. “Oh, so you’re just a bad detective. What a pity, I had quite hoped you might be good. Or at least interesting.”\n\nSeveral police officers entered, and began to cuff Mrs. Wren’s hands behind her back. Mrs. Wren let them, cheerfully, not too concerned about just being accused of murder. “You know, detective, there’s something so special about knowledge. The more you have, the closer you come to the truth. And you, silly boy - Well, you have lots more to learn.” She tried to reach out and touch his face, but the handcuffs prevented her. She frowned. “Come find me when you’ve learned. I can help you. And Miss Crane?” She called to the pale-faced woman as she was being led away. “No, dear, don’t cry. Just make sure to watch out for Fernado until I get back, alright?”\n\nThe cops pulled Mrs. Wren away. The detective felt as if there was something… off about her reaction. Maybe a few details had slipped past, the first time. Was Mrs. Wren really the killer at all?\n\n**The server will reset in 1 minute**`)
                         sleep(60).then(r => {
                             msg.guild.channels.cache.get(ballroomID).messages.fetch({limit: 99}).then(m => {
@@ -1458,7 +1458,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                     .catch(console.error);
                 })
                     }
-                    if (message == "the killer is... mr. penguin" || message == "the killer is... mr penguin") {
+                    if (message.toLowerCase() == "the killer is... mr. penguin" || message.toLowerCase() == "the killer is... mr penguin") {
                         msg.channel.send(`For the first time since the detective’s arrival, Mr. Penguin looked slightly unraveled. Miss Mallard reached for him immediately, and he waved her away. “Surely there’s been a mistake.” He looked over to the detective, pulling himself straighter. “I know there’s a joke about it ‘always being the butler’, but I thought so much better of you, dear man. I would never do this.”\n\nSeveral police officers arrived, and began to cuff Mr. Penguin’s hands behind his back. Miss Mallard protested, trying to pull them off of him, but Mr. Penguin stood firm, and let it happen. “I’ve worked in this manor for the past 30 years. I would never kill anyone. You’ve made a horrible mistake.”\n\nThe cops pulled Mr. Penguin away, while Miss Mallard sobbed, and Colonel Kestral held her. The detective felt as if there was something… off about his reaction. Maybe a few details had slipped past, the first time. Was Mr. Penguin really the killer at all?\n\n**The server will reset in 1 minute**`)
                         sleep(60).then(r => {
                             msg.guild.channels.cache.get(ballroomID).messages.fetch({limit: 99}).then(m => {
@@ -1570,7 +1570,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                     .catch(console.error);
                 })
                     }
-                    if (message == "the killer is... mr. jay" || message == "the killer is... mr jay") {
+                    if (message.toLowerCase() == "the killer is... mr. jay" || message.toLowerCase() == "the killer is... mr jay") {
                         msg.channel.send(`The older man stared, in disbelief, at the detective. “Me? I’m sorry, my hearing is starting to go. I thought you said that - I had killed him?”\n\nSeveral police officers entered, and began to cuff Mr. Jay’s hands behind his back. Miss Crane let out a gasp of horror and tried to bat the cops away from the older man. “Please. I’ve only been tending to the gardens. I wouldn’t kill Dr. Mallard. I would never kill anyone.” Mr. Jay tried to take a step toward, the detective, but the cops forced him back. “Please.”\n\nThe cops pulled Mr. Jay away. The detective felt as if there was something… off about his reaction. Maybe a few details had slipped past, the first time. Was Mr. Jay really the killer at all?\n\n**The server will reset in 1 minute**`)
                         sleep(60).then(r => {
                             msg.guild.channels.cache.get(ballroomID).messages.fetch({limit: 99}).then(m => {
@@ -1682,7 +1682,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                     .catch(console.error);
                 })
                     }
-                    if (message == "the killer is... mr. falcon" || message == "the killer is... mr falcon") {
+                    if (message.toLowerCase() == "the killer is... mr. falcon" || message.toLowerCase() == "the killer is... mr falcon") {
                         msg.channel.send(`Mr. Falcon began to laugh, before he saw everyone staring at him. “Whoa. Wait, hang on a second, this isn’t cool. Are you being, like, for real right now?”\n\nSeveral police officers entered, and began to cuff Mr. Falcon’s hands behind his back. The kid began to panic, trying to wiggle away as he hyperventilated. “This isn’t cool! I’m 17! I’m not a killer! I - Don’t touch me! My father will hear about this!”\n\nThe cops pulled Mr. Falcon away as he blubbered like a child. The detective felt as if there was something… off about his reaction. Maybe a few details had slipped past, the first time. Was Mr. Falcon really the killer at all?\n\n**The server will reset in 1 minute**`)
                         sleep(60).then(r => {
                             msg.guild.channels.cache.get(ballroomID).messages.fetch({limit: 99}).then(m => {
@@ -1794,7 +1794,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                     .catch(console.error);
                 })
                     }
-                    if (message == "the killer is... miss mallard") {
+                    if (message.toLowerCase() == "the killer is... miss mallard") {
                         msg.channel.send(`Miss Crane and Colonel Kestral immediately made disbelieving sounds, and Kestral threw her arms around Miss Mallard to protect her, but Miss Mallard just stared at the detective in quiet shock. Finally, when she found her voice, she whispered, “you - you think I killed my own father?”\n\nSeveral police officers entered, and began to cuff Miss Mallard’s hands behind her back. Colonel Kestral actually fought the first officer off, but Miss Mallard calmed her and offered her hands up. “It’s okay, my love. I’m sure - I’m sure this is all a big misunderstanding. I’m sure it’ll - Be settled.”\n\nThe cops began to pull Miss Mallard away, but she turned one last time to the detective. “I didn’t do this. You have to understand that. Sometimes I hated him, but I would never kill my own father. You - You have to keep looking. You have to find who really did this.” She was pulled away. The detective felt as if there was something… off about her reaction. Maybe a few details had slipped past, the first time. Was Miss Mallard really the killer at all?\n\n**The server will reset in 1 minute**`)
                         sleep(60).then(r => {
                             msg.guild.channels.cache.get(ballroomID).messages.fetch({limit: 99}).then(m => {
@@ -1906,7 +1906,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                     .catch(console.error);
                 })
                     }
-                    if (message == "the killer is... lord cuckoo") {
+                    if (message.toLowerCase() == "the killer is... lord cuckoo") {
                         msg.channel.send(`Lady Cuckoo was the first to react, unable to hide a laugh. Professor Cuckoo made a sound of distress, but Lord Cuckoo kept getting redder and redder. “I can’t - You - You DARE accuse me?”\n\nSeveral police officers entered, and began to cuff Lord Cuckoo’s hands behind his back. He fought them away best he could, until they overpowered him. “I’m Lord Cuckoo! I come from money! I’m - I’m more important than any of you will ever be. You can’t - Get your hands off me, you scum!”\n\nThe cops pulled Lord Cuckoo away. The detective felt as if there was something… off about his reaction. Maybe a few details had slipped past, the first time. Was Lord Cuckoo really the killer at all?\n\n**The server will reset in 1 minute**`)
                         sleep(60).then(r => {
                             msg.guild.channels.cache.get(ballroomID).messages.fetch({limit: 99}).then(m => {
@@ -2018,7 +2018,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                     .catch(console.error);
                 })
                     }
-                    if (message == "the killer is... lady cuckoo") {
+                    if (message.toLowerCase() == "the killer is... lady cuckoo") {
                         msg.channel.send(`Lady Cuckoo’s eyebrows raised. Professor Cuckoo let out a sound of distress, but Lady Cuckoo just let out a small laugh. “Of course. All this drama, all this gossip and you accuse _me_ . You truly are an idiot, aren’t you?”\n\nSeveral police officers entered, and began to cuff Lady Cuckoo’s hands behind her back. Lord Cuckoo attempted to fight a few of them off, but Lady Cuckoo didn’t fight. “You know, I never slept with him,” she addressed the entire room. “Everyone talks. They claim I’m some sort of cheat, or a slut. That’s why you accused me, isn’t it? You think I was having an affair?” She let out a patronizing laugh. “You men are all the same. Everything is about sex to you. I didn’t do it. Any of it. You’ll see.”\n\nThe cops pulled Lady Cuckoo away. The detective felt as if there was something… off about her reaction. Maybe a few details had slipped past, the first time. Was Lady Cuckoo really the killer at all?\n\n**The server will reset in 1 minute**`)
                         sleep(60).then(r => {
                             msg.guild.channels.cache.get(ballroomID).messages.fetch({limit: 99}).then(m => {
@@ -2130,7 +2130,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                     .catch(console.error);
                 })
                     }
-                    if (message == "the killer is... colonel kestral") {
+                    if (message.toLowerCase() == "the killer is... colonel kestral") {
                         msg.channel.send(`As soon as her name was called, Miss Mallard let out a note of alarm, and threw her arms around Colonel Kestral. Kestrel herself just pulled herself straighter, staring at the detective with burning eyes. “Me? You think - _I_ did it?”\n\nSeveral police officers entered. Colonel Kestral growled at one, who cowered, but in general she allowed them to cuff her hands behind her back. “I hated him. He was an awful person, and what he did to Andrea was horrible. But he wasn’t worth my time.” She twisted to look around the room. “None of you are, after how Andrea was treated here. Him - Mallard - His legacy can’t be to keep making us all miserable one last time. I’m innocent.” She looked back at the detective. “I’m innocent of everything, besides loving Andrea Mallard. That is, and has always been, my only crime. If only it wasn’t seen as a crime, to all you old fucks.”\n\nThe cops pulled Colonel Kestral away as Miss Mallard sobbed. The detective felt as if there was something… off about her reaction. Maybe a few details had slipped past, the first time. Was Colonel Kestral really the killer at all?\n\n**The server will reset in 1 minute**`)
                         sleep(60).then(r => {
                             msg.guild.channels.cache.get(ballroomID).messages.fetch({limit: 99}).then(m => {
@@ -2242,7 +2242,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                     .catch(console.error);
                 })
                     }
-            if (message == "the killer is... miss crane") {
+            if (message.toLowerCase() == "the killer is... miss crane") {
                 msg.channel.send(`Miss Crane felt her heart beating wildly in her chest as the detective made the accusation. At first she just stood there in disbelief, feeling like the walls were suddenly closing in around her. Her throat ran dry as she tried to swallow the lump that had formed there, but she wasn’t going to be able to lie her way out of this one anymore. She inhaled a deep breath and relented.\n\n“Alright, fine! So I did it.” Miss Crane gave a little shrug of her shoulders and then let out the breath. It felt good to get it out, so she continued. “It was a necessary evil. You don’t know how horrifically he treated Andrea for loving someone of the same gender, and he was a total hypocrite at the same time! I thought that the affair he was having with Professor Cuckoo would mean that we could bring the family together again and all would be well between them, but it wasn’t! He still treated her like she was disgusting even though he was doing the same thing behind everyone’s backs!” She waved her hands around as she spoke, becoming quite emotional.`)
                 msg.channel.send(`“I couldn’t believe he could still act like that towards his own flesh and blood despite everything, so when Ms. Gannet told me where he went after dinner, I planned on confronting him about it. I don’t know what came over me, but I had to have snapped because I grabbed the gun along the way before going to his study.” Miss Crane gripped the edge of the counter to try and support herself while letting it all out since she had started shaking with fury all over again. “I told him exactly what I thought about him doing what he did to Andrea and called him out on all the hypocrisies, but he laughed in my face! I had no proof about any of it, and he was going to write Andrea and I both out of the will without a single smudge across his own name. I had to do something…he couldn’t get away with treating human beings like that. His own daughter, and also the staff members who work here for less than they deserve while some are blackmailed to accept it.”\n\nShe took a few calming breaths as the truth poured out of her. After a pause, she spoke again more quietly. “So I shot him, and I burned the new copy of the will he was writing up so that Andrea would be able to inherit what she so rightfully deserved. And so the people who work here could finally work for me; someone who cares about them and pays them a decent wage.” After she finished speaking, Miss Crane looked to the detective almost defiantly, as if challenging him to think she was some malicious killer regardless of her reasoning for doing it.`)
                 sleep(5).then(r => {
