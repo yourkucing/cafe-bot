@@ -188,8 +188,8 @@ client.on('ready', () => {
     checkforBirthdays().catch((err) => {
 		console.log(err)
 	})
-/*  	client.channels.fetch("979257748040589332").then(channel => {
-		channel.messages.fetch("980875214005080095").then(message => {
+ 	client.channels.fetch("980901093536043043").then(channel => {
+		channel.messages.fetch("982344079503425536").then(message => {
 			message.react("❤️").then(m =>
                 {
                     message.react("🧡").then(a => {
@@ -215,14 +215,14 @@ client.on('ready', () => {
                     })
                 })
 		})
-	}) */
+	}) 
  });
 
  client.on('guildMemberAdd', member => {
      userID = member.id
      serverID = member.guild.id
-     if (userID == "267130234522828801" && serverID == "979221828876791839") {
-        member.roles.add("979263010461855774")
+     if (serverID == "980901091942232164") {
+        member.roles.add("980901091975778431")
      }
  })
 
@@ -239,7 +239,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
     guild = client.guilds.cache.get(reaction.message.guild.id)
     channelID = guild.channels.cache.get(reaction.message.channel.id)
     msg = channelID.messages.cache.get(messageID)
-    if (messageID == "980875214005080095" && user.id == "267130234522828801") {
+    if (messageID == "982344079503425536") {
         if (reaction.emoji.name == "❤️") {
             const embed = new MessageEmbed()
             .setColor('#FF69B4')
@@ -449,7 +449,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
 
     var message = msg.content.toLowerCase()
 
-    if (msg.guild.id == "979221828876791839") {
+    if (msg.guild.id == "980901091942232164") {
         winecellarID = "979258357309382759"
         garageID = "979258754526744586"
         loungeID = "979258451089850388"
