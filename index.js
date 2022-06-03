@@ -248,7 +248,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setDescription(`**Miss Mallard** is the only child of Dr. Mallard. She is 28, and has been making her own way in life since the age of 22.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "❤️").users.remove(user.id)
-                setTimeout(() => repliedMessage.delete(), 10000);
+                setTimeout(() => repliedMessage.delete(), 30000);
               })
               .catch();
         }
@@ -260,7 +260,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setDescription(`**Colonel Kestral** is in her early 30s. She is intimidating to look at, and she's well-decorated from her time in the army. She is closely guarded with her secrets, and judges other based on strength and willpower.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "🧡").users.remove(user.id)
-                setTimeout(() => repliedMessage.delete(), 10000);
+                setTimeout(() => repliedMessage.delete(), 30000);
               })
               .catch();
         }
@@ -272,7 +272,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setDescription(`**Ms. Gannet** is in her mid-30s, and is the daughter of a single mother who has had to pay her way to get to America and care for her family of 3. Ms. Gannet cares deeply for her family, and has worked for the Mallard household for the past 10 years.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "💛").users.remove(user.id)
-                setTimeout(() => repliedMessage.delete(), 10000);
+                setTimeout(() => repliedMessage.delete(), 30000);
               })
               .catch();
         }
@@ -285,7 +285,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
             channelID.send({embeds: [embed]}).then(repliedMessage => {
                 console.log(msg)
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "💚").users.remove(user.id)
-                setTimeout(() => repliedMessage.delete(), 10000);
+                setTimeout(() => repliedMessage.delete(), 30000);
               })
               .catch();
         }
@@ -298,7 +298,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
             channelID.send({embeds: [embed]}).then(repliedMessage => {
                 console.log(msg)
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "💙").users.remove(user.id)
-                setTimeout(() => repliedMessage.delete(), 10000);
+                setTimeout(() => repliedMessage.delete(), 30000);
               })
               .catch();
         }
@@ -310,7 +310,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setDescription(`**Professor Cuckoo** is in his early 50s, and is the younger brother of Lord Cuckoo. He lives at the family manor, and teaches at a local university. Books and learning is his passion, and he would much rather be reading than speaking to others.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "💜").users.remove(user.id)
-                setTimeout(() => repliedMessage.delete(), 10000);
+                setTimeout(() => repliedMessage.delete(), 30000);
               })
               .catch();
         }
@@ -322,7 +322,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setDescription(`**Mr. Falcon** is only 17, and doesn't know much about anything. He was hired on as Dr. Mallard's driver because his father and Dr. Mallard were old colleagues, and his father believes Mr. Falcon needed some real world work experience.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "🖤").users.remove(user.id)
-                setTimeout(() => repliedMessage.delete(), 10000);
+                setTimeout(() => repliedMessage.delete(), 30000);
               })
               .catch();
         }
@@ -334,7 +334,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setDescription(`**Mrs. Wren** is in her late 50s, and has worked for the Mallard Manor for the past 30 years. Not only does she know the library like the back of her hand, she knows all the goings-ons of the entire Manor. And then some!`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "🤎").users.remove(user.id)
-                setTimeout(() => repliedMessage.delete(), 10000);
+                setTimeout(() => repliedMessage.delete(), 30000);
               })
               .catch();
         }
@@ -346,7 +346,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setDescription(`**Mr. Penguin** is 60 years old, and has worked as a butler in the Mallard household for years. His is always incredibly professional and formal, with immaculate manners.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "🤍").users.remove(user.id)
-                setTimeout(() => repliedMessage.delete(), 10000);
+                setTimeout(() => repliedMessage.delete(), 30000);
               })
               .catch();
         }
@@ -358,7 +358,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setDescription(`**Lady Cuckoo** is in her early 50s, and enjoys the lifestyle of the upper crust. She is nearly 10 years younger than her husband Lord Cuckoo, and married more for wealth than for true love.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "❤️‍🔥").users.remove(user.id)
-                setTimeout(() => repliedMessage.delete(), 10000);
+                setTimeout(() => repliedMessage.delete(), 30000);
               })
               .catch();
         }
@@ -370,7 +370,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setDescription(`**Lord Cuckoo** is in his early 60s. He is an incredibly wealthy man due to family wealth, and married a younger woman. However, he himself has accomplished little in his life, and is constantly worried about being compared to his peers.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "💘").users.remove(user.id)
-                setTimeout(() => repliedMessage.delete(), 10000);
+                setTimeout(() => repliedMessage.delete(), 30000);
               })
               .catch();
         }
@@ -382,7 +382,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
             .setDescription(`**Professor Peregrine** is the man next door. Literally! The 40-something year old professor spends more time with his ear to the wall than at the school he supposedly teaches. He wasn't well liked by Dr. Mallard, but he somehow continues to find himself at their doorstep, no matter the situation.`);
             channelID.send({embeds: [embed]}).then(repliedMessage => {
                 msg.reactions.cache.find(reaction => reaction.emoji.name == "💟").users.remove(user.id)
-                setTimeout(() => repliedMessage.delete(), 10000);
+                setTimeout(() => repliedMessage.delete(), 30000);
               })
               .catch();
         }
@@ -1547,7 +1547,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                                                                                                                                 msg.guild.channels.cache.get(thestudyID).messages.fetch({limit: nummessages}).then(k => {
                                                                                                                                     msg.guild.channels.cache.get(thestudyID).bulkDelete(k)
                                                                                                                                     msg.guild.channels.cache.get(thestudyID).send(`Dr. Mallard’s body had been removed, but the Study still felt hallowed. As the detective approached the room, the suspects filed in behind. Reactions were different - Some quiet, and solitary, others barely hiding their curiosity as they examined the room where a man had just been murdered.\n\nDespite mixed reactions, no one dared speak as their eyes went to the detective. Everyone waited for the final accusation. To figure out… Whoddunit.\n\n\n**OOG** - This is your opportunity to make your FINAL ACCUSATION. Remember, this is final, and if you get it incorrect, there will be consequences. Not only will the wrong person be imprisoned, but your progress in the server so far will _all be deleted_ .\n\nIf you haven’t already, make sure you’ve gone through and spoken to EVERYONE. Look at all the information you’ve gathered.\n\nWhen you’re ready, make sure your response includes “The killer is…” , and then the name of whomever you thought did it. For example “The killer is… Professor Plum”.`)
-                                                                                                                                    msg.guild.channels.cache.get("979969811784290345").messages.fetch({limit:99}).then(m => {
+                                                                                                                                    msg.guild.channels.cache.get(entrancehallID).messages.fetch({limit:99}).then(m => {
                                                                                                                                         nummessages = m.size - 1
                                                                                                                                         msg.guild.channels.cache.get(entrancehallID).messages.fetch({limit: nummessages}).then(k => {
                                                                                                                                             msg.guild.channels.cache.get(entrancehallID).bulkDelete(k)
@@ -1664,7 +1664,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                                                                                                                                 msg.guild.channels.cache.get(thestudyID).messages.fetch({limit: nummessages}).then(k => {
                                                                                                                                     msg.guild.channels.cache.get(thestudyID).bulkDelete(k)
                                                                                                                                     msg.guild.channels.cache.get(thestudyID).send(`Dr. Mallard’s body had been removed, but the Study still felt hallowed. As the detective approached the room, the suspects filed in behind. Reactions were different - Some quiet, and solitary, others barely hiding their curiosity as they examined the room where a man had just been murdered.\n\nDespite mixed reactions, no one dared speak as their eyes went to the detective. Everyone waited for the final accusation. To figure out… Whoddunit.\n\n\n**OOG** - This is your opportunity to make your FINAL ACCUSATION. Remember, this is final, and if you get it incorrect, there will be consequences. Not only will the wrong person be imprisoned, but your progress in the server so far will _all be deleted_ .\n\nIf you haven’t already, make sure you’ve gone through and spoken to EVERYONE. Look at all the information you’ve gathered.\n\nWhen you’re ready, make sure your response includes “The killer is…” , and then the name of whomever you thought did it. For example “The killer is… Professor Plum”.`)
-                                                                                                                                    msg.guild.channels.cache.get("979969811784290345").messages.fetch({limit:99}).then(m => {
+                                                                                                                                    msg.guild.channels.cache.get(entrancehallID).messages.fetch({limit:99}).then(m => {
                                                                                                                                         nummessages = m.size - 1
                                                                                                                                         msg.guild.channels.cache.get(entrancehallID).messages.fetch({limit: nummessages}).then(k => {
                                                                                                                                             msg.guild.channels.cache.get(entrancehallID).bulkDelete(k)
@@ -1781,7 +1781,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                                                                                                                                 msg.guild.channels.cache.get(thestudyID).messages.fetch({limit: nummessages}).then(k => {
                                                                                                                                     msg.guild.channels.cache.get(thestudyID).bulkDelete(k)
                                                                                                                                     msg.guild.channels.cache.get(thestudyID).send(`Dr. Mallard’s body had been removed, but the Study still felt hallowed. As the detective approached the room, the suspects filed in behind. Reactions were different - Some quiet, and solitary, others barely hiding their curiosity as they examined the room where a man had just been murdered.\n\nDespite mixed reactions, no one dared speak as their eyes went to the detective. Everyone waited for the final accusation. To figure out… Whoddunit.\n\n\n**OOG** - This is your opportunity to make your FINAL ACCUSATION. Remember, this is final, and if you get it incorrect, there will be consequences. Not only will the wrong person be imprisoned, but your progress in the server so far will _all be deleted_ .\n\nIf you haven’t already, make sure you’ve gone through and spoken to EVERYONE. Look at all the information you’ve gathered.\n\nWhen you’re ready, make sure your response includes “The killer is…” , and then the name of whomever you thought did it. For example “The killer is… Professor Plum”.`)
-                                                                                                                                    msg.guild.channels.cache.get("979969811784290345").messages.fetch({limit:99}).then(m => {
+                                                                                                                                    msg.guild.channels.cache.get(entrancehallID).messages.fetch({limit:99}).then(m => {
                                                                                                                                         nummessages = m.size - 1
                                                                                                                                         msg.guild.channels.cache.get(entrancehallID).messages.fetch({limit: nummessages}).then(k => {
                                                                                                                                             msg.guild.channels.cache.get(entrancehallID).bulkDelete(k)
@@ -1898,7 +1898,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                                                                                                                                 msg.guild.channels.cache.get(thestudyID).messages.fetch({limit: nummessages}).then(k => {
                                                                                                                                     msg.guild.channels.cache.get(thestudyID).bulkDelete(k)
                                                                                                                                     msg.guild.channels.cache.get(thestudyID).send(`Dr. Mallard’s body had been removed, but the Study still felt hallowed. As the detective approached the room, the suspects filed in behind. Reactions were different - Some quiet, and solitary, others barely hiding their curiosity as they examined the room where a man had just been murdered.\n\nDespite mixed reactions, no one dared speak as their eyes went to the detective. Everyone waited for the final accusation. To figure out… Whoddunit.\n\n\n**OOG** - This is your opportunity to make your FINAL ACCUSATION. Remember, this is final, and if you get it incorrect, there will be consequences. Not only will the wrong person be imprisoned, but your progress in the server so far will _all be deleted_ .\n\nIf you haven’t already, make sure you’ve gone through and spoken to EVERYONE. Look at all the information you’ve gathered.\n\nWhen you’re ready, make sure your response includes “The killer is…” , and then the name of whomever you thought did it. For example “The killer is… Professor Plum”.`)
-                                                                                                                                    msg.guild.channels.cache.get("979969811784290345").messages.fetch({limit:99}).then(m => {
+                                                                                                                                    msg.guild.channels.cache.get(entrancehallID).messages.fetch({limit:99}).then(m => {
                                                                                                                                         nummessages = m.size - 1
                                                                                                                                         msg.guild.channels.cache.get(entrancehallID).messages.fetch({limit: nummessages}).then(k => {
                                                                                                                                             msg.guild.channels.cache.get(entrancehallID).bulkDelete(k)
@@ -2015,7 +2015,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                                                                                                                                 msg.guild.channels.cache.get(thestudyID).messages.fetch({limit: nummessages}).then(k => {
                                                                                                                                     msg.guild.channels.cache.get(thestudyID).bulkDelete(k)
                                                                                                                                     msg.guild.channels.cache.get(thestudyID).send(`Dr. Mallard’s body had been removed, but the Study still felt hallowed. As the detective approached the room, the suspects filed in behind. Reactions were different - Some quiet, and solitary, others barely hiding their curiosity as they examined the room where a man had just been murdered.\n\nDespite mixed reactions, no one dared speak as their eyes went to the detective. Everyone waited for the final accusation. To figure out… Whoddunit.\n\n\n**OOG** - This is your opportunity to make your FINAL ACCUSATION. Remember, this is final, and if you get it incorrect, there will be consequences. Not only will the wrong person be imprisoned, but your progress in the server so far will _all be deleted_ .\n\nIf you haven’t already, make sure you’ve gone through and spoken to EVERYONE. Look at all the information you’ve gathered.\n\nWhen you’re ready, make sure your response includes “The killer is…” , and then the name of whomever you thought did it. For example “The killer is… Professor Plum”.`)
-                                                                                                                                    msg.guild.channels.cache.get("979969811784290345").messages.fetch({limit:99}).then(m => {
+                                                                                                                                    msg.guild.channels.cache.get(entrancehallID).messages.fetch({limit:99}).then(m => {
                                                                                                                                         nummessages = m.size - 1
                                                                                                                                         msg.guild.channels.cache.get(entrancehallID).messages.fetch({limit: nummessages}).then(k => {
                                                                                                                                             msg.guild.channels.cache.get(entrancehallID).bulkDelete(k)
@@ -2132,7 +2132,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                                                                                                                                 msg.guild.channels.cache.get(thestudyID).messages.fetch({limit: nummessages}).then(k => {
                                                                                                                                     msg.guild.channels.cache.get(thestudyID).bulkDelete(k)
                                                                                                                                     msg.guild.channels.cache.get(thestudyID).send(`Dr. Mallard’s body had been removed, but the Study still felt hallowed. As the detective approached the room, the suspects filed in behind. Reactions were different - Some quiet, and solitary, others barely hiding their curiosity as they examined the room where a man had just been murdered.\n\nDespite mixed reactions, no one dared speak as their eyes went to the detective. Everyone waited for the final accusation. To figure out… Whoddunit.\n\n\n**OOG** - This is your opportunity to make your FINAL ACCUSATION. Remember, this is final, and if you get it incorrect, there will be consequences. Not only will the wrong person be imprisoned, but your progress in the server so far will _all be deleted_ .\n\nIf you haven’t already, make sure you’ve gone through and spoken to EVERYONE. Look at all the information you’ve gathered.\n\nWhen you’re ready, make sure your response includes “The killer is…” , and then the name of whomever you thought did it. For example “The killer is… Professor Plum”.`)
-                                                                                                                                    msg.guild.channels.cache.get("979969811784290345").messages.fetch({limit:99}).then(m => {
+                                                                                                                                    msg.guild.channels.cache.get(entrancehallID).messages.fetch({limit:99}).then(m => {
                                                                                                                                         nummessages = m.size - 1
                                                                                                                                         msg.guild.channels.cache.get(entrancehallID).messages.fetch({limit: nummessages}).then(k => {
                                                                                                                                             msg.guild.channels.cache.get(entrancehallID).bulkDelete(k)
@@ -2249,7 +2249,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
                                                                                                                                 msg.guild.channels.cache.get(thestudyID).messages.fetch({limit: nummessages}).then(k => {
                                                                                                                                     msg.guild.channels.cache.get(thestudyID).bulkDelete(k)
                                                                                                                                     msg.guild.channels.cache.get(thestudyID).send(`Dr. Mallard’s body had been removed, but the Study still felt hallowed. As the detective approached the room, the suspects filed in behind. Reactions were different - Some quiet, and solitary, others barely hiding their curiosity as they examined the room where a man had just been murdered.\n\nDespite mixed reactions, no one dared speak as their eyes went to the detective. Everyone waited for the final accusation. To figure out… Whoddunit.\n\n\n**OOG** - This is your opportunity to make your FINAL ACCUSATION. Remember, this is final, and if you get it incorrect, there will be consequences. Not only will the wrong person be imprisoned, but your progress in the server so far will _all be deleted_ .\n\nIf you haven’t already, make sure you’ve gone through and spoken to EVERYONE. Look at all the information you’ve gathered.\n\nWhen you’re ready, make sure your response includes “The killer is…” , and then the name of whomever you thought did it. For example “The killer is… Professor Plum”.`)
-                                                                                                                                    msg.guild.channels.cache.get("979969811784290345").messages.fetch({limit:99}).then(m => {
+                                                                                                                                    msg.guild.channels.cache.get(entrancehallID).messages.fetch({limit:99}).then(m => {
                                                                                                                                         nummessages = m.size - 1
                                                                                                                                         msg.guild.channels.cache.get(entrancehallID).messages.fetch({limit: nummessages}).then(k => {
                                                                                                                                             msg.guild.channels.cache.get(entrancehallID).bulkDelete(k)
@@ -2302,7 +2302,6 @@ client.on('messageReactionAdd', async (reaction, user) => {
                 msg.channel.send(`“I couldn’t believe he could still act like that towards his own flesh and blood despite everything, so when Ms. Gannet told me where he went after dinner, I planned on confronting him about it. I don’t know what came over me, but I had to have snapped because I grabbed the gun along the way before going to his study.” Miss Crane gripped the edge of the counter to try and support herself while letting it all out since she had started shaking with fury all over again. “I told him exactly what I thought about him doing what he did to Andrea and called him out on all the hypocrisies, but he laughed in my face! I had no proof about any of it, and he was going to write Andrea and I both out of the will without a single smudge across his own name. I had to do something…he couldn’t get away with treating human beings like that. His own daughter, and also the staff members who work here for less than they deserve while some are blackmailed to accept it.”\n\nShe took a few calming breaths as the truth poured out of her. After a pause, she spoke again more quietly. “So I shot him, and I burned the new copy of the will he was writing up so that Andrea would be able to inherit what she so rightfully deserved. And so the people who work here could finally work for me; someone who cares about them and pays them a decent wage.” After she finished speaking, Miss Crane looked to the detective almost defiantly, as if challenging him to think she was some malicious killer regardless of her reasoning for doing it.`)
                 sleep(5).then(r => {
                     msg.channel.send(`**Congratulations! You’ve solved the murder of Who Killed Dr. Mallard. WELL DONE! We all believed in you! You’re not too shabby at this whole detective thing. Might be able to give Sherlock a run for his money.**`)
-                    msg.channel.send("https://media.discordapp.net/attachments/979257682844332072/980929413304684615/Product_1.jpeg")
                     msg.guild.members.forEach(member => {
                         if (!member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) {
                             member.roles.set([]).then(k => {
