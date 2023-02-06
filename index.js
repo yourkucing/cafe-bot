@@ -231,7 +231,6 @@ client.on('messageReactionAdd', async (reaction, user) => {
     msg = channelID.messages.cache.get(messageID)
 
     if (messageID == "1072188682372665434") {
-        console.log(member)
         if (reaction.emoji.name == "🍤") {
             member.roles.add("1053242483917725786")
         }
