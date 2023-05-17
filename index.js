@@ -90,7 +90,7 @@ function getNumberOfDays(start, end) {
 function Roman(){
     var startWeek = 1; //Today's IG week in GMT timezone
     var startYear = 1; //Today's IG year in GMT timezone
-    var startDate = '2021,7,25'; //Today's date in GMT timezone
+    var startDate = '2021,8,25'; //Today's date in GMT timezone
     //var currentDate = '2021,12,2'; // Use this to check if code works.
     var c = new Date();
     var n = c.toUTCString();
