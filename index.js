@@ -135,29 +135,29 @@ function Roman(){
     
     var month;
     
-    if (week==1){month='September';
+    if (week==9){month='September';
     }
-    if (week==2){month='October';
+    if (week==10){month='October';
     }
-    if (week==3){month='November';
+    if (week==11){month='November';
     }
-    if (week==4){month='December';
+    if (week==12){month='December';
     }
-    if (week==5){month='January';
+    if (week==1){month='January';
     }
-    if (week==6){month='February';
+    if (week==2){month='February';
     }
-    if (week==7){month='March';
+    if (week==3){month='March';
     }
-    if (week==8){month='April';
+    if (week==4){month='April';
     }
-    if (week==9){month='May';
+    if (week==5){month='May';
     }
-    if (week==10){month='June';
+    if (week==6){month='June';
     }
-    if (week==11){month='July';
+    if (week==7){month='July';
     }
-    if (week==12){month='August';
+    if (week==8){month='August';
     }
     
     var d;
@@ -248,7 +248,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
         }
     }
 
-    if (messageID == "982344079503425536") {
+/*     if (messageID == "982344079503425536") {
         if (reaction.emoji.name == "❤️") {
             const embed = new MessageEmbed()
             .setColor('#FF69B4')
@@ -395,7 +395,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
               })
               .catch();
         }
-    }
+    } */
 })
 
 client.on('messageReactionRemove', async (reaction, user) => {
@@ -442,7 +442,7 @@ client.on('messageReactionRemove', async (reaction, user) => {
 
     if (msg.author.bot) return
 
-    channelModel.findOne({channelID: msg.channel.id}).then(userexistence => {
+/*     channelModel.findOne({channelID: msg.channel.id}).then(userexistence => {
         if (userexistence) {
             if (msg.content.toLowerCase().includes("cafe disable-cards")) {
             }
@@ -491,11 +491,11 @@ client.on('messageReactionRemove', async (reaction, user) => {
             }
 
         }
-    })
+    }) */
 
     var message = msg.content.toLowerCase()
 
-    if (msg.guild.id == "980901091942232164") {
+/*     if (msg.guild.id == "980901091942232164") {
         winecellarID = "980901093536043046"
         garageID = "980901093536043047"
         loungeID = "980901094018396172"
@@ -2539,7 +2539,7 @@ client.on('messageReactionRemove', async (reaction, user) => {
             }
         }
         }
-    }
+    } */
     
     if (message.includes('hi cafe bot')) {
         msg.channel.send('Greetings ' + msg.author.toString() +'! I hope you\'re having a lovely day!');
