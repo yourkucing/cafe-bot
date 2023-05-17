@@ -87,14 +87,14 @@ function getNumberOfDays(start, end) {
     return diffInDays;
 }
 
-function Roman(){
+function Roman() {
     var startWeek = 1; //Today's IG week in GMT timezone
     var startYear = 1; //Today's IG year in GMT timezone
-    var startDate = '2021,5,25'; //Today's date in GMT timezone
-    //var currentDate = '2021,12,2'; // Use this to check if code works.
+    var startDate = '2021,1,15'; //Today's date in GMT timezone
+    //var currentDate = '2023,5,22'; // Use this to check if code works.
     var c = new Date();
     var n = c.toUTCString();
-    
+    var t;
     var s = n.split(" ");
     
     var month = s[2];
@@ -111,20 +111,8 @@ function Roman(){
     if (month == 'Nov'){t=11};
     if (month == 'Dec'){t=12};
     
-    var currentDate = s[3]+','+t+','+s[1];
-    var currentDay = s[0];
-    
+    var currentDate = s[3]+','+t+','+s[1];    
     var number = getNumberOfDays(startDate,currentDate);
-    
-    if(currentDay=='Mon,'){daynumber = 1;}
-    if(currentDay=='Tue,'){daynumber = 2;}
-    if(currentDay=='Wed,'){daynumber = 3;}
-    if(currentDay=='Thu,'){daynumber = 4;}
-    if(currentDay=='Fri,'){daynumber = 5;}
-    if(currentDay=='Sat,'){daynumber = 6;}
-    if(currentDay=='Sun,'){daynumber = 7;}
-    
-    var days = (daynumber+number)%7;
     
     var weekDifference = number/14;
     var yearDifference = number/168;
@@ -161,11 +149,11 @@ function Roman(){
     }
     
     var d;
-    var RLyear = 1963+Number(year);
-    
+    var RLyear = 1962+Number(year);
+    var IGtime;
     IGtime = new Date().toDateString() + ': IG ' + month + ' '+ RLyear
     return IGtime;
-    }
+}
 
 
 const checkforDate = async() => {
