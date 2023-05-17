@@ -90,8 +90,8 @@ function getNumberOfDays(start, end) {
 function Roman() {
     var startWeek = 1; //Today's IG week in GMT timezone
     var startYear = 1; //Today's IG year in GMT timezone
-    var startDate = '2021,1,15'; //Today's date in GMT timezone
-    //var currentDate = '2023,5,22'; // Use this to check if code works.
+    var startDate = '2023,4,24'; //Today's date in GMT timezone
+    //var currentDate = '2023,4,23'; // Use this to check if code works.
     var c = new Date();
     var n = c.toUTCString();
     var t;
@@ -113,7 +113,7 @@ function Roman() {
     
     var currentDate = s[3]+','+t+','+s[1];    
     var number = getNumberOfDays(startDate,currentDate);
-    
+
     var weekDifference = number/14;
     var yearDifference = number/168;
     
@@ -123,33 +123,33 @@ function Roman() {
     
     var month;
     
-    if (week==9){month='September';
+    if (week==10){month='September';
     }
-    if (week==10){month='October';
+    if (week==11){month='October';
     }
-    if (week==11){month='November';
+    if (week==12){month='November';
     }
-    if (week==12){month='December';
+    if (week==1){month='December';
     }
-    if (week==1){month='January';
+    if (week==2){month='January';
     }
-    if (week==2){month='February';
+    if (week==3){month='February';
     }
-    if (week==3){month='March';
+    if (week==4){month='March';
     }
-    if (week==4){month='April';
+    if (week==5){month='April';
     }
-    if (week==5){month='May';
+    if (week==6){month='May';
     }
-    if (week==6){month='June';
+    if (week==7){month='June';
     }
-    if (week==7){month='July';
+    if (week==8){month='July';
     }
-    if (week==8){month='August';
+    if (week==9){month='August';
     }
     
     var d;
-    var RLyear = 1962+Number(year);
+    var RLyear = 1967+Number(year);
     var IGtime;
     IGtime = new Date().toDateString() + ': IG ' + month + ' '+ RLyear
     return IGtime;
