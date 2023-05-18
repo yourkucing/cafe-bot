@@ -248,9 +248,11 @@ client.on('messageReactionAdd', async (reaction, user) => {
         }
     }
     if (messageID == "1108651936527417344") {
-        console.log(reaction.message)
-        console.log(user)
-        const userReactions = reaction.message.reactions.cache.filter(reaction => reaction.users.cache.has(user.id))
+        const userReactions = reaction.message.reactions.cache.filter(reaction => {
+            console.log(reaction.users)
+            reaction.users.cache.has(user.id)
+        })
+        console.log(userReactions.values())
         for (const reaction of userReactions.values()) {
             reaction.users.remove(user.id);
         }
