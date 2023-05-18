@@ -248,13 +248,13 @@ client.on('messageReactionAdd', async (reaction, user) => {
         }
     }
     if (messageID == "1108651936527417344") {
-        const userReactions = reaction.message.reactions.cache.filter(reaction => {
-            console.log(reaction.users)
-            reaction.users.cache.has(user.id)
+        const userReactions = reaction.message.reactions.cache.filter(r => {
+            console.log(r.users)
+            r.users.cache.has(user.id)
         })
         console.log(userReactions.values())
-        for (const reaction of userReactions.values()) {
-            reaction.users.remove(user.id);
+        for (const r of userReactions.values()) {
+            r.users.remove(user.id);
         }
         if (reaction.emoji.name == "💚") {
             if (member.roles.cache.has("929838660969435166")) {
