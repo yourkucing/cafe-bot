@@ -176,20 +176,32 @@ client.on('ready', () => {
     checkforBirthdays().catch((err) => {
 		console.log(err)
 	})
-/*  	client.channels.fetch("1053235092857819177").then(channel => {
-		channel.messages.fetch("1072188682372665434").then(message => {
-			message.react("🍤").then(m =>
+ 	client.channels.fetch("1108392347957465130").then(channel => {
+		channel.messages.fetch("1108651936527417344").then(message => {
+			message.react("💚").then(m =>
                 {
-                    message.react("🥩").then(a => {
-                        message.react("🍰").then(b => {
-                            message.react("🍵").then(c => {
-                                message.react("🍹")
+                    message.react("💙").then(a => {
+                        message.react("❤️").then(b => {
+                            message.react("💛")
+                        })
+                    })
+                })
+		})
+	}) 
+    client.channels.fetch("1108392347957465130").then(channel => {
+		channel.messages.fetch("1108652985334116362").then(message => {
+			message.react("🇦").then(m =>
+                {
+                    message.react("🇧").then(a => {
+                        message.react("🇨").then(b => {
+                            message.react("🇩").then(c => {
+                                message.react("🇸")
                             })
                         })
                     })
                 })
 		})
-	})  */
+	}) 
  });
 
  client.on('guildMemberAdd', member => {
@@ -233,6 +245,38 @@ client.on('messageReactionAdd', async (reaction, user) => {
         }
         else if (reaction.emoji.name == "🍹") {
             member.roles.add("905711651947429919")
+        }
+    }
+    if (messageID == "1108651936527417344") {
+        if (reaction.emoji.name == "💚") {
+            member.roles.add("929838270932717638")
+        }
+        else if (reaction.emoji.name == "💙") {
+            member.roles.add("929838660969435166")
+        }
+        else if (reaction.emoji.name == "❤️") {
+            member.roles.add("929838776010801202")
+        }
+        else if (reaction.emoji.name == "💛") {
+            member.roles.add("1092224409546264586")
+        }
+    }
+
+    if (messageID == "1108652985334116362") {
+        if (reaction.emoji.name == "🇦") {
+            member.roles.add("1101542969334571090")
+        }
+        else if (reaction.emoji.name == "🇧") {
+            member.roles.add("1101543025894768721")
+        }
+        else if (reaction.emoji.name == "🇨") {
+            member.roles.add("1101543069041561600")
+        }
+        else if (reaction.emoji.name == "🇩") {
+            member.roles.add("1101543809147478016")
+        }
+        else if (reaction.emoji.name == "🇸") {
+            member.roles.add("1101543090914873444")
         }
     }
 
