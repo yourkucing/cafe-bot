@@ -252,33 +252,39 @@ client.on('messageReactionAdd', async (reaction, user) => {
             if (member.roles.cache.has("929838660969435166")) {
                 member.roles.remove("929838660969435166").then(r => {
                     member.roles.add("929838270932717638").then(a => {
-                        const messageReacted = channelID.messages.cache.get(messageID);
-                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
-                        for (const r of userReactions.values()) {
-                            r.users.remove(user.id);
-                        }
+                        channelID.messages.fetch(messageID).then(messageReacted => {
+                            messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id)).then(userReactions => {
+                                for (const r of userReactions.values()) {
+                                    r.users.remove(user.id)
+                                }
+                            })
+                        })
                     })
                 })
             }
             if (member.roles.cache.has("929838776010801202")) {
                 member.roles.remove("929838776010801202").then(r => {
                     member.roles.add("929838270932717638").then(a => {
-                        const messageReacted = channelID.messages.cache.get(messageID);
-                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
-                        for (const r of userReactions.values()) {
-                            r.users.remove(user.id);
-                        }
+                        channelID.messages.fetch(messageID).then(messageReacted => {
+                            messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id)).then(userReactions => {
+                                for (const r of userReactions.values()) {
+                                    r.users.remove(user.id)
+                                }
+                            })
+                        })
                     })
                 })
             }
             if (member.roles.cache.has("1092224409546264586")) {
                 member.roles.remove("1092224409546264586").then(r => {
                     member.roles.add("929838270932717638").then(a => {
-                        const messageReacted = channelID.messages.cache.get(messageID);
-                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
-                        for (const r of userReactions.values()) {
-                            r.users.remove(user.id);
-                        }
+                        channelID.messages.fetch(messageID).then(messageReacted => {
+                            messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id)).then(userReactions => {
+                                for (const r of userReactions.values()) {
+                                    r.users.remove(user.id)
+                                }
+                            })
+                        })
                     })
                 })
             }
@@ -288,33 +294,39 @@ client.on('messageReactionAdd', async (reaction, user) => {
             if (member.roles.cache.has("929838270932717638")) {
                 member.roles.remove("929838270932717638").then(r => {
                     member.roles.add("929838660969435166").then(a => {
-                        const messageReacted = channelID.messages.cache.get(messageID);
-                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
-                        for (const r of userReactions.values()) {
-                            r.users.remove(user.id);
-                        }
+                        channelID.messages.fetch(messageID).then(messageReacted => {
+                            messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id)).then(userReactions => {
+                                for (const r of userReactions.values()) {
+                                    r.users.remove(user.id)
+                                }
+                            })
+                        })
                     })
                 })
             }
             if (member.roles.cache.has("929838776010801202")) {
                 member.roles.remove("929838776010801202").then(r => {
                     member.roles.add("929838660969435166").then(a => {
-                        const messageReacted = channelID.messages.cache.get(messageID);
-                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
-                        for (const r of userReactions.values()) {
-                            r.users.remove(user.id);
-                        }
+                        channelID.messages.fetch(messageID).then(messageReacted => {
+                            messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id)).then(userReactions => {
+                                for (const r of userReactions.values()) {
+                                    r.users.remove(user.id)
+                                }
+                            })
+                        })
                     })
                 })
             }
             if (member.roles.cache.has("1092224409546264586")) {
                 member.roles.remove("1092224409546264586").then(r => {
                     member.roles.add("929838660969435166").then(a => {
-                        const messageReacted = channelID.messages.cache.get(messageID);
-                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
-                        for (const r of userReactions.values()) {
-                            r.users.remove(user.id);
-                        }
+                        channelID.messages.fetch(messageID).then(messageReacted => {
+                            messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id)).then(userReactions => {
+                                for (const r of userReactions.values()) {
+                                    r.users.remove(user.id)
+                                }
+                            })
+                        })
                     })
                 })
             }
@@ -323,33 +335,39 @@ client.on('messageReactionAdd', async (reaction, user) => {
             if (member.roles.cache.has("929838270932717638")) {
                 member.roles.remove("929838270932717638").then(r => {
                     member.roles.add("929838776010801202").then(a => {
-                        const messageReacted = channelID.messages.cache.get(messageID);
-                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
-                        for (const r of userReactions.values()) {
-                            r.users.remove(user.id);
-                        }
+                        channelID.messages.fetch(messageID).then(messageReacted => {
+                            messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id)).then(userReactions => {
+                                for (const r of userReactions.values()) {
+                                    r.users.remove(user.id)
+                                }
+                            })
+                        })
                     })
                 })
             }
             if (member.roles.cache.has("929838660969435166")) {
                 member.roles.remove("929838660969435166").then(r => {
                     member.roles.add("929838776010801202").then(a => {
-                        const messageReacted = channelID.messages.cache.get(messageID);
-                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
-                        for (const r of userReactions.values()) {
-                            r.users.remove(user.id);
-                        }
+                        channelID.messages.fetch(messageID).then(messageReacted => {
+                            messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id)).then(userReactions => {
+                                for (const r of userReactions.values()) {
+                                    r.users.remove(user.id)
+                                }
+                            })
+                        })
                     })
                 })
             }
             if (member.roles.cache.has("1092224409546264586")) {
                 member.roles.remove("1092224409546264586").then(r => {
                     member.roles.add("929838776010801202").then(a => {
-                        const messageReacted = channelID.messages.cache.get(messageID);
-                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
-                        for (const r of userReactions.values()) {
-                            r.users.remove(user.id);
-                        }
+                        channelID.messages.fetch(messageID).then(messageReacted => {
+                            messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id)).then(userReactions => {
+                                for (const r of userReactions.values()) {
+                                    r.users.remove(user.id)
+                                }
+                            })
+                        })
                     })
                 })
             }
@@ -358,33 +376,39 @@ client.on('messageReactionAdd', async (reaction, user) => {
             if (member.roles.cache.has("929838270932717638")) {
                 member.roles.remove("929838270932717638").then(r => {
                     member.roles.add("1092224409546264586").then(a => {
-                        const messageReacted = channelID.messages.cache.get(messageID);
-                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
-                        for (const r of userReactions.values()) {
-                            r.users.remove(user.id);
-                        }
+                        channelID.messages.fetch(messageID).then(messageReacted => {
+                            messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id)).then(userReactions => {
+                                for (const r of userReactions.values()) {
+                                    r.users.remove(user.id)
+                                }
+                            })
+                        })
                     })
                 })
             }
             if (member.roles.cache.has("929838660969435166")) {
                 member.roles.remove("929838660969435166").then(r => {
                     member.roles.add("1092224409546264586").then(a => {
-                        const messageReacted = channelID.messages.cache.get(messageID);
-                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
-                        for (const r of userReactions.values()) {
-                            r.users.remove(user.id);
-                        }
+                        channelID.messages.fetch(messageID).then(messageReacted => {
+                            messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id)).then(userReactions => {
+                                for (const r of userReactions.values()) {
+                                    r.users.remove(user.id)
+                                }
+                            })
+                        })
                     })
                 })
             }
             if (member.roles.cache.has("929838776010801202")) {
                 member.roles.remove("929838776010801202").then(r => {
                     member.roles.add("1092224409546264586").then(a => {
-                        const messageReacted = channelID.messages.cache.get(messageID);
-                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
-                        for (const r of userReactions.values()) {
-                            r.users.remove(user.id);
-                        }
+                        channelID.messages.fetch(messageID).then(messageReacted => {
+                            messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id)).then(userReactions => {
+                                for (const r of userReactions.values()) {
+                                    r.users.remove(user.id)
+                                }
+                            })
+                        })
                     })
                 })
             }
