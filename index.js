@@ -176,7 +176,7 @@ client.on('ready', () => {
     checkforBirthdays().catch((err) => {
 		console.log(err)
 	})
- 	client.channels.fetch("1108392347957465130").then(channel => {
+/*  	client.channels.fetch("1108392347957465130").then(channel => {
 		channel.messages.fetch("1108651936527417344").then(message => {
 			message.react("💚").then(m =>
                 {
@@ -201,7 +201,7 @@ client.on('ready', () => {
                     })
                 })
 		})
-	}) 
+	})  */
  });
 
  client.on('guildMemberAdd', member => {
