@@ -252,8 +252,8 @@ client.on('messageReactionAdd', async (reaction, user) => {
             console.log(r.users)
             r.users.cache.has(user.id)
         })
-        console.log(userReactions.values())
-        for (const r of userReactions.values()) {
+        console.log(userReactions)
+        for (const r of userReactions) {
             r.users.remove(user.id);
         }
         if (reaction.emoji.name == "💚") {
