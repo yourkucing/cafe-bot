@@ -248,26 +248,38 @@ client.on('messageReactionAdd', async (reaction, user) => {
         }
     }
     if (messageID == "1108651936527417344") {
-        const messageReacted = await channelID.messages.fetch(messageID);
-        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
-        for (const r of userReactions.values()) {
-            console.log(r)
-            await r.users.remove(user.id);
-        }
         if (reaction.emoji.name == "💚") {
             if (member.roles.cache.has("929838660969435166")) {
                 member.roles.remove("929838660969435166").then(r => {
-                    member.roles.add("929838270932717638")
+                    member.roles.add("929838270932717638").then(a => {
+                        const messageReacted = channelID.messages.fetch(messageID);
+                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
+                        for (const r of userReactions.values()) {
+                            r.users.remove(user.id);
+                        }
+                    })
                 })
             }
             if (member.roles.cache.has("929838776010801202")) {
                 member.roles.remove("929838776010801202").then(r => {
-                    member.roles.add("929838270932717638")
+                    member.roles.add("929838270932717638").then(a => {
+                        const messageReacted = channelID.messages.fetch(messageID);
+                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
+                        for (const r of userReactions.values()) {
+                            r.users.remove(user.id);
+                        }
+                    })
                 })
             }
             if (member.roles.cache.has("1092224409546264586")) {
                 member.roles.remove("1092224409546264586").then(r => {
-                    member.roles.add("929838270932717638")
+                    member.roles.add("929838270932717638").then(a => {
+                        const messageReacted = channelID.messages.fetch(messageID);
+                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
+                        for (const r of userReactions.values()) {
+                            r.users.remove(user.id);
+                        }
+                    })
                 })
             }
             
@@ -275,51 +287,105 @@ client.on('messageReactionAdd', async (reaction, user) => {
         else if (reaction.emoji.name == "💙") {
             if (member.roles.cache.has("929838270932717638")) {
                 member.roles.remove("929838270932717638").then(r => {
-                    member.roles.add("929838660969435166")
+                    member.roles.add("929838660969435166").then(a => {
+                        const messageReacted = channelID.messages.fetch(messageID);
+                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
+                        for (const r of userReactions.values()) {
+                            r.users.remove(user.id);
+                        }
+                    })
                 })
             }
             if (member.roles.cache.has("929838776010801202")) {
                 member.roles.remove("929838776010801202").then(r => {
-                    member.roles.add("929838660969435166")
+                    member.roles.add("929838660969435166").then(a => {
+                        const messageReacted = channelID.messages.fetch(messageID);
+                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
+                        for (const r of userReactions.values()) {
+                            r.users.remove(user.id);
+                        }
+                    })
                 })
             }
             if (member.roles.cache.has("1092224409546264586")) {
                 member.roles.remove("1092224409546264586").then(r => {
-                    member.roles.add("929838660969435166")
+                    member.roles.add("929838660969435166").then(a => {
+                        const messageReacted = channelID.messages.fetch(messageID);
+                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
+                        for (const r of userReactions.values()) {
+                            r.users.remove(user.id);
+                        }
+                    })
                 })
             }
         }
         else if (reaction.emoji.name == "❤️") {
             if (member.roles.cache.has("929838270932717638")) {
                 member.roles.remove("929838270932717638").then(r => {
-                    member.roles.add("929838776010801202")
+                    member.roles.add("929838776010801202").then(a => {
+                        const messageReacted = channelID.messages.fetch(messageID);
+                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
+                        for (const r of userReactions.values()) {
+                            r.users.remove(user.id);
+                        }
+                    })
                 })
             }
             if (member.roles.cache.has("929838660969435166")) {
                 member.roles.remove("929838660969435166").then(r => {
-                    member.roles.add("929838776010801202")
+                    member.roles.add("929838776010801202").then(a => {
+                        const messageReacted = channelID.messages.fetch(messageID);
+                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
+                        for (const r of userReactions.values()) {
+                            r.users.remove(user.id);
+                        }
+                    })
                 })
             }
             if (member.roles.cache.has("1092224409546264586")) {
                 member.roles.remove("1092224409546264586").then(r => {
-                    member.roles.add("929838776010801202")
+                    member.roles.add("929838776010801202").then(a => {
+                        const messageReacted = channelID.messages.fetch(messageID);
+                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
+                        for (const r of userReactions.values()) {
+                            r.users.remove(user.id);
+                        }
+                    })
                 })
             }
         }
         else if (reaction.emoji.name == "💛") {
             if (member.roles.cache.has("929838270932717638")) {
                 member.roles.remove("929838270932717638").then(r => {
-                    member.roles.add("1092224409546264586")
+                    member.roles.add("1092224409546264586").then(a => {
+                        const messageReacted = channelID.messages.fetch(messageID);
+                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
+                        for (const r of userReactions.values()) {
+                            r.users.remove(user.id);
+                        }
+                    })
                 })
             }
             if (member.roles.cache.has("929838660969435166")) {
                 member.roles.remove("929838660969435166").then(r => {
-                    member.roles.add("1092224409546264586")
+                    member.roles.add("1092224409546264586").then(a => {
+                        const messageReacted = channelID.messages.fetch(messageID);
+                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
+                        for (const r of userReactions.values()) {
+                            r.users.remove(user.id);
+                        }
+                    })
                 })
             }
             if (member.roles.cache.has("929838776010801202")) {
                 member.roles.remove("929838776010801202").then(r => {
-                    member.roles.add("1092224409546264586")
+                    member.roles.add("1092224409546264586").then(a => {
+                        const messageReacted = channelID.messages.fetch(messageID);
+                        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
+                        for (const r of userReactions.values()) {
+                            r.users.remove(user.id);
+                        }
+                    })
                 })
             }
         }
