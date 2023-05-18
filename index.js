@@ -248,7 +248,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
         }
     }
     if (messageID == "1108651936527417344") {
-        userReact = reaction.message.reactions.cache.get("💚")
+        userReact = reaction.message.reactions.cache.find("💚")
         console.log(userReact)
         if (reaction.emoji.name == "💚") {
             if (member.roles.cache.has("929838660969435166")) {
