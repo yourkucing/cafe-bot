@@ -325,6 +325,11 @@ client.on('messageReactionAdd', async (reaction, user) => {
     }
 
     if (messageID == "1108652985334116362") {
+        const messageReacted = await channelID.messages.fetch(messageID);
+        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
+        for (const r of userReactions.values()) {
+            await r.users.remove(user.id);
+        }
         if (reaction.emoji.name == "🇦") {
             if (member.roles.cache.has("1101543025894768721")) {
                 member.roles.remove("1101543025894768721").then(r => {
