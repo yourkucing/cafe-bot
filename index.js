@@ -248,8 +248,12 @@ client.on('messageReactionAdd', async (reaction, user) => {
         }
     }
     if (messageID == "1108651936527417344") {
-        userReact = msg.reactions.reactions.cache.get("💚")
-        console.log(userReact)
+        const messageReacted = await client.channels.cache
+            .get(channelID)
+            .messages.fetch(messageID);
+        messageReacted.reactions.cache.forEach(async(reaction) => {
+            console.log(reaction)
+        })
         if (reaction.emoji.name == "💚") {
             if (member.roles.cache.has("929838660969435166")) {
                 member.roles.remove("929838660969435166").then(r => {
