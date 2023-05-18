@@ -249,11 +249,11 @@ client.on('messageReactionAdd', async (reaction, user) => {
     }
     if (messageID == "1108651936527417344") {
         const messageReacted = await channelID.messages.fetch(messageID);
-        messageReacted.reactions.cache.forEach(async(react) => {
-            if (react.name != reaction.emoji.name) {
-                console.log(react.users)
-            }
-        })
+        userReactions = messageReacted.reactions.cache.filter(react => react.users.cache.has(user.id))
+        for (const r of userReactions.values()) {
+            console.log(r)
+            await r.users.remove(user.id);
+        }
         if (reaction.emoji.name == "💚") {
             if (member.roles.cache.has("929838660969435166")) {
                 member.roles.remove("929838660969435166").then(r => {
