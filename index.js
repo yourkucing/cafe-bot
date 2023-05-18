@@ -249,34 +249,186 @@ client.on('messageReactionAdd', async (reaction, user) => {
     }
     if (messageID == "1108651936527417344") {
         if (reaction.emoji.name == "💚") {
-            member.roles.add("929838270932717638")
+            if (member.roles.cache.has("929838660969435166")) {
+                member.roles.remove("929838660969435166").then(r => {
+                    member.roles.add("929838270932717638")
+                })
+            }
+            if (member.roles.cache.has("929838776010801202")) {
+                member.roles.remove("929838776010801202").then(r => {
+                    member.roles.add("929838270932717638")
+                })
+            }
+            if (member.roles.cache.has("1092224409546264586")) {
+                member.roles.remove("1092224409546264586").then(r => {
+                    member.roles.add("929838270932717638")
+                })
+            }
+            
         }
         else if (reaction.emoji.name == "💙") {
-            member.roles.add("929838660969435166")
+            if (member.roles.cache.has("929838270932717638")) {
+                member.roles.remove("929838270932717638").then(r => {
+                    member.roles.add("929838660969435166")
+                })
+            }
+            if (member.roles.cache.has("929838776010801202")) {
+                member.roles.remove("929838776010801202").then(r => {
+                    member.roles.add("929838660969435166")
+                })
+            }
+            if (member.roles.cache.has("1092224409546264586")) {
+                member.roles.remove("1092224409546264586").then(r => {
+                    member.roles.add("929838660969435166")
+                })
+            }
         }
         else if (reaction.emoji.name == "❤️") {
-            member.roles.add("929838776010801202")
+            if (member.roles.cache.has("929838270932717638")) {
+                member.roles.remove("929838270932717638").then(r => {
+                    member.roles.add("929838776010801202")
+                })
+            }
+            if (member.roles.cache.has("929838660969435166")) {
+                member.roles.remove("929838660969435166").then(r => {
+                    member.roles.add("929838776010801202")
+                })
+            }
+            if (member.roles.cache.has("1092224409546264586")) {
+                member.roles.remove("1092224409546264586").then(r => {
+                    member.roles.add("929838776010801202")
+                })
+            }
         }
         else if (reaction.emoji.name == "💛") {
-            member.roles.add("1092224409546264586")
+            if (member.roles.cache.has("929838270932717638")) {
+                member.roles.remove("929838270932717638").then(r => {
+                    member.roles.add("1092224409546264586")
+                })
+            }
+            if (member.roles.cache.has("929838660969435166")) {
+                member.roles.remove("929838660969435166").then(r => {
+                    member.roles.add("1092224409546264586")
+                })
+            }
+            if (member.roles.cache.has("929838776010801202")) {
+                member.roles.remove("929838776010801202").then(r => {
+                    member.roles.add("1092224409546264586")
+                })
+            }
         }
     }
 
     if (messageID == "1108652985334116362") {
         if (reaction.emoji.name == "🇦") {
-            member.roles.add("1101542969334571090")
+            if (member.roles.cache.has("1101543025894768721")) {
+                member.roles.remove("1101543025894768721").then(r => {
+                    member.roles.add("1101542969334571090")
+                })
+            }
+            if (member.roles.cache.has("1101543069041561600")) {
+                member.roles.remove("1101543069041561600").then(r => {
+                    member.roles.add("1101542969334571090")
+                })
+            }
+            if (member.roles.cache.has("1101543809147478016")) {
+                member.roles.remove("1101543809147478016").then(r => {
+                    member.roles.add("1101542969334571090")
+                })
+            }
+            if (member.roles.cache.has("1101543090914873444")) {
+                member.roles.remove("1101543090914873444").then(r => {
+                    member.roles.add("1101542969334571090")
+                })
+            }
         }
         else if (reaction.emoji.name == "🇧") {
-            member.roles.add("1101543025894768721")
+            if (member.roles.cache.has("1101542969334571090")) {
+                member.roles.remove("1101542969334571090").then(r => {
+                    member.roles.add("1101543025894768721")
+                })
+            }
+            if (member.roles.cache.has("1101543069041561600")) {
+                member.roles.remove("1101543069041561600").then(r => {
+                    member.roles.add("1101543025894768721")
+                })
+            }
+            if (member.roles.cache.has("1101543809147478016")) {
+                member.roles.remove("1101543809147478016").then(r => {
+                    member.roles.add("1101543025894768721")
+                })
+            }
+            if (member.roles.cache.has("1101543090914873444")) {
+                member.roles.remove("1101543090914873444").then(r => {
+                    member.roles.add("1101543025894768721")
+                })
+            }
         }
         else if (reaction.emoji.name == "🇨") {
-            member.roles.add("1101543069041561600")
+            if (member.roles.cache.has("1101542969334571090")) {
+                member.roles.remove("1101542969334571090").then(r => {
+                    member.roles.add("1101543069041561600")
+                })
+            }
+            if (member.roles.cache.has("1101543025894768721")) {
+                member.roles.remove("1101543025894768721").then(r => {
+                    member.roles.add("1101543069041561600")
+                })
+            }
+            if (member.roles.cache.has("1101543809147478016")) {
+                member.roles.remove("1101543809147478016").then(r => {
+                    member.roles.add("1101543069041561600")
+                })
+            }
+            if (member.roles.cache.has("1101543090914873444")) {
+                member.roles.remove("1101543090914873444").then(r => {
+                    member.roles.add("1101543069041561600")
+                })
+            }
         }
         else if (reaction.emoji.name == "🇩") {
-            member.roles.add("1101543809147478016")
+            if (member.roles.cache.has("1101542969334571090")) {
+                member.roles.remove("1101542969334571090").then(r => {
+                    member.roles.add("1101543809147478016")
+                })
+            }
+            if (member.roles.cache.has("1101543025894768721")) {
+                member.roles.remove("1101543025894768721").then(r => {
+                    member.roles.add("1101543809147478016")
+                })
+            }
+            if (member.roles.cache.has("1101543069041561600")) {
+                member.roles.remove("1101543069041561600").then(r => {
+                    member.roles.add("1101543809147478016")
+                })
+            }
+            if (member.roles.cache.has("1101543090914873444")) {
+                member.roles.remove("1101543090914873444").then(r => {
+                    member.roles.add("1101543809147478016")
+                })
+            }
         }
         else if (reaction.emoji.name == "🇸") {
-            member.roles.add("1101543090914873444")
+            if (member.roles.cache.has("1101542969334571090")) {
+                member.roles.remove("1101542969334571090").then(r => {
+                    member.roles.add("1101543090914873444")
+                })
+            }
+            if (member.roles.cache.has("1101543025894768721")) {
+                member.roles.remove("1101543025894768721").then(r => {
+                    member.roles.add("1101543090914873444")
+                })
+            }
+            if (member.roles.cache.has("1101543069041561600")) {
+                member.roles.remove("1101543069041561600").then(r => {
+                    member.roles.add("1101543090914873444")
+                })
+            }
+            if (member.roles.cache.has("1101543809147478016")) {
+                member.roles.remove("1101543809147478016").then(r => {
+                    member.roles.add("1101543090914873444")
+                })
+            }
         }
     }
 
